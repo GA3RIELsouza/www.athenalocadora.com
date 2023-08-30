@@ -4709,3 +4709,4 @@
 0:0:0:0:0:0:0:1 - - [30/Aug/2023:12:22:54 -0300] "GET /www.athenalocadora.com/form/incluir/cliente.jsp HTTP/1.1" 200 8689
 0:0:0:0:0:0:0:1 - - [30/Aug/2023:12:22:55 -0300] "GET /www.athenalocadora.com/form/excluir/cliente.jsp HTTP/1.1" 200 6449
 0:0:0:0:0:0:0:1 - - [30/Aug/2023:12:22:55 -0300] "GET /www.athenalocadora.com/form/alterar/cliente.jsp HTTP/1.1" 200 8401
+0:0:0:0:0:0:0:1 - - [30/Aug/2023:12:22:59 -0300] "GET /www.athenalocadora.com/inicio.jsp HTTP/1.1" 200 5664
