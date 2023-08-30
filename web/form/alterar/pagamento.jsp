@@ -1,4 +1,7 @@
 <%@page import="classes.Usuarios"%>
+<%@page import="classes.Pagamentos"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
@@ -92,12 +95,56 @@
             
             <div class="form-input">
                 <label for="idPagamento">ID do pagamento <small class="no-select">(buscar por)</small></label><br>
-                <input type="number" step="1" pattern="\d+" id="idPagamento" name="idPagamento" placeholder="Insira o ID do pagamento" min="1" max="2147483647" value="<%=request.getParameter("idPagamento") != null ? request.getParameter("idPagamento") : ""%>" required>
+                <select name="idPagamento" id="idPagamento" required>
+                    <option value="" disabled selected>Insira o ID do aluguel</option>
+                    <%
+                        Pagamentos pag1 = new Pagamentos();
+                        List<Pagamentos> listaPagamentos = new ArrayList<>();
+                        listaPagamentos = pag1.consultarPagamentos();
+                        
+                        int idPagamentoConsulta = 0;
+
+                        String idPag = request.getParameter("idPagamento");
+                        if (idPag != null && !idPag.isEmpty()) {
+                            idPagamentoConsulta = Integer.parseInt(idPag);
+                        }
+
+                        for(Pagamentos p : listaPagamentos) {
+                            int fIdPagamento = p.getIdPagamento();
+                            String selectedAttribute = fIdPagamento==idPagamentoConsulta ? "selected" : "";
+                    %>
+                    <option value="<%= fIdPagamento%>" <%= selectedAttribute %>><%= fIdPagamento%></option>
+                    <%
+                        }
+                    %>
+                </select>
             </div>
             
             <div class="form-input">
-                <label for="idAluguel">ID do aluguel <small>(buscar por)</small></label><br>
-                <input type="number" step="1" pattern="\d+" id="idAluguel" name="idAluguel" placeholder="Insira o ID do aluguel" min="1" max="2147483647" value="<%=request.getParameter("idAluguel") != null ? request.getParameter("idAluguel") : ""%>" required>
+                <label for="idAluguel">ID do aluguel <small class="no-select">(buscar por)</small></label><br>
+                <select name="idAluguel" id="idAluguel" required>
+                    <option value="" disabled selected>Insira o ID do aluguel</option>
+                    <%
+                        Pagamentos pag2 = new Pagamentos();
+                        List<Pagamentos> listaAlugueis = new ArrayList<>();
+                        listaAlugueis = pag2.consultarPagamentos();
+                        
+                        int idAluguelConsulta = 0;
+
+                        String idAlu = request.getParameter("idAluguel");
+                        if (idAlu != null && !idAlu.isEmpty()) {
+                            idAluguelConsulta = Integer.parseInt(idAlu);
+                        }
+
+                        for(Pagamentos p : listaAlugueis) {
+                            int fIdAluguel = p.getIdAluguel();
+                            String selectedAttribute = fIdAluguel==idAluguelConsulta ? "selected" : "";
+                    %>
+                    <option value="<%= fIdAluguel%>" <%= selectedAttribute %>><%= fIdAluguel%></option>
+                    <%
+                        }
+                    %>
+                </select>
             </div>
             
             <div class="form-input">
@@ -107,12 +154,40 @@
             
             <div class="form-input">
                 <label for="tipoPagamento">Tipo</label><br>
-                <select name="tipoPagamento" id="tipoPagamento" value="<%=request.getParameter("tipo") != null ? request.getParameter("tipo") : ""%>" required>
-                    <option value="" disabled selected>Insira o tipo de pagamento</option>
-                    <option value="Dinheiro">Dinheiro</option>
-                    <option value="Cartão crédito">Cartão crédito</option>
-                    <option value="Cartão débito">Cartão débito</option>
-                    <option value="PIX">PIX</option>
+                <select name="tipoPagamento" id="tipoPagamento" required>
+                    <option value="" disabled selected>Insira o tipo</option>
+                    <%
+                        String option1 = "Dinheiro";
+                        String option2 = "Cartão crédito";
+                        String option3 = "Cartão débito";
+                        String option4 = "PIX";
+                        
+                        String tipoModeloConsulta = request.getParameter("tipo");
+                        for(int i = 0; i < 4; i++) {
+                            String optionAtual = "";
+                            switch(i) {
+                                case 0:
+                                    optionAtual = option1;
+                                break;
+
+                                case 1:
+                                    optionAtual = option2;
+                                break;
+
+                                case 2:
+                                    optionAtual = option3;
+                                break;
+
+                                case 3:
+                                    optionAtual = option4;
+                                break;
+                            }
+                            String selectedAttribute = (optionAtual.equals(tipoModeloConsulta)  ) ? "selected" : optionAtual + tipoModeloConsulta;
+                    %>
+                    <option value="<%= optionAtual %>" <%= selectedAttribute %>><%= optionAtual %></option>
+                    <%
+                        }
+                    %>
                 </select>
             </div>
             

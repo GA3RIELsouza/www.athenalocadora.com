@@ -1,4 +1,7 @@
 <%@page import="classes.Usuarios"%>
+<%@page import="classes.Alugueis"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
@@ -91,7 +94,29 @@
             
             <div class="form-input">
                 <label for="idAluguel">ID do aluguel</label><br>
-                <input type="number" step="1" pattern="\d+" id="idAluguel" name="idAluguel" placeholder="Insira o ID do aluguel" min="1" max="2147483647" required>
+                <select name="idAluguel" id="idAluguel" required>
+                    <option value="" disabled selected>Insira o ID do aluguel</option>
+                    <%
+                        Alugueis alu = new Alugueis();
+                        List<Alugueis> listaAlugueis = new ArrayList<>();
+                        listaAlugueis = alu.consultarAlugueis();
+                        
+                        int idAluguelConsulta = 0;
+
+                        String idAlu = request.getParameter("idAluguel");
+                        if (idAlu != null && !idAlu.isEmpty()) {
+                            idAluguelConsulta = Integer.parseInt(idAlu);
+                        }
+
+                        for(Alugueis a : listaAlugueis) {
+                            int fIdAluguel = a.getIdAluguel();
+                            String selectedAttribute = fIdAluguel==idAluguelConsulta ? "selected" : "";
+                    %>
+                    <option value="<%= fIdAluguel%>" <%= selectedAttribute %>><%= fIdAluguel%></option>
+                    <%
+                        }
+                    %>
+                </select>
             </div>
             
             <div class="form-input">

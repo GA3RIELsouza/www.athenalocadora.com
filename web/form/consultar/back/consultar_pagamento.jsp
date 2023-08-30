@@ -57,15 +57,15 @@
 
             <div class="operation-selector">
 
-                <a href="../../incluir/cliente.jsp" class="operation">
+                <a href="../../incluir/pagamento.jsp" class="operation">
                     Incluir
                 </a>
 
-                <a href="../../excluir/cliente.jsp" class="operation">
+                <a href="../../excluir/pagamento.jsp" class="operation">
                     Excluir
                 </a>
 
-                <a href="../../alterar/cliente.jsp" class="operation">
+                <a href="../../alterar/pagamento.jsp" class="operation">
                     Alterar
                 </a>
 
@@ -137,7 +137,7 @@
                     
                     <tr>
                         
-                        <td> style="background-color: transparent;"
+                        <td style="background-color: transparent;">
                             <a class="alterar" href="../../alterar/pagamento.jsp?idPagamento=<%=pag.getIdPagamento()%>&idAluguel=<%=pag.getIdAluguel()%>&data=<%=pag.getDataPagamento()%>&tipo=<%=pag.getTipoPagamento()%>&valor=<%=pag.getVlrPagamento()%>">
                                 Alterar
                             </a>
@@ -169,7 +169,7 @@
                         
                         <td>
                             <%
-                                out.print(pag.getVlrPagamento());
+                                out.print("R$" + pag.getVlrPagamento());
                             %>
                         </td>
                         
@@ -268,7 +268,7 @@
                         
                         <td>
                             <%
-                                out.print(p.getVlrPagamento());
+                                out.print("R$" + p.getVlrPagamento());
                             %>
                         </td>
                         

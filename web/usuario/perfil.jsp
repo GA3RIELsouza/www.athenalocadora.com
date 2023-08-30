@@ -61,7 +61,7 @@
             
             <div class="title">
                 <h1>
-                    Perfil do usuï¿½rio
+                    Perfil do usuário
                 </h1>
             </div>
             
