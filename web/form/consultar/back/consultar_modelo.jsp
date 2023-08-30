@@ -36,15 +36,15 @@
 
             <div class="operation-selector">
 
-                <a href="../../incluir/aluguel.jsp" class="operation">
+                <a href="../../incluir/modelo.jsp" class="operation">
                     Incluir
                 </a>
 
-                <a href="../../excluir/aluguel.jsp" class="operation">
+                <a href="../../excluir/modelo.jsp" class="operation">
                     Excluir
                 </a>
 
-                <a href="../../alterar/aluguel.jsp" class="operation">
+                <a href="../../alterar/modelo.jsp" class="operation">
                     Alterar
                 </a>
 
