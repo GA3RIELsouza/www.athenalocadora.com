@@ -503,7 +503,7 @@ An error occurred at line: [16] in the jsp file: [/form/alterar/veiculo.jsp]
 Syntax error, insert ";" to complete Statement
 13:         <link href="../../css/global.css" rel="stylesheet">
 14:         <link href="../../css/form.css" rel="stylesheet">
-15:         <script type="text/javascript">
+15:         <script>
 16:             var disponivelRequest = <%request.getParameter("disponivel")%>;
 17:             var disponivelCheckbox = document.getElementById("disponivel");
 18:             
@@ -517,7 +517,7 @@ An error occurred at line: [16] in the jsp file: [/form/alterar/veiculo.jsp]
 Syntax error, insert ";" to complete Statement
 13:         <link href="../../css/global.css" rel="stylesheet">
 14:         <link href="../../css/form.css" rel="stylesheet">
-15:         <script type="text/javascript">
+15:         <script>
 16:             var disponivelRequest = <%request.getParameter("disponivel")%>;
 17:             var disponivelCheckbox = document.getElementById("disponivel");
 18:             
@@ -564,7 +564,7 @@ An error occurred at line: [16] in the jsp file: [/form/alterar/veiculo.jsp]
 Syntax error, insert ";" to complete Statement
 13:         <link href="../../css/global.css" rel="stylesheet">
 14:         <link href="../../css/form.css" rel="stylesheet">
-15:         <script type="text/javascript">
+15:         <script>
 16:             var disponivelRequest = <%request.getParameter("disponivel")%>;
 17:             console.log(disponivelRequest);
 18:             console.log("disponivelRequest");
@@ -578,7 +578,7 @@ An error occurred at line: [16] in the jsp file: [/form/alterar/veiculo.jsp]
 Syntax error, insert ";" to complete Statement
 13:         <link href="../../css/global.css" rel="stylesheet">
 14:         <link href="../../css/form.css" rel="stylesheet">
-15:         <script type="text/javascript">
+15:         <script>
 16:             var disponivelRequest = <%request.getParameter("disponivel")%>;
 17:             console.log(disponivelRequest);
 18:             console.log("disponivelRequest");

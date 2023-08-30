@@ -1,4 +1,3 @@
-<%@page import="classes.Usuarios"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
@@ -17,25 +16,11 @@
     
     <body>
         
-        <%
-            Cookie[] cookies = request.getCookies();
-            Usuarios  usu     = new Usuarios();
-            
-            if(cookies != null) {
-               for(Cookie atual : cookies) {
-                    if(atual.getName().equals("sessionId")) {
-                        usu.setSessionId(atual.getValue());
-                        
-                        if(usu.checkSessionId()) {
-                            response.sendRedirect("inicio.jsp");
-                        }
-                    }
-                }
-            }
-        %>
-        
         <div class="vertical-space"></div>
-        
+        <div class="vertical-space"></div>
+        <div class="vertical-space"></div>
+        <div class="vertical-space"></div>
+        <div class="vertical-space"></div>
         <div class="vertical-space"></div>
         
         <form action="login.jsp" method="post" class="outer">
@@ -76,7 +61,7 @@
             
         </form>
             
-        <%@include file="/include/theme.jsp"%>
+        <%@include file="/include/theme.html"%>
         
     </body>
     

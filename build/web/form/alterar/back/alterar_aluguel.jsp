@@ -1,4 +1,4 @@
-<%@page import="classes.Usuarios"%>
+<%@include file="/include/check_login.jsp"%>
 <%@page import="classes.Alugueis"%>
 <%@page import="java.sql.Timestamp"%>
 <%@page import="java.io.PrintWriter"%>

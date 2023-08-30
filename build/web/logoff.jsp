@@ -9,8 +9,8 @@
         Cookie[] cookies = request.getCookies();
         Usuarios  usu     = new Usuarios();
         
-        String   vLogin  = request.getParameter("login");
-        String   vSenha  = request.getParameter("senha");
+        String vLogin  = request.getParameter("login");
+        String vSenha  = request.getParameter("senha");
 
         if(cookies != null) {
            for(Cookie atual : cookies) {

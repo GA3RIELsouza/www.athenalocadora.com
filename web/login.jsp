@@ -9,8 +9,8 @@
     <%
         Usuarios usu = new Usuarios();
 
-        String   vLogin  = request.getParameter("login");
-        String   vSenha  = request.getParameter("senha");
+        String vLogin  = request.getParameter("login");
+        String vSenha  = request.getParameter("senha");
 
         usu.setLogin(vLogin);
         usu.setSenha(vSenha);

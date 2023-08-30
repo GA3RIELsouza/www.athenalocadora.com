@@ -1,4 +1,4 @@
-<%@page import="classes.Usuarios"%>
+<%@include file="/include/check_login.jsp"%>
 <%@page import="classes.Veiculos"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
@@ -16,7 +16,7 @@
         <link rel="icon" type="image/x-icon" href="/www.athenalocadora.com/images/favicon.ico?v=1">
         <link href="/www.athenalocadora.com/css/styles.css" rel="stylesheet">
         
-        <script type="text/javascript">
+        <script>
             function scriptModoConsulta() {
                 var campoId         = document.getElementById("campoId");
                 var inputId         = document.getElementById("idVeiculo");
@@ -45,29 +45,7 @@
     
     <body>
         
-        <%
-            Cookie[] cookies = request.getCookies();
-            Usuarios  usu     = new Usuarios();
-            boolean  ok       = false;
-            
-            if(cookies != null) {
-               for(Cookie atual : cookies) {
-                    if(atual.getName().equals("sessionId")) {
-                        usu.setSessionId(atual.getValue());
-                        
-                        if(usu.checkSessionId()) {
-                            ok = true;
-                        }
-                    }
-                }
-            }
-
-            if(ok == false) {
-                response.sendRedirect("/www.athenalocadora.com/index.jsp");
-            }
-        %>
-        
-        <%@include file="/include/header.jsp"%>
+        <%@include file="/include/header.html"%>
         
         <div class="vertical-space"></div>
         <div class="vertical-space"></div>
@@ -160,7 +138,7 @@
         
         <div class="vertical-space"></div>
             
-        <%@include file="/include/theme.jsp"%>
+        <%@include file="/include/theme.html"%>
         
     </body>
     

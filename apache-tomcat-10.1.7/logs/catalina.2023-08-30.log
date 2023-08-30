@@ -1551,3 +1551,152 @@
 30-Aug-2023 11:55:54.345 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\gabriel_souza20\Documents\NetBeansProjects\www.athenalocadora.com\apache-tomcat-10.1.7\webapps\ROOT] has finished in [22] ms
 30-Aug-2023 11:55:54.349 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
 30-Aug-2023 11:55:54.373 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1165] milliseconds
+30-Aug-2023 18:09:11.970 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.7
+30-Aug-2023 18:09:11.975 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 27 2023 20:25:27 UTC
+30-Aug-2023 18:09:11.975 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.7.0
+30-Aug-2023 18:09:11.975 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+30-Aug-2023 18:09:11.975 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+30-Aug-2023 18:09:11.975 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+30-Aug-2023 18:09:11.975 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             D:\Program Files\Java\jdk-15.0.2
+30-Aug-2023 18:09:11.975 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           15.0.2+7-27
+30-Aug-2023 18:09:11.976 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+30-Aug-2023 18:09:11.976 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7
+30-Aug-2023 18:09:11.976 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7
+30-Aug-2023 18:09:11.989 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7\conf\logging.properties
+30-Aug-2023 18:09:11.989 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+30-Aug-2023 18:09:11.989 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|DESKTOP-GNPTJLR
+30-Aug-2023 18:09:11.989 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+30-Aug-2023 18:09:11.989 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+30-Aug-2023 18:09:11.989 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+30-Aug-2023 18:09:11.989 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+30-Aug-2023 18:09:11.989 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+30-Aug-2023 18:09:11.990 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+30-Aug-2023 18:09:11.990 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+30-Aug-2023 18:09:11.990 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7
+30-Aug-2023 18:09:11.990 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7
+30-Aug-2023 18:09:11.990 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7\temp
+30-Aug-2023 18:09:11.997 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [D:\Program Files\Java\jdk-15.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Gabriel\AppData\Local\Microsoft\WindowsApps;;D:\Microsoft VS Code\bin;.]
+30-Aug-2023 18:09:12.304 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+30-Aug-2023 18:09:12.343 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [579] milliseconds
+30-Aug-2023 18:09:12.394 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+30-Aug-2023 18:09:12.394 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.7]
+30-Aug-2023 18:09:12.410 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7\conf\Catalina\localhost\www.athenalocadora.com.xml]
+30-Aug-2023 18:09:12.426 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/www.athenalocadora.com] in deployment descriptor [D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7\conf\Catalina\localhost\www.athenalocadora.com.xml] has been ignored
+30-Aug-2023 18:09:12.469 SEVERE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Error deploying deployment descriptor [D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7\conf\Catalina\localhost\www.athenalocadora.com.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:713)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:641)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1927)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:118)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:534)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:424)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1656)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:309)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:423)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:366)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:898)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:846)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:871)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:241)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:428)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:913)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:795)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:347)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@1a5a4e19]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4566)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4699)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [C:\Users\gabriel_souza20\Documents\NetBeansProjects\www.athenalocadora.com\build\web] is not valid
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:749)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:707)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 41 more
+30-Aug-2023 18:09:12.500 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7\conf\Catalina\localhost\www.athenalocadora.com.xml] has finished in [88] ms
+30-Aug-2023 18:09:12.501 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7\webapps\docs]
+30-Aug-2023 18:09:12.850 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7\webapps\docs] has finished in [349] ms
+30-Aug-2023 18:09:12.850 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7\webapps\examples]
+30-Aug-2023 18:09:13.726 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7\webapps\examples] has finished in [876] ms
+30-Aug-2023 18:09:13.726 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7\webapps\host-manager]
+30-Aug-2023 18:09:13.796 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7\webapps\host-manager] has finished in [70] ms
+30-Aug-2023 18:09:13.796 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7\webapps\manager]
+30-Aug-2023 18:09:13.869 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7\webapps\manager] has finished in [73] ms
+30-Aug-2023 18:09:13.869 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7\webapps\ROOT]
+30-Aug-2023 18:09:13.905 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7\webapps\ROOT] has finished in [36] ms
+30-Aug-2023 18:09:13.908 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+30-Aug-2023 18:09:13.953 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1610] milliseconds
+30-Aug-2023 18:09:16.849 INFO [http-nio-8080-exec-9] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/www.athenalocadora.com]
+30-Aug-2023 18:11:06.115 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+30-Aug-2023 18:11:06.116 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+30-Aug-2023 18:11:06.124 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+30-Aug-2023 18:11:06.156 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+30-Aug-2023 18:11:06.159 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+30-Aug-2023 18:11:48.401 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.7
+30-Aug-2023 18:11:48.405 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 27 2023 20:25:27 UTC
+30-Aug-2023 18:11:48.405 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.7.0
+30-Aug-2023 18:11:48.405 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+30-Aug-2023 18:11:48.405 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+30-Aug-2023 18:11:48.405 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+30-Aug-2023 18:11:48.405 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             D:\Program Files\Java\jdk-15.0.2
+30-Aug-2023 18:11:48.406 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           15.0.2+7-27
+30-Aug-2023 18:11:48.406 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+30-Aug-2023 18:11:48.406 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7
+30-Aug-2023 18:11:48.406 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7
+30-Aug-2023 18:11:48.419 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7\conf\logging.properties
+30-Aug-2023 18:11:48.419 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+30-Aug-2023 18:11:48.419 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|DESKTOP-GNPTJLR
+30-Aug-2023 18:11:48.419 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+30-Aug-2023 18:11:48.419 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+30-Aug-2023 18:11:48.419 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+30-Aug-2023 18:11:48.419 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+30-Aug-2023 18:11:48.420 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+30-Aug-2023 18:11:48.420 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+30-Aug-2023 18:11:48.420 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+30-Aug-2023 18:11:48.420 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7
+30-Aug-2023 18:11:48.420 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7
+30-Aug-2023 18:11:48.420 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7\temp
+30-Aug-2023 18:11:48.426 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [D:\Program Files\Java\jdk-15.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Gabriel\AppData\Local\Microsoft\WindowsApps;;D:\Microsoft VS Code\bin;.]
+30-Aug-2023 18:11:48.715 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+30-Aug-2023 18:11:48.740 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [533] milliseconds
+30-Aug-2023 18:11:48.798 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+30-Aug-2023 18:11:48.798 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.7]
+30-Aug-2023 18:11:48.814 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7\webapps\docs]
+30-Aug-2023 18:11:49.260 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7\webapps\docs] has finished in [444] ms
+30-Aug-2023 18:11:49.260 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7\webapps\examples]
+30-Aug-2023 18:11:50.026 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7\webapps\examples] has finished in [766] ms
+30-Aug-2023 18:11:50.026 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7\webapps\host-manager]
+30-Aug-2023 18:11:50.105 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7\webapps\host-manager] has finished in [78] ms
+30-Aug-2023 18:11:50.105 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7\webapps\manager]
+30-Aug-2023 18:11:50.188 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7\webapps\manager] has finished in [83] ms
+30-Aug-2023 18:11:50.188 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7\webapps\ROOT]
+30-Aug-2023 18:11:50.241 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7\webapps\ROOT] has finished in [52] ms
+30-Aug-2023 18:11:50.246 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+30-Aug-2023 18:11:50.304 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1563] milliseconds
+30-Aug-2023 18:11:50.488 INFO [http-nio-8080-exec-6] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7\conf\Catalina\localhost\www.athenalocadora.com.xml]
+30-Aug-2023 18:11:50.489 WARNING [http-nio-8080-exec-6] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/www.athenalocadora.com] in deployment descriptor [D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7\conf\Catalina\localhost\www.athenalocadora.com.xml] has been ignored
+30-Aug-2023 18:11:51.590 INFO [http-nio-8080-exec-6] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+30-Aug-2023 18:11:51.599 INFO [http-nio-8080-exec-6] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [D:\Projetos\NetBeans 12.6\www.athenalocadora.com\apache-tomcat-10.1.7\conf\Catalina\localhost\www.athenalocadora.com.xml] has finished in [1.111] ms
+30-Aug-2023 18:11:51.603 INFO [http-nio-8080-exec-5] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/www.athenalocadora.com]] after start() had already been called. The second call will be ignored.

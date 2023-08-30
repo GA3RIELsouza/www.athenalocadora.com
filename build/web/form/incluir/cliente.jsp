@@ -1,4 +1,4 @@
-<%@page import="classes.Usuarios"%>
+<%@include file="/include/check_login.jsp"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
@@ -15,7 +15,7 @@
         
         <script src="/www.athenalocadora.com/js/jquery-1.2.6.pack.js"></script>
         <script src="/www.athenalocadora.com/js/jquery.maskedinput-1.1.4.pack.js"></script>
-        <script type="text/javascript">
+        <script>
             $(document).ready(function(){
                 $("#cpfCliente").mask("999.999.999-99");
             });
@@ -42,29 +42,7 @@
     
     <body>
         
-        <%
-            Cookie[] cookies = request.getCookies();
-            Usuarios  usu     = new Usuarios();
-            boolean  ok       = false;
-            
-            if(cookies != null) {
-               for(Cookie atual : cookies) {
-                    if(atual.getName().equals("sessionId")) {
-                        usu.setSessionId(atual.getValue());
-                        
-                        if(usu.checkSessionId()) {
-                            ok = true;
-                        }
-                    }
-                }
-            }
-
-            if(ok == false) {
-                response.sendRedirect("/www.athenalocadora.com/index.jsp");
-            }
-        %>
-        
-        <%@include file="/include/header.jsp"%>
+        <%@include file="/include/header.html"%>
         
         <div class="vertical-space"></div>
         <div class="vertical-space"></div>
@@ -167,7 +145,7 @@
         
         <div class="vertical-space"></div>
         
-        <%@include file="/include/theme.jsp"%>
+        <%@include file="/include/theme.html"%>
             
     </body>
     

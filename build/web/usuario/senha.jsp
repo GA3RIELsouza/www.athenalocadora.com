@@ -1,4 +1,4 @@
-<%@page import="classes.Usuarios"%>
+<%@include file="/include/check_login.jsp"%>
 <!DOCTYPE html>
 
 <html lang="pt">
@@ -12,7 +12,7 @@
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico?v=1">
         <link href="../css/styles.css" rel="stylesheet">
         
-        <script type="text/javascript">
+        <script>
             function checkNovaSenha() {
                 senha         = document.getElementById("novaSenha").value;
                 confirmaSenha = document.getElementById("confirmaNovaSenha").value;
@@ -34,29 +34,7 @@
     
     <body>
         
-        <%
-            Cookie[] cookies = request.getCookies();
-            Usuarios  usu     = new Usuarios();
-            boolean  ok       = false;
-            
-            if(cookies != null) {
-               for(Cookie atual : cookies) {
-                    if(atual.getName().equals("sessionId")) {
-                        usu.setSessionId(atual.getValue());
-                        
-                        if(usu.checkSessionId()) {
-                            ok = true;
-                        }
-                    }
-                }
-            }
-
-            if(ok == false) {
-                response.sendRedirect("/www.athenalocadora.com/index.jsp");
-            }
-        %>
-        
-        <%@include file="/include/header.jsp"%>
+        <%@include file="/include/header.html"%>
         
         <div class="vertical-space"></div>
         <div class="vertical-space"></div>
@@ -122,7 +100,7 @@
             </a>
         </div>
         
-        <%@include file="/include/theme.jsp"%>
+        <%@include file="/include/theme.html"%>
         
     </body>
     
