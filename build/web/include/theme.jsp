@@ -40,6 +40,17 @@
                             elementos[i].classList.add("tema-cinza");
                             localStorage.setItem("tema", "tema-cinza");
                         break;
+                        
+                        default:
+                            if (localStorage.getItem("tema")) {
+                                var elementos  = document.getElementsByTagName("*");
+
+                                for (var i = 0; i < elementos.length; i++) {
+                                    elementos[i].classList.remove("tema-azul", "tema-verde", "tema-laranja", "tema-cinza");
+                                    elementos[i].classList.add(localStorage.getItem("tema"));
+                                }
+                            }
+                        break;
                     }
                 }
             }
