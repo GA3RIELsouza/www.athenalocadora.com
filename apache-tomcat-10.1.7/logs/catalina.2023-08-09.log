@@ -1,0 +1,265 @@
+09-Aug-2023 08:10:26.985 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.7
+09-Aug-2023 08:10:26.989 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 27 2023 20:25:27 UTC
+09-Aug-2023 08:10:26.990 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.7.0
+09-Aug-2023 08:10:26.990 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+09-Aug-2023 08:10:26.990 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+09-Aug-2023 08:10:26.990 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+09-Aug-2023 08:10:26.990 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-17.0.2
+09-Aug-2023 08:10:26.990 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.2+8-LTS-86
+09-Aug-2023 08:10:26.990 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+09-Aug-2023 08:10:26.990 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7
+09-Aug-2023 08:10:26.990 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7
+09-Aug-2023 08:10:27.000 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\conf\logging.properties
+09-Aug-2023 08:10:27.001 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+09-Aug-2023 08:10:27.001 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|SN-344667
+09-Aug-2023 08:10:27.001 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+09-Aug-2023 08:10:27.001 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+09-Aug-2023 08:10:27.001 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+09-Aug-2023 08:10:27.001 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+09-Aug-2023 08:10:27.001 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+09-Aug-2023 08:10:27.001 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+09-Aug-2023 08:10:27.001 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+09-Aug-2023 08:10:27.001 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7
+09-Aug-2023 08:10:27.002 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7
+09-Aug-2023 08:10:27.002 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\temp
+09-Aug-2023 08:10:27.013 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk-17.0.2\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\IronRuby 1.1\bin;C:\Program Files\Git\cmd;C:\Program Files\Inkscape\bin;C:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin;C:\Program Files\Azure Data Studio\bin;C:\Program Files\nodejs\;C:\ProgramData\UNIVALI\Portugol Studio;C:\Program Files\MATLAB\R2021a\runtime\win64;C:\Program Files\MATLAB\R2021a\bin;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files\CodeBlocks\MinGW\bin;C:\Users\Default\AppData\Roaming\npm;C:\Users\Default\AppData\Roaming\node_modules\@angular\cli\bin;C:\Users\gabriel_souza20\AppData\Local\Microsoft\WindowsApps;;.]
+09-Aug-2023 08:10:27.250 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+09-Aug-2023 08:10:27.272 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [476] milliseconds
+09-Aug-2023 08:10:27.319 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+09-Aug-2023 08:10:27.319 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.7]
+09-Aug-2023 08:10:27.329 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\conf\Catalina\localhost\SA_Locadora.xml]
+09-Aug-2023 08:10:27.347 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SA_Locadora] in deployment descriptor [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\conf\Catalina\localhost\SA_Locadora.xml] has been ignored
+09-Aug-2023 08:10:27.381 SEVERE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Error deploying deployment descriptor [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\conf\Catalina\localhost\SA_Locadora.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:713)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:641)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1927)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:534)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:424)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1656)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:309)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:423)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:366)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:898)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:846)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:871)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:241)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:428)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:913)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:795)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:347)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@700fb871]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4566)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4699)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [D:\Projetos\NetBeans 12.6\SA_Locadora\build\web] is not valid
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:749)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:707)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 41 more
+09-Aug-2023 08:10:27.426 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\conf\Catalina\localhost\SA_Locadora.xml] has finished in [95] ms
+09-Aug-2023 08:10:27.427 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\docs]
+09-Aug-2023 08:10:27.718 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\docs] has finished in [291] ms
+09-Aug-2023 08:10:27.719 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\examples]
+09-Aug-2023 08:10:28.189 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\examples] has finished in [471] ms
+09-Aug-2023 08:10:28.189 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\host-manager]
+09-Aug-2023 08:10:28.232 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\host-manager] has finished in [43] ms
+09-Aug-2023 08:10:28.232 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\manager]
+09-Aug-2023 08:10:28.278 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\manager] has finished in [45] ms
+09-Aug-2023 08:10:28.278 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\ROOT]
+09-Aug-2023 08:10:28.305 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\ROOT] has finished in [26] ms
+09-Aug-2023 08:10:28.307 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+09-Aug-2023 08:10:28.339 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1066] milliseconds
+09-Aug-2023 08:10:30.668 INFO [http-nio-8080-exec-8] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/SA_Locadora]
+09-Aug-2023 08:12:04.904 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+09-Aug-2023 08:12:04.904 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+09-Aug-2023 08:12:04.910 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+09-Aug-2023 08:12:04.931 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+09-Aug-2023 08:12:04.947 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+09-Aug-2023 08:13:02.619 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.7
+09-Aug-2023 08:13:02.622 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 27 2023 20:25:27 UTC
+09-Aug-2023 08:13:02.622 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.7.0
+09-Aug-2023 08:13:02.622 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+09-Aug-2023 08:13:02.623 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+09-Aug-2023 08:13:02.623 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+09-Aug-2023 08:13:02.623 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-17.0.2
+09-Aug-2023 08:13:02.623 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.2+8-LTS-86
+09-Aug-2023 08:13:02.623 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+09-Aug-2023 08:13:02.623 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7
+09-Aug-2023 08:13:02.623 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7
+09-Aug-2023 08:13:02.632 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\conf\logging.properties
+09-Aug-2023 08:13:02.633 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+09-Aug-2023 08:13:02.633 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|SN-344667
+09-Aug-2023 08:13:02.633 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+09-Aug-2023 08:13:02.633 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+09-Aug-2023 08:13:02.633 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+09-Aug-2023 08:13:02.633 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+09-Aug-2023 08:13:02.633 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+09-Aug-2023 08:13:02.633 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+09-Aug-2023 08:13:02.633 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+09-Aug-2023 08:13:02.633 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7
+09-Aug-2023 08:13:02.633 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7
+09-Aug-2023 08:13:02.634 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\temp
+09-Aug-2023 08:13:02.644 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk-17.0.2\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\IronRuby 1.1\bin;C:\Program Files\Git\cmd;C:\Program Files\Inkscape\bin;C:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin;C:\Program Files\Azure Data Studio\bin;C:\Program Files\nodejs\;C:\ProgramData\UNIVALI\Portugol Studio;C:\Program Files\MATLAB\R2021a\runtime\win64;C:\Program Files\MATLAB\R2021a\bin;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files\CodeBlocks\MinGW\bin;C:\Users\Default\AppData\Roaming\npm;C:\Users\Default\AppData\Roaming\node_modules\@angular\cli\bin;C:\Users\gabriel_souza20\AppData\Local\Microsoft\WindowsApps;;.]
+09-Aug-2023 08:13:02.874 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+09-Aug-2023 08:13:02.895 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [461] milliseconds
+09-Aug-2023 08:13:02.934 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+09-Aug-2023 08:13:02.934 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.7]
+09-Aug-2023 08:13:02.945 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\docs]
+09-Aug-2023 08:13:03.258 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\docs] has finished in [311] ms
+09-Aug-2023 08:13:03.259 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\examples]
+09-Aug-2023 08:13:03.705 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\examples] has finished in [446] ms
+09-Aug-2023 08:13:03.705 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\host-manager]
+09-Aug-2023 08:13:03.749 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\host-manager] has finished in [44] ms
+09-Aug-2023 08:13:03.750 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\manager]
+09-Aug-2023 08:13:03.793 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\manager] has finished in [42] ms
+09-Aug-2023 08:13:03.793 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\ROOT]
+09-Aug-2023 08:13:03.817 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\ROOT] has finished in [24] ms
+09-Aug-2023 08:13:03.820 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+09-Aug-2023 08:13:03.848 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [951] milliseconds
+09-Aug-2023 08:13:03.952 INFO [http-nio-8080-exec-2] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\conf\Catalina\localhost\SA_Locadora.xml]
+09-Aug-2023 08:13:03.953 WARNING [http-nio-8080-exec-2] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SA_Locadora] in deployment descriptor [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\conf\Catalina\localhost\SA_Locadora.xml] has been ignored
+09-Aug-2023 08:13:04.629 INFO [http-nio-8080-exec-2] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-Aug-2023 08:13:04.637 INFO [http-nio-8080-exec-2] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\conf\Catalina\localhost\SA_Locadora.xml] has finished in [684] ms
+09-Aug-2023 08:13:04.640 INFO [http-nio-8080-exec-3] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/SA_Locadora]] after start() had already been called. The second call will be ignored.
+09-Aug-2023 09:41:22.979 INFO [http-nio-8080-exec-3] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SA_Locadora] has started
+09-Aug-2023 09:41:22.983 WARNING [http-nio-8080-exec-3] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [SA_Locadora] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+09-Aug-2023 09:41:22.984 WARNING [http-nio-8080-exec-3] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SA_Locadora] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.2/java.lang.Object.wait(Native Method)
+ java.base@17.0.2/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.2/java.lang.Thread.run(Thread.java:833)
+09-Aug-2023 09:41:23.630 INFO [http-nio-8080-exec-3] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-Aug-2023 09:41:23.632 INFO [http-nio-8080-exec-3] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SA_Locadora] is completed
+09-Aug-2023 09:41:26.355 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1457)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:1047)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+09-Aug-2023 10:33:13.092 INFO [Catalina-utility-2] org.apache.catalina.users.MemoryUserDatabase.backgroundProcess Reloading memory user database [UserDatabase] from updated source [file:/C:/Users/gabriel_souza20/Documents/NetBeansProjects/SA_Locadora/apache-tomcat-10.1.7/conf/tomcat-users.xml]
+09-Aug-2023 10:33:13.092 SEVERE [Catalina-utility-2] org.apache.catalina.users.MemoryUserDatabase.open The specified user database [conf/tomcat-users.xml] could not be found
+09-Aug-2023 10:33:13.607 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+09-Aug-2023 10:33:14.125 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/examples]
+09-Aug-2023 10:33:14.641 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/host-manager]
+09-Aug-2023 10:33:15.178 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/SA_Locadora]
+09-Aug-2023 10:33:15.232 WARNING [Catalina-utility-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [SA_Locadora] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+09-Aug-2023 10:33:15.233 WARNING [Catalina-utility-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [SA_Locadora] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.2/java.lang.Object.wait(Native Method)
+ java.base@17.0.2/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base@17.0.2/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.2/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.2/java.lang.Thread.run(Thread.java:833)
+09-Aug-2023 10:33:15.751 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/manager]
+09-Aug-2023 10:33:16.270 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/docs]
+09-Aug-2023 10:33:17.725 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1457)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:1047)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+09-Aug-2023 10:34:56.412 INFO [Catalina-utility-2] org.apache.catalina.users.MemoryUserDatabase.backgroundProcess Reloading memory user database [UserDatabase] from updated source [file:/C:/Users/gabriel_souza20/Documents/NetBeansProjects/SA_Locadora/apache-tomcat-10.1.7/conf/tomcat-users.xml]
+09-Aug-2023 10:34:56.438 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\conf\Catalina\localhost\SA_Locadora.xml]
+09-Aug-2023 10:34:56.441 WARNING [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SA_Locadora] in deployment descriptor [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\conf\Catalina\localhost\SA_Locadora.xml] has been ignored
+09-Aug-2023 10:34:57.076 INFO [Catalina-utility-2] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-Aug-2023 10:34:57.078 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\conf\Catalina\localhost\SA_Locadora.xml] has finished in [640] ms
+09-Aug-2023 10:34:57.079 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\docs]
+09-Aug-2023 10:34:57.115 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\docs] has finished in [36] ms
+09-Aug-2023 10:34:57.115 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\examples]
+09-Aug-2023 10:34:57.534 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\examples] has finished in [419] ms
+09-Aug-2023 10:34:57.534 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\host-manager]
+09-Aug-2023 10:34:57.571 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\host-manager] has finished in [37] ms
+09-Aug-2023 10:34:57.571 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\manager]
+09-Aug-2023 10:34:57.631 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\manager] has finished in [60] ms
+09-Aug-2023 10:34:57.631 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\ROOT]
+09-Aug-2023 10:34:57.655 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\ROOT] has finished in [24] ms
+09-Aug-2023 10:35:07.197 INFO [http-nio-8080-exec-21] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SA_Locadora] has started
+09-Aug-2023 10:35:07.783 INFO [http-nio-8080-exec-21] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-Aug-2023 10:35:07.786 INFO [http-nio-8080-exec-21] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SA_Locadora] is completed
+09-Aug-2023 10:35:31.524 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+09-Aug-2023 10:35:31.525 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+09-Aug-2023 10:35:31.529 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+09-Aug-2023 10:35:31.538 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+09-Aug-2023 10:35:31.542 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+09-Aug-2023 10:36:21.035 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.7
+09-Aug-2023 10:36:21.042 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 27 2023 20:25:27 UTC
+09-Aug-2023 10:36:21.042 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.7.0
+09-Aug-2023 10:36:21.042 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+09-Aug-2023 10:36:21.043 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+09-Aug-2023 10:36:21.043 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+09-Aug-2023 10:36:21.043 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-17.0.2
+09-Aug-2023 10:36:21.043 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.2+8-LTS-86
+09-Aug-2023 10:36:21.043 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+09-Aug-2023 10:36:21.043 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7
+09-Aug-2023 10:36:21.043 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7
+09-Aug-2023 10:36:21.054 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\conf\logging.properties
+09-Aug-2023 10:36:21.055 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+09-Aug-2023 10:36:21.055 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|SN-344667
+09-Aug-2023 10:36:21.055 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+09-Aug-2023 10:36:21.055 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+09-Aug-2023 10:36:21.055 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+09-Aug-2023 10:36:21.055 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+09-Aug-2023 10:36:21.055 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+09-Aug-2023 10:36:21.055 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+09-Aug-2023 10:36:21.055 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+09-Aug-2023 10:36:21.055 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7
+09-Aug-2023 10:36:21.056 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7
+09-Aug-2023 10:36:21.056 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\temp
+09-Aug-2023 10:36:21.067 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk-17.0.2\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\IronRuby 1.1\bin;C:\Program Files\Git\cmd;C:\Program Files\Inkscape\bin;C:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin;C:\Program Files\Azure Data Studio\bin;C:\Program Files\nodejs\;C:\ProgramData\UNIVALI\Portugol Studio;C:\Program Files\MATLAB\R2021a\runtime\win64;C:\Program Files\MATLAB\R2021a\bin;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files\CodeBlocks\MinGW\bin;C:\Users\Default\AppData\Roaming\npm;C:\Users\Default\AppData\Roaming\node_modules\@angular\cli\bin;C:\Users\gabriel_souza20\AppData\Local\Microsoft\WindowsApps;;.]
+09-Aug-2023 10:36:21.333 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+09-Aug-2023 10:36:21.357 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [534] milliseconds
+09-Aug-2023 10:36:21.425 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+09-Aug-2023 10:36:21.425 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.7]
+09-Aug-2023 10:36:21.443 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\conf\Catalina\localhost\SA_Locadora.xml]
+09-Aug-2023 10:36:21.477 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/SA_Locadora] in deployment descriptor [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\conf\Catalina\localhost\SA_Locadora.xml] has been ignored
+09-Aug-2023 10:36:22.421 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-Aug-2023 10:36:22.489 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\conf\Catalina\localhost\SA_Locadora.xml] has finished in [1.044] ms
+09-Aug-2023 10:36:22.490 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\docs]
+09-Aug-2023 10:36:22.532 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\docs] has finished in [43] ms
+09-Aug-2023 10:36:22.533 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\examples]
+09-Aug-2023 10:36:22.969 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\examples] has finished in [436] ms
+09-Aug-2023 10:36:22.969 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\host-manager]
+09-Aug-2023 10:36:23.017 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\host-manager] has finished in [48] ms
+09-Aug-2023 10:36:23.017 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\manager]
+09-Aug-2023 10:36:23.075 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\manager] has finished in [58] ms
+09-Aug-2023 10:36:23.076 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Diretório de instalação da aplicação web [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\ROOT]
+09-Aug-2023 10:36:23.122 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\gabriel_souza20\Documents\NetBeansProjects\SA_Locadora\apache-tomcat-10.1.7\webapps\ROOT] has finished in [45] ms
+09-Aug-2023 10:36:23.127 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+09-Aug-2023 10:36:23.162 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1805] milliseconds
+09-Aug-2023 10:36:27.711 INFO [http-nio-8080-exec-10] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SA_Locadora] has started
+09-Aug-2023 10:36:28.487 INFO [http-nio-8080-exec-10] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+09-Aug-2023 10:36:28.490 INFO [http-nio-8080-exec-10] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/SA_Locadora] is completed

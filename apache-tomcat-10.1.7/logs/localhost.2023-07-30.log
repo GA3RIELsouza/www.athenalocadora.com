@@ -1,0 +1,1591 @@
+30-Jul-2023 21:04:35.261 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+30-Jul-2023 21:04:35.262 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+30-Jul-2023 21:04:35.268 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@70e02081')
+30-Jul-2023 21:05:16.492 SEVERE [http-nio-8080-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/SA_Locadora] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [22] in the jsp file: [/recebeDadosVeiculo.jsp]
+vIdVeiculo cannot be resolved to a variable
+19:             boolean vRevisado          = Boolean.parseBoolean(request.getParameter("revisado"));
+20:            
+21:             Veiculo vei = new Veiculo();
+22:             vei.setIdVeiculo(vIdVeiculo);
+23:             vei.setMarcaVeiculo(vMarcaVeiculo);
+24:             vei.setModeloVeiculo(vModeloVeiculo);
+25:             vei.setPlacaVeiculo(vPlacaVeiculo);
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [22] in the jsp file: [/recebeDadosVeiculo.jsp]
+vIdVeiculo cannot be resolved to a variable
+19:             boolean vRevisado          = Boolean.parseBoolean(request.getParameter("revisado"));
+20:            
+21:             Veiculo vei = new Veiculo();
+22:             vei.setIdVeiculo(vIdVeiculo);
+23:             vei.setMarcaVeiculo(vMarcaVeiculo);
+24:             vei.setModeloVeiculo(vModeloVeiculo);
+25:             vei.setPlacaVeiculo(vPlacaVeiculo);
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1589)
+30-Jul-2023 21:05:35.896 SEVERE [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/SA_Locadora] threw exception [An exception occurred processing [/recebeDadosVeiculo.jsp] at line [31]
+
+28:             vei.setTemArCondicionado(vTemArCondicionado);
+29:             vei.setTemDirHidraulica(vTemDirHidraulica);
+30:             vei.setRevisado(vRevisado);
+31:             if (vei.incluirVeiculo()){
+32:                 response.sendRedirect("cadastraCliente.jsp?sucesso=SUCESSO AO CADASTRAR O VE�CULO");
+33:             } else {
+34:                 response.sendRedirect("cadastraCliente.jsp?erro=PROBLEMAS AO CADASTRAR O VE�CULO");
+
+
+Stacktrace:] with root cause
+	java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "con" is null
+		at classes.Veiculo.incluirVeiculo(Veiculo.java:34)
+		at org.apache.jsp.recebeDadosVeiculo_jsp._jspService(recebeDadosVeiculo_jsp.java:156)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1589)
+30-Jul-2023 21:06:14.134 SEVERE [http-nio-8080-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/SA_Locadora] threw exception [An exception occurred processing [/recebeDadosVeiculo.jsp] at line [31]
+
+28:             vei.setTemArCondicionado(vTemArCondicionado);
+29:             vei.setTemDirHidraulica(vTemDirHidraulica);
+30:             vei.setRevisado(vRevisado);
+31:             if (vei.incluirVeiculo()){
+32:                 response.sendRedirect("cadastraCliente.jsp?sucesso=SUCESSO AO CADASTRAR O VE�CULO");
+33:             } else {
+34:                 response.sendRedirect("cadastraCliente.jsp?erro=PROBLEMAS AO CADASTRAR O VE�CULO");
+
+
+Stacktrace:] with root cause
+	java.lang.NullPointerException: Cannot invoke "java.sql.Connection.prepareStatement(String)" because "con" is null
+		at classes.Veiculo.incluirVeiculo(Veiculo.java:34)
+		at org.apache.jsp.recebeDadosVeiculo_jsp._jspService(recebeDadosVeiculo_jsp.java:156)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1589)
+30-Jul-2023 21:08:07.446 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+30-Jul-2023 21:08:07.446 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+30-Jul-2023 21:15:47.554 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+30-Jul-2023 21:15:47.554 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+30-Jul-2023 21:15:47.554 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@652ce654')
+30-Jul-2023 21:16:09.212 SEVERE [http-nio-8080-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/SA_Locadora] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [20] in the jsp file: [/recebeDadosVeiculo.jsp]
+Type mismatch: cannot convert from int to boolean
+17:             String  vPlacaVeiculo      = request.getParameter("placaVeiculo");
+18:             String  vCorPredominante   = request.getParameter("corPredominante");
+19:             int     vAnoFabricacao     = Integer.parseInt(request.getParameter("anoFabricacao"));
+20:             boolean vDisponivel        = Integer.parseInt(request.getParameter("disponivel"));
+21:             boolean vTemArCondicionado = Integer.parseInt(request.getParameter("temArCondicionado"));
+22:             boolean vTemDirHidraulica  = Integer.parseInt(request.getParameter("temDirHidraulica"));
+23:             boolean vRevisado          = Integer.parseInt(request.getParameter("revisado"));
+
+
+An error occurred at line: [21] in the jsp file: [/recebeDadosVeiculo.jsp]
+Type mismatch: cannot convert from int to boolean
+18:             String  vCorPredominante   = request.getParameter("corPredominante");
+19:             int     vAnoFabricacao     = Integer.parseInt(request.getParameter("anoFabricacao"));
+20:             boolean vDisponivel        = Integer.parseInt(request.getParameter("disponivel"));
+21:             boolean vTemArCondicionado = Integer.parseInt(request.getParameter("temArCondicionado"));
+22:             boolean vTemDirHidraulica  = Integer.parseInt(request.getParameter("temDirHidraulica"));
+23:             boolean vRevisado          = Integer.parseInt(request.getParameter("revisado"));
+24:            
+
+
+An error occurred at line: [22] in the jsp file: [/recebeDadosVeiculo.jsp]
+Type mismatch: cannot convert from int to boolean
+19:             int     vAnoFabricacao     = Integer.parseInt(request.getParameter("anoFabricacao"));
+20:             boolean vDisponivel        = Integer.parseInt(request.getParameter("disponivel"));
+21:             boolean vTemArCondicionado = Integer.parseInt(request.getParameter("temArCondicionado"));
+22:             boolean vTemDirHidraulica  = Integer.parseInt(request.getParameter("temDirHidraulica"));
+23:             boolean vRevisado          = Integer.parseInt(request.getParameter("revisado"));
+24:            
+25:             Veiculo vei = new Veiculo();
+
+
+An error occurred at line: [23] in the jsp file: [/recebeDadosVeiculo.jsp]
+Type mismatch: cannot convert from int to boolean
+20:             boolean vDisponivel        = Integer.parseInt(request.getParameter("disponivel"));
+21:             boolean vTemArCondicionado = Integer.parseInt(request.getParameter("temArCondicionado"));
+22:             boolean vTemDirHidraulica  = Integer.parseInt(request.getParameter("temDirHidraulica"));
+23:             boolean vRevisado          = Integer.parseInt(request.getParameter("revisado"));
+24:            
+25:             Veiculo vei = new Veiculo();
+26:             vei.setMarcaVeiculo(vMarcaVeiculo);
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [20] in the jsp file: [/recebeDadosVeiculo.jsp]
+Type mismatch: cannot convert from int to boolean
+17:             String  vPlacaVeiculo      = request.getParameter("placaVeiculo");
+18:             String  vCorPredominante   = request.getParameter("corPredominante");
+19:             int     vAnoFabricacao     = Integer.parseInt(request.getParameter("anoFabricacao"));
+20:             boolean vDisponivel        = Integer.parseInt(request.getParameter("disponivel"));
+21:             boolean vTemArCondicionado = Integer.parseInt(request.getParameter("temArCondicionado"));
+22:             boolean vTemDirHidraulica  = Integer.parseInt(request.getParameter("temDirHidraulica"));
+23:             boolean vRevisado          = Integer.parseInt(request.getParameter("revisado"));
+
+
+An error occurred at line: [21] in the jsp file: [/recebeDadosVeiculo.jsp]
+Type mismatch: cannot convert from int to boolean
+18:             String  vCorPredominante   = request.getParameter("corPredominante");
+19:             int     vAnoFabricacao     = Integer.parseInt(request.getParameter("anoFabricacao"));
+20:             boolean vDisponivel        = Integer.parseInt(request.getParameter("disponivel"));
+21:             boolean vTemArCondicionado = Integer.parseInt(request.getParameter("temArCondicionado"));
+22:             boolean vTemDirHidraulica  = Integer.parseInt(request.getParameter("temDirHidraulica"));
+23:             boolean vRevisado          = Integer.parseInt(request.getParameter("revisado"));
+24:            
+
+
+An error occurred at line: [22] in the jsp file: [/recebeDadosVeiculo.jsp]
+Type mismatch: cannot convert from int to boolean
+19:             int     vAnoFabricacao     = Integer.parseInt(request.getParameter("anoFabricacao"));
+20:             boolean vDisponivel        = Integer.parseInt(request.getParameter("disponivel"));
+21:             boolean vTemArCondicionado = Integer.parseInt(request.getParameter("temArCondicionado"));
+22:             boolean vTemDirHidraulica  = Integer.parseInt(request.getParameter("temDirHidraulica"));
+23:             boolean vRevisado          = Integer.parseInt(request.getParameter("revisado"));
+24:            
+25:             Veiculo vei = new Veiculo();
+
+
+An error occurred at line: [23] in the jsp file: [/recebeDadosVeiculo.jsp]
+Type mismatch: cannot convert from int to boolean
+20:             boolean vDisponivel        = Integer.parseInt(request.getParameter("disponivel"));
+21:             boolean vTemArCondicionado = Integer.parseInt(request.getParameter("temArCondicionado"));
+22:             boolean vTemDirHidraulica  = Integer.parseInt(request.getParameter("temDirHidraulica"));
+23:             boolean vRevisado          = Integer.parseInt(request.getParameter("revisado"));
+24:            
+25:             Veiculo vei = new Veiculo();
+26:             vei.setMarcaVeiculo(vMarcaVeiculo);
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1589)
+30-Jul-2023 21:26:20.635 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+30-Jul-2023 21:26:20.635 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+30-Jul-2023 21:26:28.286 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+30-Jul-2023 21:26:28.286 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+30-Jul-2023 21:26:28.291 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@46d8f407')
+30-Jul-2023 21:38:25.252 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+30-Jul-2023 21:38:25.252 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+30-Jul-2023 22:04:24.155 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+30-Jul-2023 22:04:24.155 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+30-Jul-2023 22:04:24.160 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@588cd519')
+30-Jul-2023 22:25:52.127 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+30-Jul-2023 22:25:52.128 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+30-Jul-2023 22:25:58.502 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+30-Jul-2023 22:25:58.502 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+30-Jul-2023 22:25:58.506 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@5c645b43')
+30-Jul-2023 22:33:49.678 SEVERE [http-nio-8080-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/SA_Locadora] threw exception [An exception occurred processing [recebeDadosVeiculo.jsp] at line [19]
+
+16:             String  vModeloVeiculo     = request.getParameter("modeloVeiculo");
+17:             String  vPlacaVeiculo      = request.getParameter("placaVeiculo");
+18:             String  vCorPredominante   = request.getParameter("corPredominante");
+19:             int     vAnoFabricacao     = Integer.parseInt(request.getParameter("anoFabricacao"));
+20:             boolean vDisponivel        = Boolean.parseBoolean(request.getParameter("disponivel"));
+21:             boolean vTemArCondicionado = Boolean.parseBoolean(request.getParameter("temArCondicionado"));
+22:             boolean vTemDirHidraulica  = Boolean.parseBoolean(request.getParameter("temDirHidraulica"));
+
+
+Stacktrace:] with root cause
+	java.lang.NumberFormatException: Cannot parse null string
+		at java.base/java.lang.Integer.parseInt(Integer.java:627)
+		at java.base/java.lang.Integer.parseInt(Integer.java:781)
+		at org.apache.jsp.recebeDadosVeiculo_jsp._jspService(recebeDadosVeiculo_jsp.java:144)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1589)
+30-Jul-2023 22:34:36.179 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/SA_Locadora] threw exception [An exception occurred processing [recebeDadosVeiculo.jsp] at line [19]
+
+16:             String  vModeloVeiculo     = request.getParameter("modeloVeiculo");
+17:             String  vPlacaVeiculo      = request.getParameter("placaVeiculo");
+18:             String  vCorPredominante   = request.getParameter("corPredominante");
+19:             int     vAnoFabricacao     = Integer.parseInt(request.getParameter("anoFabricacao"));
+20:             boolean vDisponivel        = Boolean.parseBoolean(request.getParameter("disponivel"));
+21:             boolean vTemArCondicionado = Boolean.parseBoolean(request.getParameter("temArCondicionado"));
+22:             boolean vTemDirHidraulica  = Boolean.parseBoolean(request.getParameter("temDirHidraulica"));
+
+
+Stacktrace:] with root cause
+	java.lang.NumberFormatException: Cannot parse null string
+		at java.base/java.lang.Integer.parseInt(Integer.java:627)
+		at java.base/java.lang.Integer.parseInt(Integer.java:781)
+		at org.apache.jsp.recebeDadosVeiculo_jsp._jspService(recebeDadosVeiculo_jsp.java:144)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:456)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1589)
+30-Jul-2023 22:35:08.175 SEVERE [http-nio-8080-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/SA_Locadora] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [15] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from String to int
+12:     <body>
+13:         
+14:         <%
+15:             int     vIdAluguel             = request.getParameter("idAluguel");
+16:             int     vIdVeiculo             = request.getParameter("idVeiculo");
+17:             String  vCpfCliente            = request.getParameter("cpfCliente");
+18:             String  vDataAluguel           = request.getParameter("dataAluguel");
+
+
+An error occurred at line: [16] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from String to int
+13:         
+14:         <%
+15:             int     vIdAluguel             = request.getParameter("idAluguel");
+16:             int     vIdVeiculo             = request.getParameter("idVeiculo");
+17:             String  vCpfCliente            = request.getParameter("cpfCliente");
+18:             String  vDataAluguel           = request.getParameter("dataAluguel");
+19:             String  vDataDevolucao         = (request.getParameter("dataDevolucao");
+
+
+An error occurred at line: [19] in the jsp file: [/recebeDadosAluguel.jsp]
+Syntax error, insert ")" to complete Expression
+16:             int     vIdVeiculo             = request.getParameter("idVeiculo");
+17:             String  vCpfCliente            = request.getParameter("cpfCliente");
+18:             String  vDataAluguel           = request.getParameter("dataAluguel");
+19:             String  vDataDevolucao         = (request.getParameter("dataDevolucao");
+20:             String  vDataEstimadaDevolucao = request.getParameter("dataEstimadaDevolucao");
+21:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+22:            
+
+
+An error occurred at line: [23] in the jsp file: [/recebeDadosAluguel.jsp]
+Aluguel cannot be resolved to a type
+20:             String  vDataEstimadaDevolucao = request.getParameter("dataEstimadaDevolucao");
+21:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+22:            
+23:             Aluguel alu = new Aluguel();
+24:             alu.setIdAluguel(vIdAluguel);
+25:             alu.setIdVeiculo(vIdVeiculo);
+26:             alu.setCpfCliente(vCpfCliente);
+
+
+An error occurred at line: [23] in the jsp file: [/recebeDadosAluguel.jsp]
+Aluguel cannot be resolved to a type
+20:             String  vDataEstimadaDevolucao = request.getParameter("dataEstimadaDevolucao");
+21:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+22:            
+23:             Aluguel alu = new Aluguel();
+24:             alu.setIdAluguel(vIdAluguel);
+25:             alu.setIdVeiculo(vIdVeiculo);
+26:             alu.setCpfCliente(vCpfCliente);
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [15] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from String to int
+12:     <body>
+13:         
+14:         <%
+15:             int     vIdAluguel             = request.getParameter("idAluguel");
+16:             int     vIdVeiculo             = request.getParameter("idVeiculo");
+17:             String  vCpfCliente            = request.getParameter("cpfCliente");
+18:             String  vDataAluguel           = request.getParameter("dataAluguel");
+
+
+An error occurred at line: [16] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from String to int
+13:         
+14:         <%
+15:             int     vIdAluguel             = request.getParameter("idAluguel");
+16:             int     vIdVeiculo             = request.getParameter("idVeiculo");
+17:             String  vCpfCliente            = request.getParameter("cpfCliente");
+18:             String  vDataAluguel           = request.getParameter("dataAluguel");
+19:             String  vDataDevolucao         = (request.getParameter("dataDevolucao");
+
+
+An error occurred at line: [19] in the jsp file: [/recebeDadosAluguel.jsp]
+Syntax error, insert ")" to complete Expression
+16:             int     vIdVeiculo             = request.getParameter("idVeiculo");
+17:             String  vCpfCliente            = request.getParameter("cpfCliente");
+18:             String  vDataAluguel           = request.getParameter("dataAluguel");
+19:             String  vDataDevolucao         = (request.getParameter("dataDevolucao");
+20:             String  vDataEstimadaDevolucao = request.getParameter("dataEstimadaDevolucao");
+21:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+22:            
+
+
+An error occurred at line: [23] in the jsp file: [/recebeDadosAluguel.jsp]
+Aluguel cannot be resolved to a type
+20:             String  vDataEstimadaDevolucao = request.getParameter("dataEstimadaDevolucao");
+21:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+22:            
+23:             Aluguel alu = new Aluguel();
+24:             alu.setIdAluguel(vIdAluguel);
+25:             alu.setIdVeiculo(vIdVeiculo);
+26:             alu.setCpfCliente(vCpfCliente);
+
+
+An error occurred at line: [23] in the jsp file: [/recebeDadosAluguel.jsp]
+Aluguel cannot be resolved to a type
+20:             String  vDataEstimadaDevolucao = request.getParameter("dataEstimadaDevolucao");
+21:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+22:            
+23:             Aluguel alu = new Aluguel();
+24:             alu.setIdAluguel(vIdAluguel);
+25:             alu.setIdVeiculo(vIdVeiculo);
+26:             alu.setCpfCliente(vCpfCliente);
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1589)
+30-Jul-2023 22:36:00.834 SEVERE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/SA_Locadora] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [23] in the jsp file: [/recebeDadosAluguel.jsp]
+Aluguel cannot be resolved to a type
+20:             String  vDataEstimadaDevolucao = request.getParameter("dataEstimadaDevolucao");
+21:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+22:            
+23:             Aluguel alu = new Aluguel();
+24:             alu.setIdAluguel(vIdAluguel);
+25:             alu.setIdVeiculo(vIdVeiculo);
+26:             alu.setCpfCliente(vCpfCliente);
+
+
+An error occurred at line: [23] in the jsp file: [/recebeDadosAluguel.jsp]
+Aluguel cannot be resolved to a type
+20:             String  vDataEstimadaDevolucao = request.getParameter("dataEstimadaDevolucao");
+21:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+22:            
+23:             Aluguel alu = new Aluguel();
+24:             alu.setIdAluguel(vIdAluguel);
+25:             alu.setIdVeiculo(vIdVeiculo);
+26:             alu.setCpfCliente(vCpfCliente);
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [23] in the jsp file: [/recebeDadosAluguel.jsp]
+Aluguel cannot be resolved to a type
+20:             String  vDataEstimadaDevolucao = request.getParameter("dataEstimadaDevolucao");
+21:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+22:            
+23:             Aluguel alu = new Aluguel();
+24:             alu.setIdAluguel(vIdAluguel);
+25:             alu.setIdVeiculo(vIdVeiculo);
+26:             alu.setCpfCliente(vCpfCliente);
+
+
+An error occurred at line: [23] in the jsp file: [/recebeDadosAluguel.jsp]
+Aluguel cannot be resolved to a type
+20:             String  vDataEstimadaDevolucao = request.getParameter("dataEstimadaDevolucao");
+21:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+22:            
+23:             Aluguel alu = new Aluguel();
+24:             alu.setIdAluguel(vIdAluguel);
+25:             alu.setIdVeiculo(vIdVeiculo);
+26:             alu.setCpfCliente(vCpfCliente);
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1589)
+30-Jul-2023 22:36:14.266 SEVERE [http-nio-8080-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/SA_Locadora] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [27] in the jsp file: [/recebeDadosAluguel.jsp]
+The method setDataAluguel(Date) in the type Aluguel is not applicable for the arguments (String)
+24:             alu.setIdAluguel(vIdAluguel);
+25:             alu.setIdVeiculo(vIdVeiculo);
+26:             alu.setCpfCliente(vCpfCliente);
+27:             alu.setDataAluguel(vDataAluguel);
+28:             alu.setDataDevolucao(vDataDevolucao);
+29:             alu.setDataEstimadaDevolucao(vDataEstimadaDevolucao);
+30:             alu.setPagamento(vPagamento);
+
+
+An error occurred at line: [28] in the jsp file: [/recebeDadosAluguel.jsp]
+The method setDataDevolucao(Date) in the type Aluguel is not applicable for the arguments (String)
+25:             alu.setIdVeiculo(vIdVeiculo);
+26:             alu.setCpfCliente(vCpfCliente);
+27:             alu.setDataAluguel(vDataAluguel);
+28:             alu.setDataDevolucao(vDataDevolucao);
+29:             alu.setDataEstimadaDevolucao(vDataEstimadaDevolucao);
+30:             alu.setPagamento(vPagamento);
+31:             if (alu.incluirAluguel()){
+
+
+An error occurred at line: [29] in the jsp file: [/recebeDadosAluguel.jsp]
+The method setDataEstimadaDevolucao(Date) in the type Aluguel is not applicable for the arguments (String)
+26:             alu.setCpfCliente(vCpfCliente);
+27:             alu.setDataAluguel(vDataAluguel);
+28:             alu.setDataDevolucao(vDataDevolucao);
+29:             alu.setDataEstimadaDevolucao(vDataEstimadaDevolucao);
+30:             alu.setPagamento(vPagamento);
+31:             if (alu.incluirAluguel()){
+32:                     response.sendRedirect("cadastraCliente.jsp?sucesso=SUCESSO AO CADASTRAR O ALUGUEL");
+
+
+An error occurred at line: [31] in the jsp file: [/recebeDadosAluguel.jsp]
+The method incluirAluguel() is undefined for the type Aluguel
+28:             alu.setDataDevolucao(vDataDevolucao);
+29:             alu.setDataEstimadaDevolucao(vDataEstimadaDevolucao);
+30:             alu.setPagamento(vPagamento);
+31:             if (alu.incluirAluguel()){
+32:                     response.sendRedirect("cadastraCliente.jsp?sucesso=SUCESSO AO CADASTRAR O ALUGUEL");
+33:             } else {
+34:                 response.sendRedirect("cadastraCliente.jsp?erro=PROBLEMAS AO CADASTRAR O ALUGUEL");
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [27] in the jsp file: [/recebeDadosAluguel.jsp]
+The method setDataAluguel(Date) in the type Aluguel is not applicable for the arguments (String)
+24:             alu.setIdAluguel(vIdAluguel);
+25:             alu.setIdVeiculo(vIdVeiculo);
+26:             alu.setCpfCliente(vCpfCliente);
+27:             alu.setDataAluguel(vDataAluguel);
+28:             alu.setDataDevolucao(vDataDevolucao);
+29:             alu.setDataEstimadaDevolucao(vDataEstimadaDevolucao);
+30:             alu.setPagamento(vPagamento);
+
+
+An error occurred at line: [28] in the jsp file: [/recebeDadosAluguel.jsp]
+The method setDataDevolucao(Date) in the type Aluguel is not applicable for the arguments (String)
+25:             alu.setIdVeiculo(vIdVeiculo);
+26:             alu.setCpfCliente(vCpfCliente);
+27:             alu.setDataAluguel(vDataAluguel);
+28:             alu.setDataDevolucao(vDataDevolucao);
+29:             alu.setDataEstimadaDevolucao(vDataEstimadaDevolucao);
+30:             alu.setPagamento(vPagamento);
+31:             if (alu.incluirAluguel()){
+
+
+An error occurred at line: [29] in the jsp file: [/recebeDadosAluguel.jsp]
+The method setDataEstimadaDevolucao(Date) in the type Aluguel is not applicable for the arguments (String)
+26:             alu.setCpfCliente(vCpfCliente);
+27:             alu.setDataAluguel(vDataAluguel);
+28:             alu.setDataDevolucao(vDataDevolucao);
+29:             alu.setDataEstimadaDevolucao(vDataEstimadaDevolucao);
+30:             alu.setPagamento(vPagamento);
+31:             if (alu.incluirAluguel()){
+32:                     response.sendRedirect("cadastraCliente.jsp?sucesso=SUCESSO AO CADASTRAR O ALUGUEL");
+
+
+An error occurred at line: [31] in the jsp file: [/recebeDadosAluguel.jsp]
+The method incluirAluguel() is undefined for the type Aluguel
+28:             alu.setDataDevolucao(vDataDevolucao);
+29:             alu.setDataEstimadaDevolucao(vDataEstimadaDevolucao);
+30:             alu.setPagamento(vPagamento);
+31:             if (alu.incluirAluguel()){
+32:                     response.sendRedirect("cadastraCliente.jsp?sucesso=SUCESSO AO CADASTRAR O ALUGUEL");
+33:             } else {
+34:                 response.sendRedirect("cadastraCliente.jsp?erro=PROBLEMAS AO CADASTRAR O ALUGUEL");
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1589)
+30-Jul-2023 22:36:52.479 SEVERE [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/SA_Locadora] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [27] in the jsp file: [/recebeDadosAluguel.jsp]
+The method setDataAluguel(Date) in the type Aluguel is not applicable for the arguments (String)
+24:             alu.setIdAluguel(vIdAluguel);
+25:             alu.setIdVeiculo(vIdVeiculo);
+26:             alu.setCpfCliente(vCpfCliente);
+27:             alu.setDataAluguel(vDataAluguel);
+28:             alu.setDataDevolucao(vDataDevolucao);
+29:             alu.setDataEstimadaDevolucao(vDataEstimadaDevolucao);
+30:             alu.setPagamento(vPagamento);
+
+
+An error occurred at line: [28] in the jsp file: [/recebeDadosAluguel.jsp]
+The method setDataDevolucao(Date) in the type Aluguel is not applicable for the arguments (String)
+25:             alu.setIdVeiculo(vIdVeiculo);
+26:             alu.setCpfCliente(vCpfCliente);
+27:             alu.setDataAluguel(vDataAluguel);
+28:             alu.setDataDevolucao(vDataDevolucao);
+29:             alu.setDataEstimadaDevolucao(vDataEstimadaDevolucao);
+30:             alu.setPagamento(vPagamento);
+31:             if (alu.locarVeiculo()){
+
+
+An error occurred at line: [29] in the jsp file: [/recebeDadosAluguel.jsp]
+The method setDataEstimadaDevolucao(Date) in the type Aluguel is not applicable for the arguments (String)
+26:             alu.setCpfCliente(vCpfCliente);
+27:             alu.setDataAluguel(vDataAluguel);
+28:             alu.setDataDevolucao(vDataDevolucao);
+29:             alu.setDataEstimadaDevolucao(vDataEstimadaDevolucao);
+30:             alu.setPagamento(vPagamento);
+31:             if (alu.locarVeiculo()){
+32:                     response.sendRedirect("cadastraCliente.jsp?sucesso=SUCESSO AO CADASTRAR O ALUGUEL");
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [27] in the jsp file: [/recebeDadosAluguel.jsp]
+The method setDataAluguel(Date) in the type Aluguel is not applicable for the arguments (String)
+24:             alu.setIdAluguel(vIdAluguel);
+25:             alu.setIdVeiculo(vIdVeiculo);
+26:             alu.setCpfCliente(vCpfCliente);
+27:             alu.setDataAluguel(vDataAluguel);
+28:             alu.setDataDevolucao(vDataDevolucao);
+29:             alu.setDataEstimadaDevolucao(vDataEstimadaDevolucao);
+30:             alu.setPagamento(vPagamento);
+
+
+An error occurred at line: [28] in the jsp file: [/recebeDadosAluguel.jsp]
+The method setDataDevolucao(Date) in the type Aluguel is not applicable for the arguments (String)
+25:             alu.setIdVeiculo(vIdVeiculo);
+26:             alu.setCpfCliente(vCpfCliente);
+27:             alu.setDataAluguel(vDataAluguel);
+28:             alu.setDataDevolucao(vDataDevolucao);
+29:             alu.setDataEstimadaDevolucao(vDataEstimadaDevolucao);
+30:             alu.setPagamento(vPagamento);
+31:             if (alu.locarVeiculo()){
+
+
+An error occurred at line: [29] in the jsp file: [/recebeDadosAluguel.jsp]
+The method setDataEstimadaDevolucao(Date) in the type Aluguel is not applicable for the arguments (String)
+26:             alu.setCpfCliente(vCpfCliente);
+27:             alu.setDataAluguel(vDataAluguel);
+28:             alu.setDataDevolucao(vDataDevolucao);
+29:             alu.setDataEstimadaDevolucao(vDataEstimadaDevolucao);
+30:             alu.setPagamento(vPagamento);
+31:             if (alu.locarVeiculo()){
+32:                     response.sendRedirect("cadastraCliente.jsp?sucesso=SUCESSO AO CADASTRAR O ALUGUEL");
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1589)
+30-Jul-2023 22:37:20.279 SEVERE [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/SA_Locadora] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [18] in the jsp file: [/recebeDadosAluguel.jsp]
+Date cannot be resolved to a type
+15:             int     vIdAluguel             = Integer.parseInt(request.getParameter("idAluguel"));
+16:             int     vIdVeiculo             = Integer.parseInt(request.getParameter("idVeiculo"));
+17:             String  vCpfCliente            = request.getParameter("cpfCliente");
+18:             Date    vDataAluguel           = request.getParameter("dataAluguel");
+19:             Date    vDataDevolucao         = request.getParameter("dataDevolucao");
+20:             Date    vDataEstimadaDevolucao = request.getParameter("dataEstimadaDevolucao");
+21:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+
+
+An error occurred at line: [19] in the jsp file: [/recebeDadosAluguel.jsp]
+Date cannot be resolved to a type
+16:             int     vIdVeiculo             = Integer.parseInt(request.getParameter("idVeiculo"));
+17:             String  vCpfCliente            = request.getParameter("cpfCliente");
+18:             Date    vDataAluguel           = request.getParameter("dataAluguel");
+19:             Date    vDataDevolucao         = request.getParameter("dataDevolucao");
+20:             Date    vDataEstimadaDevolucao = request.getParameter("dataEstimadaDevolucao");
+21:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+22:            
+
+
+An error occurred at line: [20] in the jsp file: [/recebeDadosAluguel.jsp]
+Date cannot be resolved to a type
+17:             String  vCpfCliente            = request.getParameter("cpfCliente");
+18:             Date    vDataAluguel           = request.getParameter("dataAluguel");
+19:             Date    vDataDevolucao         = request.getParameter("dataDevolucao");
+20:             Date    vDataEstimadaDevolucao = request.getParameter("dataEstimadaDevolucao");
+21:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+22:            
+23:             Aluguel alu = new Aluguel();
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [18] in the jsp file: [/recebeDadosAluguel.jsp]
+Date cannot be resolved to a type
+15:             int     vIdAluguel             = Integer.parseInt(request.getParameter("idAluguel"));
+16:             int     vIdVeiculo             = Integer.parseInt(request.getParameter("idVeiculo"));
+17:             String  vCpfCliente            = request.getParameter("cpfCliente");
+18:             Date    vDataAluguel           = request.getParameter("dataAluguel");
+19:             Date    vDataDevolucao         = request.getParameter("dataDevolucao");
+20:             Date    vDataEstimadaDevolucao = request.getParameter("dataEstimadaDevolucao");
+21:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+
+
+An error occurred at line: [19] in the jsp file: [/recebeDadosAluguel.jsp]
+Date cannot be resolved to a type
+16:             int     vIdVeiculo             = Integer.parseInt(request.getParameter("idVeiculo"));
+17:             String  vCpfCliente            = request.getParameter("cpfCliente");
+18:             Date    vDataAluguel           = request.getParameter("dataAluguel");
+19:             Date    vDataDevolucao         = request.getParameter("dataDevolucao");
+20:             Date    vDataEstimadaDevolucao = request.getParameter("dataEstimadaDevolucao");
+21:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+22:            
+
+
+An error occurred at line: [20] in the jsp file: [/recebeDadosAluguel.jsp]
+Date cannot be resolved to a type
+17:             String  vCpfCliente            = request.getParameter("cpfCliente");
+18:             Date    vDataAluguel           = request.getParameter("dataAluguel");
+19:             Date    vDataDevolucao         = request.getParameter("dataDevolucao");
+20:             Date    vDataEstimadaDevolucao = request.getParameter("dataEstimadaDevolucao");
+21:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+22:            
+23:             Aluguel alu = new Aluguel();
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1589)
+30-Jul-2023 22:38:01.192 SEVERE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/SA_Locadora] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [19] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from String to Date
+16:             int     vIdAluguel             = Integer.parseInt(request.getParameter("idAluguel"));
+17:             int     vIdVeiculo             = Integer.parseInt(request.getParameter("idVeiculo"));
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = request.getParameter("dataAluguel");
+20:             Date    vDataDevolucao         = request.getParameter("dataDevolucao");
+21:             Date    vDataEstimadaDevolucao = request.getParameter("dataEstimadaDevolucao");
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+
+
+An error occurred at line: [20] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from String to Date
+17:             int     vIdVeiculo             = Integer.parseInt(request.getParameter("idVeiculo"));
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = request.getParameter("dataAluguel");
+20:             Date    vDataDevolucao         = request.getParameter("dataDevolucao");
+21:             Date    vDataEstimadaDevolucao = request.getParameter("dataEstimadaDevolucao");
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+23:            
+
+
+An error occurred at line: [21] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from String to Date
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = request.getParameter("dataAluguel");
+20:             Date    vDataDevolucao         = request.getParameter("dataDevolucao");
+21:             Date    vDataEstimadaDevolucao = request.getParameter("dataEstimadaDevolucao");
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+23:            
+24:             Aluguel alu = new Aluguel();
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [19] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from String to Date
+16:             int     vIdAluguel             = Integer.parseInt(request.getParameter("idAluguel"));
+17:             int     vIdVeiculo             = Integer.parseInt(request.getParameter("idVeiculo"));
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = request.getParameter("dataAluguel");
+20:             Date    vDataDevolucao         = request.getParameter("dataDevolucao");
+21:             Date    vDataEstimadaDevolucao = request.getParameter("dataEstimadaDevolucao");
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+
+
+An error occurred at line: [20] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from String to Date
+17:             int     vIdVeiculo             = Integer.parseInt(request.getParameter("idVeiculo"));
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = request.getParameter("dataAluguel");
+20:             Date    vDataDevolucao         = request.getParameter("dataDevolucao");
+21:             Date    vDataEstimadaDevolucao = request.getParameter("dataEstimadaDevolucao");
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+23:            
+
+
+An error occurred at line: [21] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from String to Date
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = request.getParameter("dataAluguel");
+20:             Date    vDataDevolucao         = request.getParameter("dataDevolucao");
+21:             Date    vDataEstimadaDevolucao = request.getParameter("dataEstimadaDevolucao");
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+23:            
+24:             Aluguel alu = new Aluguel();
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1589)
+30-Jul-2023 22:40:24.118 SEVERE [http-nio-8080-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/SA_Locadora] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [19] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from long to Date
+16:             int     vIdAluguel             = Integer.parseInt(request.getParameter("idAluguel"));
+17:             int     vIdVeiculo             = Integer.parseInt(request.getParameter("idVeiculo"));
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = Date.parse(request.getParameter("dataAluguel"));
+20:             Date    vDataDevolucao         = Date.parse(request.getParameter("dataDevolucao"));
+21:             Date    vDataEstimadaDevolucao = Date.parse(request.getParameter("dataEstimadaDevolucao"));
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+
+
+An error occurred at line: [20] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from long to Date
+17:             int     vIdVeiculo             = Integer.parseInt(request.getParameter("idVeiculo"));
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = Date.parse(request.getParameter("dataAluguel"));
+20:             Date    vDataDevolucao         = Date.parse(request.getParameter("dataDevolucao"));
+21:             Date    vDataEstimadaDevolucao = Date.parse(request.getParameter("dataEstimadaDevolucao"));
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+23:            
+
+
+An error occurred at line: [21] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from long to Date
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = Date.parse(request.getParameter("dataAluguel"));
+20:             Date    vDataDevolucao         = Date.parse(request.getParameter("dataDevolucao"));
+21:             Date    vDataEstimadaDevolucao = Date.parse(request.getParameter("dataEstimadaDevolucao"));
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+23:            
+24:             Aluguel alu = new Aluguel();
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [19] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from long to Date
+16:             int     vIdAluguel             = Integer.parseInt(request.getParameter("idAluguel"));
+17:             int     vIdVeiculo             = Integer.parseInt(request.getParameter("idVeiculo"));
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = Date.parse(request.getParameter("dataAluguel"));
+20:             Date    vDataDevolucao         = Date.parse(request.getParameter("dataDevolucao"));
+21:             Date    vDataEstimadaDevolucao = Date.parse(request.getParameter("dataEstimadaDevolucao"));
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+
+
+An error occurred at line: [20] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from long to Date
+17:             int     vIdVeiculo             = Integer.parseInt(request.getParameter("idVeiculo"));
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = Date.parse(request.getParameter("dataAluguel"));
+20:             Date    vDataDevolucao         = Date.parse(request.getParameter("dataDevolucao"));
+21:             Date    vDataEstimadaDevolucao = Date.parse(request.getParameter("dataEstimadaDevolucao"));
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+23:            
+
+
+An error occurred at line: [21] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from long to Date
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = Date.parse(request.getParameter("dataAluguel"));
+20:             Date    vDataDevolucao         = Date.parse(request.getParameter("dataDevolucao"));
+21:             Date    vDataEstimadaDevolucao = Date.parse(request.getParameter("dataEstimadaDevolucao"));
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+23:            
+24:             Aluguel alu = new Aluguel();
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1589)
+30-Jul-2023 22:40:55.108 SEVERE [http-nio-8080-exec-13] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/SA_Locadora] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [19] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from String to Date
+16:             int     vIdAluguel             = Integer.parseInt(request.getParameter("idAluguel"));
+17:             int     vIdVeiculo             = Integer.parseInt(request.getParameter("idVeiculo"));
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = request.getParameter("dataAluguel");
+20:             Date    vDataDevolucao         = request.getParameter("dataDevolucao");
+21:             Date    vDataEstimadaDevolucao = request.getParameter("dataEstimadaDevolucao");
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+
+
+An error occurred at line: [20] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from String to Date
+17:             int     vIdVeiculo             = Integer.parseInt(request.getParameter("idVeiculo"));
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = request.getParameter("dataAluguel");
+20:             Date    vDataDevolucao         = request.getParameter("dataDevolucao");
+21:             Date    vDataEstimadaDevolucao = request.getParameter("dataEstimadaDevolucao");
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+23:            
+
+
+An error occurred at line: [21] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from String to Date
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = request.getParameter("dataAluguel");
+20:             Date    vDataDevolucao         = request.getParameter("dataDevolucao");
+21:             Date    vDataEstimadaDevolucao = request.getParameter("dataEstimadaDevolucao");
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+23:            
+24:             Aluguel alu = new Aluguel();
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [19] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from String to Date
+16:             int     vIdAluguel             = Integer.parseInt(request.getParameter("idAluguel"));
+17:             int     vIdVeiculo             = Integer.parseInt(request.getParameter("idVeiculo"));
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = request.getParameter("dataAluguel");
+20:             Date    vDataDevolucao         = request.getParameter("dataDevolucao");
+21:             Date    vDataEstimadaDevolucao = request.getParameter("dataEstimadaDevolucao");
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+
+
+An error occurred at line: [20] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from String to Date
+17:             int     vIdVeiculo             = Integer.parseInt(request.getParameter("idVeiculo"));
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = request.getParameter("dataAluguel");
+20:             Date    vDataDevolucao         = request.getParameter("dataDevolucao");
+21:             Date    vDataEstimadaDevolucao = request.getParameter("dataEstimadaDevolucao");
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+23:            
+
+
+An error occurred at line: [21] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from String to Date
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = request.getParameter("dataAluguel");
+20:             Date    vDataDevolucao         = request.getParameter("dataDevolucao");
+21:             Date    vDataEstimadaDevolucao = request.getParameter("dataEstimadaDevolucao");
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+23:            
+24:             Aluguel alu = new Aluguel();
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1589)
+30-Jul-2023 22:41:10.159 SEVERE [http-nio-8080-exec-16] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/SA_Locadora] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [19] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from long to Date
+16:             int     vIdAluguel             = Integer.parseInt(request.getParameter("idAluguel"));
+17:             int     vIdVeiculo             = Integer.parseInt(request.getParameter("idVeiculo"));
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = Date.parse(request.getParameter("dataAluguel"));
+20:             Date    vDataDevolucao         = Date.parse(request.getParameter("dataDevolucao"));
+21:             Date    vDataEstimadaDevolucao = Date.parse(request.getParameter("dataEstimadaDevolucao"));
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+
+
+An error occurred at line: [20] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from long to Date
+17:             int     vIdVeiculo             = Integer.parseInt(request.getParameter("idVeiculo"));
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = Date.parse(request.getParameter("dataAluguel"));
+20:             Date    vDataDevolucao         = Date.parse(request.getParameter("dataDevolucao"));
+21:             Date    vDataEstimadaDevolucao = Date.parse(request.getParameter("dataEstimadaDevolucao"));
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+23:            
+
+
+An error occurred at line: [21] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from long to Date
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = Date.parse(request.getParameter("dataAluguel"));
+20:             Date    vDataDevolucao         = Date.parse(request.getParameter("dataDevolucao"));
+21:             Date    vDataEstimadaDevolucao = Date.parse(request.getParameter("dataEstimadaDevolucao"));
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+23:            
+24:             Aluguel alu = new Aluguel();
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [19] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from long to Date
+16:             int     vIdAluguel             = Integer.parseInt(request.getParameter("idAluguel"));
+17:             int     vIdVeiculo             = Integer.parseInt(request.getParameter("idVeiculo"));
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = Date.parse(request.getParameter("dataAluguel"));
+20:             Date    vDataDevolucao         = Date.parse(request.getParameter("dataDevolucao"));
+21:             Date    vDataEstimadaDevolucao = Date.parse(request.getParameter("dataEstimadaDevolucao"));
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+
+
+An error occurred at line: [20] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from long to Date
+17:             int     vIdVeiculo             = Integer.parseInt(request.getParameter("idVeiculo"));
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = Date.parse(request.getParameter("dataAluguel"));
+20:             Date    vDataDevolucao         = Date.parse(request.getParameter("dataDevolucao"));
+21:             Date    vDataEstimadaDevolucao = Date.parse(request.getParameter("dataEstimadaDevolucao"));
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+23:            
+
+
+An error occurred at line: [21] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from long to Date
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = Date.parse(request.getParameter("dataAluguel"));
+20:             Date    vDataDevolucao         = Date.parse(request.getParameter("dataDevolucao"));
+21:             Date    vDataEstimadaDevolucao = Date.parse(request.getParameter("dataEstimadaDevolucao"));
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+23:            
+24:             Aluguel alu = new Aluguel();
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1589)
+30-Jul-2023 22:42:57.624 SEVERE [http-nio-8080-exec-17] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/SA_Locadora] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [19] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from long to Date
+16:             int     vIdAluguel             = Integer.parseInt(request.getParameter("idAluguel"));
+17:             int     vIdVeiculo             = Integer.parseInt(request.getParameter("idVeiculo"));
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = Date.parse(request.getParameter("dataAluguel"));
+20:             Date    vDataDevolucao         = Date.parse(request.getParameter("dataDevolucao"));
+21:             Date    vDataEstimadaDevolucao = Date.parse(request.getParameter("dataEstimadaDevolucao"));
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+
+
+An error occurred at line: [20] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from long to Date
+17:             int     vIdVeiculo             = Integer.parseInt(request.getParameter("idVeiculo"));
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = Date.parse(request.getParameter("dataAluguel"));
+20:             Date    vDataDevolucao         = Date.parse(request.getParameter("dataDevolucao"));
+21:             Date    vDataEstimadaDevolucao = Date.parse(request.getParameter("dataEstimadaDevolucao"));
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+23:            
+
+
+An error occurred at line: [21] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from long to Date
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = Date.parse(request.getParameter("dataAluguel"));
+20:             Date    vDataDevolucao         = Date.parse(request.getParameter("dataDevolucao"));
+21:             Date    vDataEstimadaDevolucao = Date.parse(request.getParameter("dataEstimadaDevolucao"));
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+23:            
+24:             Aluguel alu = new Aluguel();
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [19] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from long to Date
+16:             int     vIdAluguel             = Integer.parseInt(request.getParameter("idAluguel"));
+17:             int     vIdVeiculo             = Integer.parseInt(request.getParameter("idVeiculo"));
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = Date.parse(request.getParameter("dataAluguel"));
+20:             Date    vDataDevolucao         = Date.parse(request.getParameter("dataDevolucao"));
+21:             Date    vDataEstimadaDevolucao = Date.parse(request.getParameter("dataEstimadaDevolucao"));
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+
+
+An error occurred at line: [20] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from long to Date
+17:             int     vIdVeiculo             = Integer.parseInt(request.getParameter("idVeiculo"));
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = Date.parse(request.getParameter("dataAluguel"));
+20:             Date    vDataDevolucao         = Date.parse(request.getParameter("dataDevolucao"));
+21:             Date    vDataEstimadaDevolucao = Date.parse(request.getParameter("dataEstimadaDevolucao"));
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+23:            
+
+
+An error occurred at line: [21] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from long to Date
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = Date.parse(request.getParameter("dataAluguel"));
+20:             Date    vDataDevolucao         = Date.parse(request.getParameter("dataDevolucao"));
+21:             Date    vDataEstimadaDevolucao = Date.parse(request.getParameter("dataEstimadaDevolucao"));
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+23:            
+24:             Aluguel alu = new Aluguel();
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1589)
+30-Jul-2023 22:45:01.537 SEVERE [http-nio-8080-exec-25] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/SA_Locadora] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [19] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from long to Date
+16:             int     vIdAluguel             = Integer.parseInt(request.getParameter("idAluguel"));
+17:             int     vIdVeiculo             = Integer.parseInt(request.getParameter("idVeiculo"));
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = Date.parse(String.valueOf(request.getParameter("dataAluguel")));
+20:             Date    vDataDevolucao         = Date.parse(String.valueOf(request.getParameter("dataDevolucao")));
+21:             Date    vDataEstimadaDevolucao = Date.parse(String.valueOf(request.getParameter("dataEstimadaDevolucao")));
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+
+
+An error occurred at line: [20] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from long to Date
+17:             int     vIdVeiculo             = Integer.parseInt(request.getParameter("idVeiculo"));
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = Date.parse(String.valueOf(request.getParameter("dataAluguel")));
+20:             Date    vDataDevolucao         = Date.parse(String.valueOf(request.getParameter("dataDevolucao")));
+21:             Date    vDataEstimadaDevolucao = Date.parse(String.valueOf(request.getParameter("dataEstimadaDevolucao")));
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+23:            
+
+
+An error occurred at line: [21] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from long to Date
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = Date.parse(String.valueOf(request.getParameter("dataAluguel")));
+20:             Date    vDataDevolucao         = Date.parse(String.valueOf(request.getParameter("dataDevolucao")));
+21:             Date    vDataEstimadaDevolucao = Date.parse(String.valueOf(request.getParameter("dataEstimadaDevolucao")));
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+23:            
+24:             Aluguel alu = new Aluguel();
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [19] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from long to Date
+16:             int     vIdAluguel             = Integer.parseInt(request.getParameter("idAluguel"));
+17:             int     vIdVeiculo             = Integer.parseInt(request.getParameter("idVeiculo"));
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = Date.parse(String.valueOf(request.getParameter("dataAluguel")));
+20:             Date    vDataDevolucao         = Date.parse(String.valueOf(request.getParameter("dataDevolucao")));
+21:             Date    vDataEstimadaDevolucao = Date.parse(String.valueOf(request.getParameter("dataEstimadaDevolucao")));
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+
+
+An error occurred at line: [20] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from long to Date
+17:             int     vIdVeiculo             = Integer.parseInt(request.getParameter("idVeiculo"));
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = Date.parse(String.valueOf(request.getParameter("dataAluguel")));
+20:             Date    vDataDevolucao         = Date.parse(String.valueOf(request.getParameter("dataDevolucao")));
+21:             Date    vDataEstimadaDevolucao = Date.parse(String.valueOf(request.getParameter("dataEstimadaDevolucao")));
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+23:            
+
+
+An error occurred at line: [21] in the jsp file: [/recebeDadosAluguel.jsp]
+Type mismatch: cannot convert from long to Date
+18:             String  vCpfCliente            = request.getParameter("cpfCliente");
+19:             Date    vDataAluguel           = Date.parse(String.valueOf(request.getParameter("dataAluguel")));
+20:             Date    vDataDevolucao         = Date.parse(String.valueOf(request.getParameter("dataDevolucao")));
+21:             Date    vDataEstimadaDevolucao = Date.parse(String.valueOf(request.getParameter("dataEstimadaDevolucao")));
+22:             boolean vPagamento             = Boolean.parseBoolean(request.getParameter("pagamento"));
+23:            
+24:             Aluguel alu = new Aluguel();
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1589)
+30-Jul-2023 22:53:19.027 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+30-Jul-2023 22:53:19.027 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+30-Jul-2023 22:53:23.403 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+30-Jul-2023 22:53:23.404 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+30-Jul-2023 22:53:23.409 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@769d513')
+30-Jul-2023 22:56:38.847 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+30-Jul-2023 22:56:38.847 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()

@@ -1,0 +1,714 @@
+09-Aug-2023 08:10:28.175 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+09-Aug-2023 08:10:28.175 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+09-Aug-2023 08:10:28.177 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@76ba13c')
+09-Aug-2023 08:12:04.921 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+09-Aug-2023 08:12:04.921 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+09-Aug-2023 08:13:03.692 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+09-Aug-2023 08:13:03.692 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+09-Aug-2023 08:13:03.694 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@bcec031')
+09-Aug-2023 08:42:19.819 SEVERE [http-nio-8080-exec-4] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/SA_Locadora] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [118] in the jsp file: [/form/consultar/back/consultar_cliente.jsp]
+c cannot be resolved
+115:                     <tr>
+116:                         
+117:                         <td class="alterar">
+118:                             <a href="../../alterar/cliente.jsp?cpf=<%=c.getCpfCliente()%>&nome=<%=c.getNomeCliente()%>&fone=<%=c.getFoneCliente()%>&email=<%=c.getEmailCliente()%>&cartao=<%=c.getNrCartaoDebCred()%>&pix=<%=c.getChavePix()%>">
+119:                                 <b>Alterar</b>
+120:                             </a>
+121:                         </td>
+
+
+An error occurred at line: [118] in the jsp file: [/form/consultar/back/consultar_cliente.jsp]
+c cannot be resolved
+115:                     <tr>
+116:                         
+117:                         <td class="alterar">
+118:                             <a href="../../alterar/cliente.jsp?cpf=<%=c.getCpfCliente()%>&nome=<%=c.getNomeCliente()%>&fone=<%=c.getFoneCliente()%>&email=<%=c.getEmailCliente()%>&cartao=<%=c.getNrCartaoDebCred()%>&pix=<%=c.getChavePix()%>">
+119:                                 <b>Alterar</b>
+120:                             </a>
+121:                         </td>
+
+
+An error occurred at line: [118] in the jsp file: [/form/consultar/back/consultar_cliente.jsp]
+c cannot be resolved
+115:                     <tr>
+116:                         
+117:                         <td class="alterar">
+118:                             <a href="../../alterar/cliente.jsp?cpf=<%=c.getCpfCliente()%>&nome=<%=c.getNomeCliente()%>&fone=<%=c.getFoneCliente()%>&email=<%=c.getEmailCliente()%>&cartao=<%=c.getNrCartaoDebCred()%>&pix=<%=c.getChavePix()%>">
+119:                                 <b>Alterar</b>
+120:                             </a>
+121:                         </td>
+
+
+An error occurred at line: [118] in the jsp file: [/form/consultar/back/consultar_cliente.jsp]
+c cannot be resolved
+115:                     <tr>
+116:                         
+117:                         <td class="alterar">
+118:                             <a href="../../alterar/cliente.jsp?cpf=<%=c.getCpfCliente()%>&nome=<%=c.getNomeCliente()%>&fone=<%=c.getFoneCliente()%>&email=<%=c.getEmailCliente()%>&cartao=<%=c.getNrCartaoDebCred()%>&pix=<%=c.getChavePix()%>">
+119:                                 <b>Alterar</b>
+120:                             </a>
+121:                         </td>
+
+
+An error occurred at line: [118] in the jsp file: [/form/consultar/back/consultar_cliente.jsp]
+c cannot be resolved
+115:                     <tr>
+116:                         
+117:                         <td class="alterar">
+118:                             <a href="../../alterar/cliente.jsp?cpf=<%=c.getCpfCliente()%>&nome=<%=c.getNomeCliente()%>&fone=<%=c.getFoneCliente()%>&email=<%=c.getEmailCliente()%>&cartao=<%=c.getNrCartaoDebCred()%>&pix=<%=c.getChavePix()%>">
+119:                                 <b>Alterar</b>
+120:                             </a>
+121:                         </td>
+
+
+An error occurred at line: [118] in the jsp file: [/form/consultar/back/consultar_cliente.jsp]
+c cannot be resolved
+115:                     <tr>
+116:                         
+117:                         <td class="alterar">
+118:                             <a href="../../alterar/cliente.jsp?cpf=<%=c.getCpfCliente()%>&nome=<%=c.getNomeCliente()%>&fone=<%=c.getFoneCliente()%>&email=<%=c.getEmailCliente()%>&cartao=<%=c.getNrCartaoDebCred()%>&pix=<%=c.getChavePix()%>">
+119:                                 <b>Alterar</b>
+120:                             </a>
+121:                         </td>
+
+
+An error occurred at line: [160] in the jsp file: [/form/consultar/back/consultar_cliente.jsp]
+c cannot be resolved
+157:                         </td>
+158:                         
+159:                         <td class="excluir">
+160:                             <a href="../../excluir/cliente.jsp?cpf=<%=c.getCpfCliente()%>">
+161:                                 <b>Excluir</b>
+162:                             </a>
+163:                         </td>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [118] in the jsp file: [/form/consultar/back/consultar_cliente.jsp]
+c cannot be resolved
+115:                     <tr>
+116:                         
+117:                         <td class="alterar">
+118:                             <a href="../../alterar/cliente.jsp?cpf=<%=c.getCpfCliente()%>&nome=<%=c.getNomeCliente()%>&fone=<%=c.getFoneCliente()%>&email=<%=c.getEmailCliente()%>&cartao=<%=c.getNrCartaoDebCred()%>&pix=<%=c.getChavePix()%>">
+119:                                 <b>Alterar</b>
+120:                             </a>
+121:                         </td>
+
+
+An error occurred at line: [118] in the jsp file: [/form/consultar/back/consultar_cliente.jsp]
+c cannot be resolved
+115:                     <tr>
+116:                         
+117:                         <td class="alterar">
+118:                             <a href="../../alterar/cliente.jsp?cpf=<%=c.getCpfCliente()%>&nome=<%=c.getNomeCliente()%>&fone=<%=c.getFoneCliente()%>&email=<%=c.getEmailCliente()%>&cartao=<%=c.getNrCartaoDebCred()%>&pix=<%=c.getChavePix()%>">
+119:                                 <b>Alterar</b>
+120:                             </a>
+121:                         </td>
+
+
+An error occurred at line: [118] in the jsp file: [/form/consultar/back/consultar_cliente.jsp]
+c cannot be resolved
+115:                     <tr>
+116:                         
+117:                         <td class="alterar">
+118:                             <a href="../../alterar/cliente.jsp?cpf=<%=c.getCpfCliente()%>&nome=<%=c.getNomeCliente()%>&fone=<%=c.getFoneCliente()%>&email=<%=c.getEmailCliente()%>&cartao=<%=c.getNrCartaoDebCred()%>&pix=<%=c.getChavePix()%>">
+119:                                 <b>Alterar</b>
+120:                             </a>
+121:                         </td>
+
+
+An error occurred at line: [118] in the jsp file: [/form/consultar/back/consultar_cliente.jsp]
+c cannot be resolved
+115:                     <tr>
+116:                         
+117:                         <td class="alterar">
+118:                             <a href="../../alterar/cliente.jsp?cpf=<%=c.getCpfCliente()%>&nome=<%=c.getNomeCliente()%>&fone=<%=c.getFoneCliente()%>&email=<%=c.getEmailCliente()%>&cartao=<%=c.getNrCartaoDebCred()%>&pix=<%=c.getChavePix()%>">
+119:                                 <b>Alterar</b>
+120:                             </a>
+121:                         </td>
+
+
+An error occurred at line: [118] in the jsp file: [/form/consultar/back/consultar_cliente.jsp]
+c cannot be resolved
+115:                     <tr>
+116:                         
+117:                         <td class="alterar">
+118:                             <a href="../../alterar/cliente.jsp?cpf=<%=c.getCpfCliente()%>&nome=<%=c.getNomeCliente()%>&fone=<%=c.getFoneCliente()%>&email=<%=c.getEmailCliente()%>&cartao=<%=c.getNrCartaoDebCred()%>&pix=<%=c.getChavePix()%>">
+119:                                 <b>Alterar</b>
+120:                             </a>
+121:                         </td>
+
+
+An error occurred at line: [118] in the jsp file: [/form/consultar/back/consultar_cliente.jsp]
+c cannot be resolved
+115:                     <tr>
+116:                         
+117:                         <td class="alterar">
+118:                             <a href="../../alterar/cliente.jsp?cpf=<%=c.getCpfCliente()%>&nome=<%=c.getNomeCliente()%>&fone=<%=c.getFoneCliente()%>&email=<%=c.getEmailCliente()%>&cartao=<%=c.getNrCartaoDebCred()%>&pix=<%=c.getChavePix()%>">
+119:                                 <b>Alterar</b>
+120:                             </a>
+121:                         </td>
+
+
+An error occurred at line: [160] in the jsp file: [/form/consultar/back/consultar_cliente.jsp]
+c cannot be resolved
+157:                         </td>
+158:                         
+159:                         <td class="excluir">
+160:                             <a href="../../excluir/cliente.jsp?cpf=<%=c.getCpfCliente()%>">
+161:                                 <b>Excluir</b>
+162:                             </a>
+163:                         </td>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+09-Aug-2023 08:51:56.965 SEVERE [http-nio-8080-exec-4] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/SA_Locadora] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [134] in the jsp file: [/form/consultar/back/consultar_veiculo.jsp]
+Syntax error on token(s), misplaced construct(s)
+131:                     <tr>
+132:                         
+133:                         <td class="alterar">
+134:                             <a href="../../alterar/veiculo.jsp?id=<%=vei.getIdVeiculo()%>&marca=<%=vei.getMarcaVeiculo()%>&modelo=<%=vei.getModeloVeiculo()%>&placa=<%=vei.getPlacaVeiculo()%>&corPredominante=<%=vei.getCorPredominante()%>&anoFabricacao=<%=vei.getAnoFabricacao()&disponivel=<%=vei.isDisponivel()%>&arCondicionado=<%=vei.isTemArCondicionado()%>&dirHidraulica=<%=vei.isTemDirHidraulica()%>&revisado=<%=vei.isRevisado()%>">
+135:                                 <b>Alterar</b>
+136:                             </a>
+137:                         </td>
+
+
+An error occurred at line: [134] in the jsp file: [/form/consultar/back/consultar_veiculo.jsp]
+Syntax error on token "<", invalid Expression
+131:                     <tr>
+132:                         
+133:                         <td class="alterar">
+134:                             <a href="../../alterar/veiculo.jsp?id=<%=vei.getIdVeiculo()%>&marca=<%=vei.getMarcaVeiculo()%>&modelo=<%=vei.getModeloVeiculo()%>&placa=<%=vei.getPlacaVeiculo()%>&corPredominante=<%=vei.getCorPredominante()%>&anoFabricacao=<%=vei.getAnoFabricacao()&disponivel=<%=vei.isDisponivel()%>&arCondicionado=<%=vei.isTemArCondicionado()%>&dirHidraulica=<%=vei.isTemDirHidraulica()%>&revisado=<%=vei.isRevisado()%>">
+135:                                 <b>Alterar</b>
+136:                             </a>
+137:                         </td>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [134] in the jsp file: [/form/consultar/back/consultar_veiculo.jsp]
+Syntax error on token(s), misplaced construct(s)
+131:                     <tr>
+132:                         
+133:                         <td class="alterar">
+134:                             <a href="../../alterar/veiculo.jsp?id=<%=vei.getIdVeiculo()%>&marca=<%=vei.getMarcaVeiculo()%>&modelo=<%=vei.getModeloVeiculo()%>&placa=<%=vei.getPlacaVeiculo()%>&corPredominante=<%=vei.getCorPredominante()%>&anoFabricacao=<%=vei.getAnoFabricacao()&disponivel=<%=vei.isDisponivel()%>&arCondicionado=<%=vei.isTemArCondicionado()%>&dirHidraulica=<%=vei.isTemDirHidraulica()%>&revisado=<%=vei.isRevisado()%>">
+135:                                 <b>Alterar</b>
+136:                             </a>
+137:                         </td>
+
+
+An error occurred at line: [134] in the jsp file: [/form/consultar/back/consultar_veiculo.jsp]
+Syntax error on token "<", invalid Expression
+131:                     <tr>
+132:                         
+133:                         <td class="alterar">
+134:                             <a href="../../alterar/veiculo.jsp?id=<%=vei.getIdVeiculo()%>&marca=<%=vei.getMarcaVeiculo()%>&modelo=<%=vei.getModeloVeiculo()%>&placa=<%=vei.getPlacaVeiculo()%>&corPredominante=<%=vei.getCorPredominante()%>&anoFabricacao=<%=vei.getAnoFabricacao()&disponivel=<%=vei.isDisponivel()%>&arCondicionado=<%=vei.isTemArCondicionado()%>&dirHidraulica=<%=vei.isTemDirHidraulica()%>&revisado=<%=vei.isRevisado()%>">
+135:                                 <b>Alterar</b>
+136:                             </a>
+137:                         </td>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+09-Aug-2023 08:52:58.476 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/SA_Locadora] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [200] in the jsp file: [/form/consultar/back/consultar_veiculo.jsp]
+cli cannot be resolved
+197:                         </td>
+198:                         
+199:                         <td class="excluir">
+200:                             <a href="../../excluir/cliente.jsp?cpf=<%=cli.getCpfCliente()%>">
+201:                                 <b>Excluir</b>
+202:                             </a>
+203:                         </td>
+
+
+An error occurred at line: [279] in the jsp file: [/form/consultar/back/consultar_veiculo.jsp]
+cli cannot be resolved
+276:                     <tr>
+277:                         
+278:                         <td class="alterar">
+279:                             <a href="../../alterar/cliente.jsp?cpf=<%=cli.getCpfCliente()%>&nome=<%=cli.getNomeCliente()%>&fone=<%=cli.getFoneCliente()%>&email=<%=cli.getEmailCliente()%>&cartao=<%=cli.getNrCartaoDebCred()%>&pix=<%=cli.getChavePix()%>">
+280:                                 <b>Alterar</b>
+281:                             </a>
+282:                         </td>
+
+
+An error occurred at line: [279] in the jsp file: [/form/consultar/back/consultar_veiculo.jsp]
+cli cannot be resolved
+276:                     <tr>
+277:                         
+278:                         <td class="alterar">
+279:                             <a href="../../alterar/cliente.jsp?cpf=<%=cli.getCpfCliente()%>&nome=<%=cli.getNomeCliente()%>&fone=<%=cli.getFoneCliente()%>&email=<%=cli.getEmailCliente()%>&cartao=<%=cli.getNrCartaoDebCred()%>&pix=<%=cli.getChavePix()%>">
+280:                                 <b>Alterar</b>
+281:                             </a>
+282:                         </td>
+
+
+An error occurred at line: [279] in the jsp file: [/form/consultar/back/consultar_veiculo.jsp]
+cli cannot be resolved
+276:                     <tr>
+277:                         
+278:                         <td class="alterar">
+279:                             <a href="../../alterar/cliente.jsp?cpf=<%=cli.getCpfCliente()%>&nome=<%=cli.getNomeCliente()%>&fone=<%=cli.getFoneCliente()%>&email=<%=cli.getEmailCliente()%>&cartao=<%=cli.getNrCartaoDebCred()%>&pix=<%=cli.getChavePix()%>">
+280:                                 <b>Alterar</b>
+281:                             </a>
+282:                         </td>
+
+
+An error occurred at line: [279] in the jsp file: [/form/consultar/back/consultar_veiculo.jsp]
+cli cannot be resolved
+276:                     <tr>
+277:                         
+278:                         <td class="alterar">
+279:                             <a href="../../alterar/cliente.jsp?cpf=<%=cli.getCpfCliente()%>&nome=<%=cli.getNomeCliente()%>&fone=<%=cli.getFoneCliente()%>&email=<%=cli.getEmailCliente()%>&cartao=<%=cli.getNrCartaoDebCred()%>&pix=<%=cli.getChavePix()%>">
+280:                                 <b>Alterar</b>
+281:                             </a>
+282:                         </td>
+
+
+An error occurred at line: [279] in the jsp file: [/form/consultar/back/consultar_veiculo.jsp]
+cli cannot be resolved
+276:                     <tr>
+277:                         
+278:                         <td class="alterar">
+279:                             <a href="../../alterar/cliente.jsp?cpf=<%=cli.getCpfCliente()%>&nome=<%=cli.getNomeCliente()%>&fone=<%=cli.getFoneCliente()%>&email=<%=cli.getEmailCliente()%>&cartao=<%=cli.getNrCartaoDebCred()%>&pix=<%=cli.getChavePix()%>">
+280:                                 <b>Alterar</b>
+281:                             </a>
+282:                         </td>
+
+
+An error occurred at line: [279] in the jsp file: [/form/consultar/back/consultar_veiculo.jsp]
+cli cannot be resolved
+276:                     <tr>
+277:                         
+278:                         <td class="alterar">
+279:                             <a href="../../alterar/cliente.jsp?cpf=<%=cli.getCpfCliente()%>&nome=<%=cli.getNomeCliente()%>&fone=<%=cli.getFoneCliente()%>&email=<%=cli.getEmailCliente()%>&cartao=<%=cli.getNrCartaoDebCred()%>&pix=<%=cli.getChavePix()%>">
+280:                                 <b>Alterar</b>
+281:                             </a>
+282:                         </td>
+
+
+An error occurred at line: [345] in the jsp file: [/form/consultar/back/consultar_veiculo.jsp]
+cli cannot be resolved
+342:                         </td>
+343:                         
+344:                         <td class="excluir">
+345:                             <a href="../../excluir/cliente.jsp?cpf=<%=cli.getCpfCliente()%>">
+346:                                 <b>Excluir</b>
+347:                             </a>
+348:                         </td>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [200] in the jsp file: [/form/consultar/back/consultar_veiculo.jsp]
+cli cannot be resolved
+197:                         </td>
+198:                         
+199:                         <td class="excluir">
+200:                             <a href="../../excluir/cliente.jsp?cpf=<%=cli.getCpfCliente()%>">
+201:                                 <b>Excluir</b>
+202:                             </a>
+203:                         </td>
+
+
+An error occurred at line: [279] in the jsp file: [/form/consultar/back/consultar_veiculo.jsp]
+cli cannot be resolved
+276:                     <tr>
+277:                         
+278:                         <td class="alterar">
+279:                             <a href="../../alterar/cliente.jsp?cpf=<%=cli.getCpfCliente()%>&nome=<%=cli.getNomeCliente()%>&fone=<%=cli.getFoneCliente()%>&email=<%=cli.getEmailCliente()%>&cartao=<%=cli.getNrCartaoDebCred()%>&pix=<%=cli.getChavePix()%>">
+280:                                 <b>Alterar</b>
+281:                             </a>
+282:                         </td>
+
+
+An error occurred at line: [279] in the jsp file: [/form/consultar/back/consultar_veiculo.jsp]
+cli cannot be resolved
+276:                     <tr>
+277:                         
+278:                         <td class="alterar">
+279:                             <a href="../../alterar/cliente.jsp?cpf=<%=cli.getCpfCliente()%>&nome=<%=cli.getNomeCliente()%>&fone=<%=cli.getFoneCliente()%>&email=<%=cli.getEmailCliente()%>&cartao=<%=cli.getNrCartaoDebCred()%>&pix=<%=cli.getChavePix()%>">
+280:                                 <b>Alterar</b>
+281:                             </a>
+282:                         </td>
+
+
+An error occurred at line: [279] in the jsp file: [/form/consultar/back/consultar_veiculo.jsp]
+cli cannot be resolved
+276:                     <tr>
+277:                         
+278:                         <td class="alterar">
+279:                             <a href="../../alterar/cliente.jsp?cpf=<%=cli.getCpfCliente()%>&nome=<%=cli.getNomeCliente()%>&fone=<%=cli.getFoneCliente()%>&email=<%=cli.getEmailCliente()%>&cartao=<%=cli.getNrCartaoDebCred()%>&pix=<%=cli.getChavePix()%>">
+280:                                 <b>Alterar</b>
+281:                             </a>
+282:                         </td>
+
+
+An error occurred at line: [279] in the jsp file: [/form/consultar/back/consultar_veiculo.jsp]
+cli cannot be resolved
+276:                     <tr>
+277:                         
+278:                         <td class="alterar">
+279:                             <a href="../../alterar/cliente.jsp?cpf=<%=cli.getCpfCliente()%>&nome=<%=cli.getNomeCliente()%>&fone=<%=cli.getFoneCliente()%>&email=<%=cli.getEmailCliente()%>&cartao=<%=cli.getNrCartaoDebCred()%>&pix=<%=cli.getChavePix()%>">
+280:                                 <b>Alterar</b>
+281:                             </a>
+282:                         </td>
+
+
+An error occurred at line: [279] in the jsp file: [/form/consultar/back/consultar_veiculo.jsp]
+cli cannot be resolved
+276:                     <tr>
+277:                         
+278:                         <td class="alterar">
+279:                             <a href="../../alterar/cliente.jsp?cpf=<%=cli.getCpfCliente()%>&nome=<%=cli.getNomeCliente()%>&fone=<%=cli.getFoneCliente()%>&email=<%=cli.getEmailCliente()%>&cartao=<%=cli.getNrCartaoDebCred()%>&pix=<%=cli.getChavePix()%>">
+280:                                 <b>Alterar</b>
+281:                             </a>
+282:                         </td>
+
+
+An error occurred at line: [279] in the jsp file: [/form/consultar/back/consultar_veiculo.jsp]
+cli cannot be resolved
+276:                     <tr>
+277:                         
+278:                         <td class="alterar">
+279:                             <a href="../../alterar/cliente.jsp?cpf=<%=cli.getCpfCliente()%>&nome=<%=cli.getNomeCliente()%>&fone=<%=cli.getFoneCliente()%>&email=<%=cli.getEmailCliente()%>&cartao=<%=cli.getNrCartaoDebCred()%>&pix=<%=cli.getChavePix()%>">
+280:                                 <b>Alterar</b>
+281:                             </a>
+282:                         </td>
+
+
+An error occurred at line: [345] in the jsp file: [/form/consultar/back/consultar_veiculo.jsp]
+cli cannot be resolved
+342:                         </td>
+343:                         
+344:                         <td class="excluir">
+345:                             <a href="../../excluir/cliente.jsp?cpf=<%=cli.getCpfCliente()%>">
+346:                                 <b>Excluir</b>
+347:                             </a>
+348:                         </td>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+09-Aug-2023 09:03:29.220 SEVERE [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/SA_Locadora] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the jsp file: [/form/alterar/veiculo.jsp]
+Syntax error, insert ";" to complete Statement
+13:         <link href="../../css/global.css" rel="stylesheet">
+14:         <link href="../../css/form.css" rel="stylesheet">
+15:         <script type="text/javascript">
+16:             var disponivelRequest = <%request.getParameter("disponivel")%>;
+17:             var disponivelCheckbox = document.getElementById("disponivel");
+18:             
+19:             if(disponivelRequest === "true") {
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the jsp file: [/form/alterar/veiculo.jsp]
+Syntax error, insert ";" to complete Statement
+13:         <link href="../../css/global.css" rel="stylesheet">
+14:         <link href="../../css/form.css" rel="stylesheet">
+15:         <script type="text/javascript">
+16:             var disponivelRequest = <%request.getParameter("disponivel")%>;
+17:             var disponivelCheckbox = document.getElementById("disponivel");
+18:             
+19:             if(disponivelRequest === "true") {
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+09-Aug-2023 09:05:46.911 SEVERE [http-nio-8080-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/SA_Locadora] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the jsp file: [/form/alterar/veiculo.jsp]
+Syntax error, insert ";" to complete Statement
+13:         <link href="../../css/global.css" rel="stylesheet">
+14:         <link href="../../css/form.css" rel="stylesheet">
+15:         <script type="text/javascript">
+16:             var disponivelRequest = <%request.getParameter("disponivel")%>;
+17:             console.log(disponivelRequest);
+18:             console.log("disponivelRequest");
+19:             var disponivelCheckbox = document.getElementById("disponivel");
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [16] in the jsp file: [/form/alterar/veiculo.jsp]
+Syntax error, insert ";" to complete Statement
+13:         <link href="../../css/global.css" rel="stylesheet">
+14:         <link href="../../css/form.css" rel="stylesheet">
+15:         <script type="text/javascript">
+16:             var disponivelRequest = <%request.getParameter("disponivel")%>;
+17:             console.log(disponivelRequest);
+18:             console.log("disponivelRequest");
+19:             var disponivelCheckbox = document.getElementById("disponivel");
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+09-Aug-2023 09:24:10.699 SEVERE [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/SA_Locadora] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [171] in the jsp file: [/form/consultar/back/consultar_aluguel.jsp]
+Syntax error, insert ";" to complete Statement
+168:                         </td>
+169:                         
+170:                         <td class="excluir">
+171:                             <a href="../../excluir/aluguel.jsp?idAluguel=<%=a.getIdAluguel()%>&cpfCliente=<%a.getCpfCliente()%>">
+172:                                 <b>Excluir</b>
+173:                             </a>
+174:                         </td>
+
+
+An error occurred at line: [295] in the jsp file: [/form/consultar/back/consultar_aluguel.jsp]
+Syntax error, insert ";" to complete Statement
+292:                         </td>
+293:                         
+294:                         <td class="excluir">
+295:                             <a href="../../excluir/aluguel.jsp?idAluguel=<%=a.getIdAluguel()%>&cpfCliente=<%a.getCpfCliente()%>">
+296:                                 <b>Excluir</b>
+297:                             </a>
+298:                         </td>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [171] in the jsp file: [/form/consultar/back/consultar_aluguel.jsp]
+Syntax error, insert ";" to complete Statement
+168:                         </td>
+169:                         
+170:                         <td class="excluir">
+171:                             <a href="../../excluir/aluguel.jsp?idAluguel=<%=a.getIdAluguel()%>&cpfCliente=<%a.getCpfCliente()%>">
+172:                                 <b>Excluir</b>
+173:                             </a>
+174:                         </td>
+
+
+An error occurred at line: [295] in the jsp file: [/form/consultar/back/consultar_aluguel.jsp]
+Syntax error, insert ";" to complete Statement
+292:                         </td>
+293:                         
+294:                         <td class="excluir">
+295:                             <a href="../../excluir/aluguel.jsp?idAluguel=<%=a.getIdAluguel()%>&cpfCliente=<%a.getCpfCliente()%>">
+296:                                 <b>Excluir</b>
+297:                             </a>
+298:                         </td>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:513)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:402)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:372)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:356)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:603)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:396)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:380)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:328)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:631)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:676)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+09-Aug-2023 10:33:14.126 INFO [Catalina-utility-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+09-Aug-2023 10:33:14.126 INFO [Catalina-utility-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+09-Aug-2023 10:34:57.524 INFO [Catalina-utility-2] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+09-Aug-2023 10:34:57.524 INFO [Catalina-utility-2] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+09-Aug-2023 10:34:57.528 INFO [Catalina-utility-2] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@1bfc21e1')
+09-Aug-2023 10:35:31.532 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+09-Aug-2023 10:35:31.532 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+09-Aug-2023 10:36:22.953 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+09-Aug-2023 10:36:22.953 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+09-Aug-2023 10:36:22.955 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@2b0b7e5a')
