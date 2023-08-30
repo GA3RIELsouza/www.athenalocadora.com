@@ -135,11 +135,11 @@
             
             <div class="form-button">
                 <button type="submit">
-                    Enviar
+                    Confirmar
                 </button>
                 
                 <button type="reset" onclick="limpaForm()">
-                    Reset
+                    Reiniciar
                 </button>
             </div>
         </form>

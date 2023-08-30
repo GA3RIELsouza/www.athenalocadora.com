@@ -194,11 +194,11 @@
             
             <div class="form-button">
                 <button type="submit">
-                    Enviar
+                    Confirmar
                 </button>
                 
                 <button type="reset">
-                    Reset
+                    Reiniciar
                 </button>
             </div>
         </form>
