@@ -56,7 +56,7 @@
             
         <div class="vertical-space"></div>
         
-        <form action="back/excluir_modelo.jsp" method="post" class="outer">
+        <form action="java/excluir_modelo.jsp" method="post" class="outer">
             
             <div class="sucesso" id="sucesso">
                 <%

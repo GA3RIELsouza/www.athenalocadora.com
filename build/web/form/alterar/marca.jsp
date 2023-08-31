@@ -55,7 +55,7 @@
             
         <div class="vertical-space"></div>
         
-        <form action="back/alterar_marca.jsp" method="post" class="outer">
+        <form action="java/alterar_marca.jsp" method="post" class="outer">
             
             <div class="sucesso" id="sucesso">
                 <%

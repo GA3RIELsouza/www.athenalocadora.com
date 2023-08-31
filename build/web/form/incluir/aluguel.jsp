@@ -55,7 +55,7 @@
         
         <div class="vertical-space"></div>
         
-        <form action="back/incluir_aluguel.jsp" method="post" class="outer">
+        <form action="java/incluir_aluguel.jsp" method="post" class="outer">
             
             <div class="sucesso" id="sucesso">
                 <%

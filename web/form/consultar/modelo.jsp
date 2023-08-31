@@ -98,7 +98,7 @@
             
         <div class="vertical-space"></div>
         
-        <form action="back/consultar_modelo.jsp" method="post" class="outer">
+        <form action="java/consultar_modelo.jsp" method="post" class="outer">
             
             <div class="form-input">
                 <label for="modoConsulta">Modo de consulta</label><br>
