@@ -1,4 +1,5 @@
 <%@include file="/include/check_login.jsp"%>
+<%@page import="classes.Veiculos"%>
 <%@page import="classes.Clientes"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
@@ -73,7 +74,29 @@
             
             <div class="form-input">
                 <label for="idVeiculo">ID do veículo</label><br>
-                <input type="number" step="1" pattern="\d+" id="idVeiculo" name="idVeiculo" placeholder="Insira o ID do veículo" min="1" max="2147483647" required>
+                <select name="idVeiculo" id="idVeiculo" required>
+                    <option value="" disabled selected>Insira o ID do veículo</option>
+                    <%
+                        Veiculos vei = new Veiculos();
+                        List<Veiculos> listaVeiculos = new ArrayList<>();
+                        listaVeiculos = vei.consultarVeiculos();
+                        
+                        int idVeiculoConsulta = 0;
+
+                        String idVei = request.getParameter("id");
+                        if (idVei != null && !idVei.isEmpty()) {
+                            idVeiculoConsulta = Integer.parseInt(idVei);
+                        }
+                        
+                        for(Veiculos v : listaVeiculos) {
+                            int    fIdVeiculo = v.getIdVeiculo();
+                            String selectedAttribute = (fIdVeiculo==idVeiculoConsulta) ? "selected" : "";
+                    %>
+                    <option value="<%= fIdVeiculo%>" <%= selectedAttribute %>><%= fIdVeiculo%></option>
+                    <%
+                        }
+                    %>
+                </select>
             </div>
             
             <div class="form-input">
