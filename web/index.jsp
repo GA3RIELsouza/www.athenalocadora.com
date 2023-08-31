@@ -7,7 +7,7 @@
         
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Efetuar login | Athena Locadora</title>
+        <title>Login | Athena Locadora</title>
         
         <link rel="icon" type="image/x-icon" href="images/favicon.ico?v=1">
         <link href="css/styles.css" rel="stylesheet">
@@ -26,7 +26,7 @@
         <form action="login.jsp" method="post" class="outer">
             
             <h1 class="title">
-                Efetuar login
+                Login
             </h1>
             
             <div class="sucesso" id="sucesso">

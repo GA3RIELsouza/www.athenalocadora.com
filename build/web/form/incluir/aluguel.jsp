@@ -127,7 +127,7 @@
             </div>
             
             <div class="form-input">
-                <label for="dataDevolucao">Data de devolução <small class="no-select"><small>(não preencha caso a devolução não tenha sido feita)</small></small></label><br>
+                <label for="dataDevolucao">Data de devolução <small class="no-select">(campo não obrigatório)</small></label><br>
                 <input type="datetime-local" id="dataDevolucao" name="dataDevolucao">
             </div>
             
