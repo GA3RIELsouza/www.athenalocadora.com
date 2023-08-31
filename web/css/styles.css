@@ -75,7 +75,7 @@ header {
     background-color: var(--color4);
     padding: 10px;
     border: 0px;
-    filter: drop-shadow(1px 1px 3px black);
+    filter: drop-shadow(-5px 1px 3px black);
     z-index:10;
 }
 
