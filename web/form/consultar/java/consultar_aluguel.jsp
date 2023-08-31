@@ -36,7 +36,7 @@
             <div class="operation-selector">
 
                 <a href="../../incluir/aluguel.jsp" class="operation">
-                    Incluir
+                    Locar
                 </a>
 
                 <a href="../../excluir/aluguel.jsp" class="operation">
