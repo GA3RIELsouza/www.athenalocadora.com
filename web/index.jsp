@@ -1,9 +1,32 @@
+<%@page import="classes.Usuarios"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
 <html lang="pt">
     
     <head>
+        
+        <%
+            Cookie[] cookies = request.getCookies();
+            Usuarios  usu     = new Usuarios();
+            boolean  ok       = false;
+
+            if(cookies != null) {
+               for(Cookie atual : cookies) {
+                    if(atual.getName().equals("sessionId")) {
+                        usu.setSessionId(atual.getValue());
+
+                        if(usu.checkSessionId()) {
+                            ok = true;
+                        }
+                    }
+                }
+            }
+
+            if(ok == true) {
+                response.sendRedirect("/www.athenalocadora.com/inicio.jsp");
+            }
+        %>
         
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
