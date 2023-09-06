@@ -14,21 +14,57 @@ public class Modelos {
     private int     idMarca;
     private String  nomeModelo;
     private String  tipoModelo;
+    
+    public int auto_increment() throws SQLException {
+        
+        Connection con = Conexao.conectar();
+        String sql  = "SELECT MAX(idModelo) ";
+               sql += "FROM modelos ";
+               sql += "WHERE idMarca= ?";
+               
+               int maxIdModelo = 0;
+               int newIdModelo = 0;
+        
+        try {
+            
+            PreparedStatement stm = con.prepareStatement(sql);
+            stm.setInt(1, idMarca);
+            ResultSet rs = stm.executeQuery();
+            
+            if(rs.next()) {
+                
+                maxIdModelo = rs.getInt(1);
+                newIdModelo = maxIdModelo + 1;
+                
+            }
+            
+        }catch(SQLException ex) {
+            
+            System.out.println("Erro: " + ex.getMessage());
+            con.close();
+            
+        }
+        
+        con.close();
+        return newIdModelo;
+        
+    }
 
     public boolean incluirModelo() throws SQLException {
         
         Connection con = Conexao.conectar();
         String sql  = "INSERT INTO modelos ";
-               sql += "(idMarca, nomeModelo, tipoModelo) ";
-               sql += "VALUES (?, ?, ?)";
+               sql += "(idModelo, idMarca, nomeModelo, tipoModelo) ";
+               sql += "VALUES (?, ?, ?, ?)";
                
         try {
             
             PreparedStatement stm = con.prepareStatement(sql);
             
-            stm.setInt    (1, idMarca);
-            stm.setString (2, nomeModelo);
-            stm.setString (3, tipoModelo);
+            stm.setInt    (1, auto_increment());
+            stm.setInt    (2, idMarca);
+            stm.setString (3, nomeModelo);
+            stm.setString (4, tipoModelo);
             
             stm.execute();
             
@@ -107,15 +143,14 @@ public class Modelos {
         
     }
 
-    public Modelos consultarModeloId() throws SQLException {
+    public List<Modelos> consultarModelosId() throws SQLException {
         
         Connection con = Conexao.conectar();
-        String sql  = "SELECT * ";
+        List<Modelos> listaModelos = new ArrayList<>();
+        String sql  = "SELECT idModelo, idMarca, nomeModelo, tipoModelo ";
                sql += "FROM modelos ";
                sql += "WHERE idModelo= ? ";
-               sql += "ORDER BY idModelo";
-               
-               Modelos mod = null;
+               sql += "ORDER BY idMarca, idModelo";
         
         try {
             
@@ -123,14 +158,16 @@ public class Modelos {
             stm.setInt(1, idModelo);
             ResultSet rs = stm.executeQuery();
             
-            if(rs.next()) {
+            while(rs.next()) {
                 
-                mod = new Modelos();
+                Modelos mod = new Modelos();
                 
                 mod.setIdModelo   (getIdModelo());
                 mod.setIdMarca    (rs.getInt("idMarca"));
                 mod.setNomeModelo (rs.getString("nomeModelo"));
                 mod.setTipoModelo (rs.getString("tipoModelo"));
+                
+                listaModelos.add(mod);
                 
             }
             
@@ -142,18 +179,18 @@ public class Modelos {
         }
         
         con.close();
-        return mod;
+        return listaModelos;
         
     }
 
-    public List<Modelos> consultarModeloMarca() throws SQLException {
+    public List<Modelos> consultarModelosMarca() throws SQLException {
         
         Connection con = Conexao.conectar();
         List<Modelos> listaModelos = new ArrayList<>();
-        String sql  = "SELECT * ";
+        String sql  = "SELECT idModelo, idMarca, nomeModelo, tipoModelo ";
                sql += "FROM modelos ";
                sql += "WHERE idMarca= ? ";
-               sql += "ORDER BY idModelo";
+               sql += "ORDER BY idMarca, idModelo";
         
         try {
             
@@ -190,9 +227,9 @@ public class Modelos {
         
         Connection con = Conexao.conectar();
         List<Modelos> listaModelos = new ArrayList<>();
-        String sql  = "SELECT * ";
+        String sql  = "SELECT idModelo, idMarca, nomeModelo, tipoModelo ";
                sql += "FROM modelos ";
-               sql += "ORDER BY idModelo, idMarca";
+               sql += "ORDER BY idMarca, idModelo";
         
         try {
             
@@ -224,14 +261,53 @@ public class Modelos {
         
     }
     
-    public List<Modelos> consultarIncluirAlterar() throws SQLException {
+    public Modelos consultarModelo() throws SQLException {
         
         Connection con = Conexao.conectar();
-        List<Modelos> listaModelos = new ArrayList<>();
-        String sql  = "SELECT m.idModelo, m.idMarca, marca.nomeMarca, m.nomeModelo, m.tipoModelo ";
-               sql += "FROM modelos AS m ";
-               sql += "INNER JOIN marcas AS marca ON m.idMarca = marca.idMarca ";
-               sql += "ORDER BY marca.nomeMarca, m.nomeModelo";
+        String sql  = "SELECT idModelo, idMarca, nomeModelo, tipoModelo ";
+               sql += "FROM modelos ";
+               sql += "WHERE idModelo= ? AND idMarca= ? ";
+               sql += "ORDER BY idMarca, idModelo";
+               
+        Modelos mod = null;
+        
+        try {
+            
+            PreparedStatement stm = con.prepareStatement(sql);
+            stm.setInt(1, idModelo);
+            stm.setInt(2, idMarca);
+            ResultSet rs = stm.executeQuery();
+            
+            if(rs.next()) {
+                
+                mod = new Modelos();
+                
+                mod.setIdModelo   (rs.getInt("idModelo"));
+                mod.setIdMarca    (rs.getInt("idMarca"));
+                mod.setNomeModelo (rs.getString("nomeModelo"));
+                mod.setTipoModelo (rs.getString("tipoModelo"));
+                
+            }
+            
+        }catch(SQLException ex) {
+            
+            System.out.println("Erro: " + ex.getMessage());
+            con.close();
+            
+        }
+        
+        con.close();
+        return mod;
+        
+    }
+    
+    public List<Marcas> selectMarcas() throws SQLException {
+        
+        Connection con = Conexao.conectar();
+        List<Marcas> listaMarcas = new ArrayList<>();
+        String sql  = "SELECT idMarca, nomeMarca ";
+               sql += "FROM marcas ";
+               sql += "ORDER BY nomeMarca";
                
         try {
             
@@ -240,14 +316,12 @@ public class Modelos {
             
             while(rs.next()) {
                 
-                Modelos mod = new Modelos();
+                Marcas mar = new Marcas();
                 
-                mod.setIdModelo   (rs.getInt("idModelo"));
-                mod.setIdMarca    (rs.getInt("idMarca"));
-                mod.setNomeModelo (rs.getString("nomeModelo"));
-                mod.setTipoModelo (rs.getString("tipoModelo"));
+                mar.setIdMarca   (rs.getInt("idMarca"));
+                mar.setNomeMarca (rs.getString("nomeMarca"));
                 
-                listaModelos.add(mod);
+                listaMarcas.add(mar);
                 
             }
             
@@ -259,11 +333,11 @@ public class Modelos {
         }
         
         con.close();
-        return listaModelos;
+        return listaMarcas;
         
     }
     
-    public List<Modelos> consultarExcluirConsultar() throws SQLException {
+    public List<Modelos> selectExAltCon() throws SQLException {
         
         Connection con = Conexao.conectar();
         List<Modelos> listaModelos = new ArrayList<>();

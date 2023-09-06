@@ -157,7 +157,7 @@ public class Clientes {
         
         Connection con = Conexao.conectar();
         List<Clientes> listaClientes = new ArrayList<>();
-        String sql  = "SELECT * ";
+        String sql  = "SELECT cpfCliente, nomeCliente, foneCliente, emailCliente, nrCartaoDebCred, chavePix ";
                sql += "FROM clientes ";
                sql += "ORDER BY cpfCliente;";
         

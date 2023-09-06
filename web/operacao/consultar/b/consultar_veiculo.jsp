@@ -71,6 +71,10 @@
                     </th>
                     
                     <th scope="col">
+                        Marca
+                    </th>
+                    
+                    <th scope="col">
                         Modelo
                     </th>
                     
@@ -132,7 +136,7 @@
                     <tr>
                         
                         <td style="background-color: transparent;">
-                            <a class="alterar" href="../../alterar/veiculo.jsp?id=<%=vei.getIdVeiculo()%>&modelo=<%=vei.getIdModelo()%>&placa=<%=vei.getPlacaVeiculo()%>&corPredominante=<%=vei.getCorPredominante()%>&anoFabricacao=<%=vei.getAnoFabricacao()%>&disponivel=<%=vei.isDisponivel()%>&arCondicionado=<%=vei.isTemArCondicionado()%>&dirHidraulica=<%=vei.isTemDirHidraulica()%>&revisado=<%=vei.isRevisado()%>">
+                            <a class="alterar" href="../../alterar/veiculo.jsp?id=<%=vei.getIdVeiculo()%>&marcaModelo=<%=(vei.getIdMarca()+"-"+vei.getIdModelo())%>&placa=<%=vei.getPlacaVeiculo()%>&corPredominante=<%=vei.getCorPredominante()%>&anoFabricacao=<%=vei.getAnoFabricacao()%>&disponivel=<%=vei.isDisponivel()%>&arCondicionado=<%=vei.isTemArCondicionado()%>&dirHidraulica=<%=vei.isTemDirHidraulica()%>&revisado=<%=vei.isRevisado()%>">
                                 Alterar
                             </a>
                         </td>
@@ -145,25 +149,27 @@
                         
                         <td>
                             <%
+                                Marcas mar = new Marcas();
+                                mar.setIdMarca(vei.getIdMarca());
+                                
+                                mar = mar.consultarMarca();
+                                
+                                if(mar != null) {
+                                    out.print(mar.getNomeMarca());
+                                }
+                            %>
+                        </td>
+                        
+                        <td>
+                            <%
                                 Modelos mod = new Modelos();
+                                mod.setIdMarca(vei.getIdMarca());
                                 mod.setIdModelo(vei.getIdModelo());
-                                
-                                mod = mod.consultarModeloId();
-                                
+
+                                mod = mod.consultarModelo();
+
                                 if(mod != null) {
-                                    int    fIdMarca    = mod.getIdMarca();
-                                    String fNomeModelo = mod.getNomeModelo();
-                                    
-                                    Marcas mar = new Marcas();
-                                    mar.setIdMarca(fIdMarca);
-                                    
-                                    mar = mar.consultarMarca();
-                                    
-                                    if(mar != null) {
-                                        String fNomeMarca = mar.getNomeMarca();
-                                        
-                                        out.print(fNomeMarca + " " + fNomeModelo);
-                                    }
+                                    out.print(mod.getNomeModelo());
                                 }
                             %>
                         </td>
@@ -280,6 +286,10 @@
                             ---
                         </td>
                         
+                        <td>
+                            ---
+                        </td>
+                        
                         <td style="background-color: transparent;">
                             <br>
                         </td>
@@ -302,7 +312,7 @@
                     <tr>
                         
                         <td style="background-color: transparent;">
-                            <a class="alterar" href="../../alterar/veiculo.jsp?id=<%=v.getIdVeiculo()%>&modelo=<%=v.getIdModelo()%>&placa=<%=v.getPlacaVeiculo()%>&corPredominante=<%=v.getCorPredominante()%>&anoFabricacao=<%=v.getAnoFabricacao()%>&disponivel=<%=v.isDisponivel()%>&arCondicionado=<%=v.isTemArCondicionado()%>&dirHidraulica=<%=v.isTemDirHidraulica()%>&revisado=<%=v.isRevisado()%>">
+                            <a class="alterar" href="../../alterar/veiculo.jsp?id=<%=v.getIdVeiculo()%>&marcaModelo=<%=(v.getIdMarca()+"-"+v.getIdModelo())%>&placa=<%=v.getPlacaVeiculo()%>&corPredominante=<%=v.getCorPredominante()%>&anoFabricacao=<%=v.getAnoFabricacao()%>&disponivel=<%=v.isDisponivel()%>&arCondicionado=<%=v.isTemArCondicionado()%>&dirHidraulica=<%=v.isTemDirHidraulica()%>&revisado=<%=v.isRevisado()%>">
                                 Alterar
                             </a>
                         </td>
@@ -315,25 +325,27 @@
                         
                         <td>
                             <%
+                                Marcas mar = new Marcas();
+                                mar.setIdMarca(v.getIdMarca());
+                                
+                                mar = mar.consultarMarca();
+                                
+                                if(mar != null) {
+                                    out.print(mar.getNomeMarca());
+                                }
+                            %>
+                        </td>
+                        
+                        <td>
+                            <%
                                 Modelos mod = new Modelos();
+                                mod.setIdMarca(v.getIdMarca());
                                 mod.setIdModelo(v.getIdModelo());
-                                
-                                mod = mod.consultarModeloId();
-                                
+
+                                mod = mod.consultarModelo();
+
                                 if(mod != null) {
-                                    int    fIdMarca    = mod.getIdMarca();
-                                    String fNomeModelo = mod.getNomeModelo();
-                                    
-                                    Marcas mar = new Marcas();
-                                    mar.setIdMarca(fIdMarca);
-                                    
-                                    mar = mar.consultarMarca();
-                                    
-                                    if(mar != null) {
-                                        String fNomeMarca = mar.getNomeMarca();
-                                        
-                                        out.print(fNomeMarca + " " + fNomeModelo);
-                                    }
+                                    out.print(mod.getNomeModelo());
                                 }
                             %>
                         </td>
@@ -455,6 +467,10 @@
                             ---
                         </td>
                         
+                        <td>
+                            ---
+                        </td>
+                        
                         <td style="background-color: transparent;">
                             <br>
                         </td>
@@ -472,6 +488,10 @@
                 </th>
                 
                 <th style="border-bottom-left-radius: var(--smooth-corners);">
+                    <br>
+                </th>
+                
+                <th>
                     <br>
                 </th>
                 

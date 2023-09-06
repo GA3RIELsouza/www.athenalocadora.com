@@ -18,24 +18,9 @@
         <script>
             $(document).ready(function(){
                 $("#cpfCliente").mask("999.999.999-99");
-            });
-            
-            $(document).ready(function(){
                 $("#foneCliente").mask("(99)99999-9999");
-            });
-            
-            $(document).ready(function(){
                 $("#nrCartaoDebCred").mask("9999 9999 9999 9999");
             });
-            
-            if (localStorage.getItem("tema")) {
-                var elementos  = document.getElementsByTagName("*");
-                
-                for (var i = 0; i < elementos.length; i++) {
-                    elementos[i].classList.remove("tema-azul", "tema-verde", "tema-laranja", "tema-cinza");
-                    elementos[i].classList.add(localStorage.getItem("tema"));
-                }
-            }
         </script>
         
     </head>

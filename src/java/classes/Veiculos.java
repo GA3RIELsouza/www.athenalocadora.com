@@ -11,6 +11,7 @@ import util.Conexao;
 public class Veiculos {
 
     private int     idVeiculo;
+    private int     idMarca;
     private int     idModelo;
     private String  placaVeiculo;
     private String  corPredominante;
@@ -24,22 +25,23 @@ public class Veiculos {
         
         Connection con = Conexao.conectar();
         String sql  = "INSERT INTO veiculos ";
-               sql += "(idModelo, placaVeiculo, corPredominante, ";
+               sql += "(idMarca, idModelo, placaVeiculo, corPredominante, ";
                sql += "anoFabricacao, disponivel, temArCondicionado, temDirHidraulica, revisado) ";
-               sql += "VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+               sql += "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
                
         try {
             
             PreparedStatement stm = con.prepareStatement(sql);
             
             stm.setInt     (1, idModelo);
-            stm.setString  (2, placaVeiculo);
-            stm.setString  (3, corPredominante);
-            stm.setInt     (4, anoFabricacao);
-            stm.setBoolean (5, disponivel);
-            stm.setBoolean (6, temArCondicionado);
-            stm.setBoolean (7, temDirHidraulica);
-            stm.setBoolean (8, revisado);
+            stm.setInt     (2, idMarca);
+            stm.setString  (3, placaVeiculo);
+            stm.setString  (4, corPredominante);
+            stm.setInt     (5, anoFabricacao);
+            stm.setBoolean (6, disponivel);
+            stm.setBoolean (7, temArCondicionado);
+            stm.setBoolean (8, temDirHidraulica);
+            stm.setBoolean (9, revisado);
             
             stm.execute();
             
@@ -61,7 +63,7 @@ public class Veiculos {
         
         Connection con = Conexao.conectar();
         String sql  = "UPDATE veiculos ";
-               sql += "SET idModelo= ?, placaVeiculo= ?, corPredominante= ?, anoFabricacao= ?, ";
+               sql += "SET idMarca= ?, idModelo= ? placaVeiculo= ?, corPredominante= ?, anoFabricacao= ?, ";
                sql += "disponivel= ?, temArCondicionado= ?, temDirHidraulica= ?, revisado = ? ";
                sql += "WHERE idVeiculo= ?";
                
@@ -69,14 +71,15 @@ public class Veiculos {
             
             PreparedStatement stm = con.prepareStatement(sql);
             
-            stm.setInt     (1,  idModelo);
-            stm.setString  (2,  placaVeiculo);
-            stm.setString  (3,  corPredominante);
-            stm.setInt     (4,  anoFabricacao);
-            stm.setBoolean (5,  disponivel);
-            stm.setBoolean (6,  temArCondicionado);
-            stm.setBoolean (7,  temDirHidraulica);
-            stm.setBoolean (8,  revisado);
+            stm.setInt     (1,  idMarca);
+            stm.setInt     (2,  idModelo);
+            stm.setString  (3,  placaVeiculo);
+            stm.setString  (4,  corPredominante);
+            stm.setInt     (5,  anoFabricacao);
+            stm.setBoolean (6,  disponivel);
+            stm.setBoolean (7,  temArCondicionado);
+            stm.setBoolean (8,  temDirHidraulica);
+            stm.setBoolean (9,  revisado);
             stm.setInt     (10, idVeiculo);
             
             stm.execute();
@@ -126,10 +129,11 @@ public class Veiculos {
     public Veiculos consultarVeiculo() throws SQLException {
         
         Connection con = Conexao.conectar();
-        String sql  = "SELECT idVeiculo, idModelo, placaVeiculo, corPredominante, ";
+        String sql  = "SELECT idVeiculo, idMarca, idModelo, placaVeiculo, corPredominante, ";
                sql += "anoFabricacao, disponivel, temArCondicionado, temDirHidraulica, revisado ";
                sql += "FROM veiculos ";
-               sql += "WHERE idVeiculo= ?";
+               sql += "WHERE idVeiculo= ? ";
+               sql += "ORDER BY idVeiculo";
                
         Veiculos vei = null;
         
@@ -144,6 +148,7 @@ public class Veiculos {
                 vei = new Veiculos();
                 
                 vei.setIdVeiculo         (getIdVeiculo());
+                vei.setIdMarca           (rs.getInt("idMarca"));
                 vei.setIdModelo          (rs.getInt("idModelo"));
                 vei.setPlacaVeiculo      (rs.getString("placaVeiculo"));
                 vei.setCorPredominante   (rs.getString("corPredominante"));
@@ -171,7 +176,8 @@ public class Veiculos {
         
         Connection con = Conexao.conectar();
         List<Veiculos> listaVeiculos = new ArrayList<>();
-        String sql  = "SELECT * ";
+        String sql  = "SELECT idVeiculo, idMarca, idModelo, placaVeiculo, corPredominante, ";
+               sql += "anoFabricacao, disponivel, temArCondicionado, temDirHidraulica, revisado ";
                sql += "FROM veiculos ";
                sql += "ORDER BY idVeiculo;";
         
@@ -185,6 +191,7 @@ public class Veiculos {
                 Veiculos vei = new Veiculos();
                 
                 vei.setIdVeiculo         (rs.getInt("idVeiculo"));
+                vei.setIdMarca           (rs.getInt("idMarca"));
                 vei.setIdModelo          (rs.getInt("idModelo"));
                 vei.setPlacaVeiculo      (rs.getString("placaVeiculo"));
                 vei.setCorPredominante   (rs.getString("corPredominante"));
@@ -210,6 +217,45 @@ public class Veiculos {
         
     }
     
+    public List<Modelos> selectModelos() throws SQLException {
+        
+        Connection con = Conexao.conectar();
+        List<Modelos> listaModelos = new ArrayList<>();
+        String sql  = "SELECT m.idModelo, marca.idMarca, marca.nomeMarca, m.nomeModelo, m.tipoModelo ";
+               sql += "FROM modelos AS m ";
+               sql += "INNER JOIN marcas AS marca ON m.idMarca = marca.idMarca ";
+               sql += "ORDER BY marca.nomeMarca, m.nomeModelo";
+               
+        try {
+            
+            PreparedStatement stm = con.prepareStatement(sql);
+            ResultSet rs = stm.executeQuery();
+            
+            while(rs.next()) {
+                
+                Modelos mod = new Modelos();
+                
+                mod.setIdModelo   (rs.getInt("idModelo"));
+                mod.setIdMarca    (rs.getInt("idMarca"));
+                mod.setNomeModelo (rs.getString("nomeModelo"));
+                mod.setTipoModelo (rs.getString("tipoModelo"));
+                
+                listaModelos.add(mod);
+                
+            }
+            
+        }catch(SQLException ex) {
+            
+            System.out.println("Erro: " + ex.getMessage());
+            con.close();
+            
+        }
+        
+        con.close();
+        return listaModelos;
+        
+    }
+    
     // Getters and Setters //
 
     public int getIdVeiculo() {
@@ -218,6 +264,14 @@ public class Veiculos {
 
     public void setIdVeiculo(int idVeiculo) {
         this.idVeiculo = idVeiculo;
+    }
+
+    public int getIdMarca() {
+        return idMarca;
+    }
+
+    public void setIdMarca(int idMarca) {
+        this.idMarca = idMarca;
     }
 
     public int getIdModelo() {

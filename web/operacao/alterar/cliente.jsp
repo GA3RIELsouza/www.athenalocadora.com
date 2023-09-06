@@ -21,9 +21,6 @@
         <script>
             $(document).ready(function(){
                 $("#foneCliente").mask("(99)99999-9999");
-            });
-            
-            $(document).ready(function(){
                 $("#nrCartaoDebCred").mask("9999 9999 9999 9999");
             });
         </script>

@@ -7,31 +7,22 @@
 <html lang="pt">
 
     <%
-            Cookie[] cookies = request.getCookies();
-            Usuarios  usu     = new Usuarios();
-            boolean  ok       = false;
-            
-            if(cookies != null) {
-               for(Cookie atual : cookies) {
-                    if(atual.getName().equals("sessionId")) {
-                        usu.setSessionId(atual.getValue());
-                        
-                        if(usu.checkSessionId()) {
-                            ok = true;
-                        }
-                    }
-                }
-            }
-
-            if(ok == false) {
-                response.sendRedirect("/www.athenalocadora.com/index.jsp");
-            }
-        %>
-
-    <%
         int     vIdVeiculo         = Integer.parseInt(request.getParameter("idVeiculo"));
-        String  vMarcaVeiculo      = request.getParameter("marcaVeiculo");
-        String  vModeloVeiculo     = request.getParameter("modeloVeiculo");
+        
+        String  marcaModeloString       = request.getParameter("marcaModelo");
+        int vIdMarca  = 0;
+        int vIdModelo = 0;
+        
+        int contador = 1;
+        for(String value : marcaModeloString.split("-")) {
+            if(contador == 1) {
+                vIdModelo = Integer.parseInt(value);
+            }else if(contador == 3) {
+                vIdMarca = Integer.parseInt(value);
+            }
+            contador++;
+        }
+        
         String  vPlacaVeiculo      = request.getParameter("placaVeiculo");
         String  vCorPredominante   = request.getParameter("corPredominante");
         int     vAnoFabricacao     = Integer.parseInt(request.getParameter("anoFabricacao"));
@@ -42,9 +33,8 @@
 
         Veiculos vei = new Veiculos();
         vei.setIdVeiculo(vIdVeiculo);
-        // /\ - WHERE
-        vei.setMarcaVeiculo(vMarcaVeiculo);
-        vei.setModeloVeiculo(vModeloVeiculo);
+        vei.setIdMarca(vIdMarca);
+        vei.setIdModelo(vIdModelo);
         vei.setPlacaVeiculo(vPlacaVeiculo);
         vei.setCorPredominante(vCorPredominante);
         vei.setAnoFabricacao(vAnoFabricacao);

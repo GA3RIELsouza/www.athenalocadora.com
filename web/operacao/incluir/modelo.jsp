@@ -77,9 +77,9 @@
                 <select name="idMarca" id="idMarca" required>
                     <option value="" disabled selected>Insira a marca</option>
                     <%
-                        Marcas mar = new Marcas();
+                        Modelos mar = new Modelos();
                         List<Marcas> listaMarcas = new ArrayList<>();
-                        listaMarcas = mar.consultarMarcas();
+                        listaMarcas = mar.selectMarcas();
 
                         for(Marcas m : listaMarcas) {
                             int    fIdMarca   = m.getIdMarca();

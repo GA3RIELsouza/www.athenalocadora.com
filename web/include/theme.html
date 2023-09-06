@@ -7,7 +7,7 @@
                 var elementos = document.getElementsByTagName("*");
                 
                 for (var i = 0; i < elementos.length; i++) {
-                    elementos[i].classList.remove("tema-azul", "tema-verde", "tema-laranja", "tema-cinza");
+                    elementos[i].classList.remove("tema-azul", "tema-verde", "tema-laranja", "tema-escuro");
                     elementos[i].classList.add(localStorage.getItem("tema"));
                 }
             }
@@ -37,8 +37,8 @@
                         break;
 
                         case "3":
-                            elementos[i].classList.add("tema-cinza");
-                            localStorage.setItem("tema", "tema-cinza");
+                            elementos[i].classList.add("tema-escuro");
+                            localStorage.setItem("tema", "tema-escuro");
                         break;
                         
                         default:
@@ -46,7 +46,7 @@
                                 var elementos  = document.getElementsByTagName("*");
 
                                 for (var i = 0; i < elementos.length; i++) {
-                                    elementos[i].classList.remove("tema-azul", "tema-verde", "tema-laranja", "tema-cinza");
+                                    elementos[i].classList.remove("tema-azul", "tema-verde", "tema-laranja", "tema-escuro");
                                     elementos[i].classList.add(localStorage.getItem("tema"));
                                 }
                             }
@@ -65,7 +65,7 @@
             <option value=0>Azul</option>
             <option value=1>Verde</option>
             <option value=2>Laranja</option>
-            <option value=3>Cinza</option>
+            <option value=3>Escuro</option>
         </select>
         
     </body>

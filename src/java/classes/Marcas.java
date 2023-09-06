@@ -140,7 +140,7 @@ public class Marcas {
         
         Connection con = Conexao.conectar();
         List<Marcas> listaMarcas = new ArrayList<>();
-        String sql  = "SELECT * ";
+        String sql  = "SELECT idMarca, nomeMarca ";
                sql += "FROM marcas ";
                sql += "ORDER BY idMarca;";
         
@@ -154,6 +154,41 @@ public class Marcas {
                 Marcas mar = new Marcas();
                 
                 mar.setIdMarca   (rs.getInt("idMarca"));
+                mar.setNomeMarca (rs.getString("nomeMarca"));
+                
+                listaMarcas.add(mar);
+                
+            }
+            
+        }catch(SQLException ex) {
+            
+            System.out.println("Erro: " + ex.getMessage());
+            con.close();
+            
+        }
+        
+        con.close();
+        return listaMarcas;
+        
+    }
+    
+    public List<Marcas> selectIncluirAlterar() throws SQLException {
+        
+        Connection con = Conexao.conectar();
+        List<Marcas> listaMarcas = new ArrayList<>();
+        String sql  = "SELECT DISTINCT nomeMarca ";
+               sql += "FROM marcas ";
+               sql += "ORDER BY nomeMarca;";
+        
+        try {
+            
+            PreparedStatement stm = con.prepareStatement(sql);
+            ResultSet rs = stm.executeQuery();
+            
+            while(rs.next()) {
+                
+                Marcas mar = new Marcas();
+                
                 mar.setNomeMarca (rs.getString("nomeMarca"));
                 
                 listaMarcas.add(mar);

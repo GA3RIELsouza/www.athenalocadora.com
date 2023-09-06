@@ -36,16 +36,16 @@
                 }else if(modoSelecionado === "1") {
                     campoIdModelo.style.display = "none";
                     inputIdModelo.removeAttribute("required");
+                    inputIdModelo.value = "";
                     campoIdMarca.style.display = "";
                     inputIdMarca.setAttribute("required", "");
-                    inputIdModelo.value = "";
                 }else {
                     campoIdModelo.style.display = "none";
                     inputIdModelo.removeAttribute("required");
+                    inputIdModelo.value = "";
                     campoIdMarca.style.display = "none";
                     inputIdMarca.removeAttribute("required");
                     inputIdMarca.value = "";
-                    inputIdModelo.value = "";
                 }
             }
             
@@ -116,7 +116,7 @@
                     <%
                         Modelos mod1 = new Modelos();
                         List<Modelos> listaModelos = new ArrayList<>();
-                        listaModelos = mod1.consultarExcluirConsultar();
+                        listaModelos = mod1.selectExAltCon();
                         
                         for(Modelos m : listaModelos) {
                             int    fIdModelo = m.getIdModelo();

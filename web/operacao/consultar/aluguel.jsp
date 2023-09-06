@@ -36,16 +36,16 @@
                 }else if(modoSelecionado === "1") {
                     campoCpfCliente.style.display = "none";
                     inputCpfCliente.removeAttribute("required");
+                    inputCpfCliente.value = "";
                     campoIdVeiculo.style.display = "";
                     inputIdVeiculo.setAttribute("required", "");
-                    inputCpfCliente.value = "";
                 }else {
                     campoCpfCliente.style.display = "none";
                     inputCpfCliente.removeAttribute("required");
+                    inputCpfCliente.value = "";
                     campoIdVeiculo.style.display = "none";
                     inputIdVeiculo.removeAttribute("required");
                     inputIdVeiculo.value = "";
-                    inputCpfCliente.value = "";
                 }
             }
             

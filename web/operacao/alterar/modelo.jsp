@@ -79,7 +79,7 @@
                     <%
                         Modelos mod1 = new Modelos();
                         List<Modelos> listaModelos = new ArrayList<>();
-                        listaModelos = mod1.consultarExcluirConsultar();
+                        listaModelos = mod1.selectExAltCon();
                         
                         int idModeloConsulta = 0;
 
@@ -100,13 +100,13 @@
             </div>
                 
             <div class="form-input">
-                <label for="idMarca">ID da marca <small class="no-select">(buscar por)</small></label><br>
+                <label for="idMarca">Marca <small class="no-select">(buscar por)</small></label><br>
                 <select name="idMarca" id="idMarca" required>
-                    <option value="" disabled selected>Insira o ID da marca</option>
+                    <option value="" disabled selected>Insira a marca</option>
                     <%
-                        Marcas mar = new Marcas();
+                        Modelos mar = new Modelos();
                         List<Marcas> listaMarcas = new ArrayList<>();
-                        listaMarcas = mar.consultarMarcas();
+                        listaMarcas = mar.selectMarcas();
                         
                         int idMarcaConsulta = 0;
 
@@ -114,12 +114,13 @@
                         if (idMar != null && !idMar.isEmpty()) {
                             idMarcaConsulta = Integer.parseInt(idMar);
                         }
-                        
+
                         for(Marcas m : listaMarcas) {
-                            int    fIdMarca = m.getIdMarca();
+                            int    fIdMarca   = m.getIdMarca();
+                            String fNomeMarca = m.getNomeMarca();
                             String selectedAttribute = (fIdMarca==idMarcaConsulta) ? "selected" : "";
                     %>
-                    <option value="<%= fIdMarca%>" <%= selectedAttribute %>><%= fIdMarca%></option>
+                    <option value="<%= fIdMarca%>" <%= selectedAttribute %>><%= fNomeMarca%></option>
                     <%
                         }
                     %>

@@ -7,8 +7,20 @@
 <html lang="pt">
 
     <%
-        int     vMarcaVeiculo      = Integer.parseInt(request.getParameter("idMarca"));
-        int     vModeloVeiculo     = Integer.parseInt(request.getParameter("idModelo"));
+        String  marcaModeloString       = request.getParameter("marcaModelo");
+        int vIdMarca  = 0;
+        int vIdModelo = 0;
+        
+        int contador = 1;
+        for(String value : marcaModeloString.split("-")) {
+            if(contador == 1) {
+                vIdModelo = Integer.parseInt(value);
+            }else if(contador == 3) {
+                vIdMarca = Integer.parseInt(value);
+            }
+            contador++;
+        }
+        
         String  vPlacaVeiculo      = request.getParameter("placaVeiculo");
         String  vCorPredominante   = request.getParameter("corPredominante");
         int     vAnoFabricacao     = Integer.parseInt(request.getParameter("anoFabricacao"));
@@ -18,8 +30,8 @@
         boolean vRevisado          = Boolean.parseBoolean(request.getParameter("revisado"));
 
         Veiculos vei = new Veiculos();
-        vei.setIdMarca(vMarcaVeiculo);
-        vei.setIdModelo(vModeloVeiculo);
+        vei.setIdMarca(vIdMarca);
+        vei.setIdModelo(vIdModelo);
         vei.setPlacaVeiculo(vPlacaVeiculo);
         vei.setCorPredominante(vCorPredominante);
         vei.setAnoFabricacao(vAnoFabricacao);

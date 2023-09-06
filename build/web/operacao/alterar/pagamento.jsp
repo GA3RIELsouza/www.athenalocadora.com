@@ -1,5 +1,6 @@
 <%@include file="/include/check_login.jsp"%>
 <%@page import="classes.Pagamentos"%>
+<%@page import="classes.Alugueis"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -74,11 +75,11 @@
             <div class="form-input">
                 <label for="idPagamento">ID do pagamento <small class="no-select">(buscar por)</small></label><br>
                 <select name="idPagamento" id="idPagamento" required>
-                    <option value="" disabled selected>Insira o ID do aluguel</option>
+                    <option value="" disabled selected>Insira o ID do pagamento</option>
                     <%
-                        Pagamentos pag1 = new Pagamentos();
+                        Pagamentos pag = new Pagamentos();
                         List<Pagamentos> listaPagamentos = new ArrayList<>();
-                        listaPagamentos = pag1.consultarPagamentos();
+                        listaPagamentos = pag.selectExcluirAlterarConsultar();
                         
                         int idPagamentoConsulta = 0;
 
@@ -103,9 +104,9 @@
                 <select name="idAluguel" id="idAluguel" required>
                     <option value="" disabled selected>Insira o ID do aluguel</option>
                     <%
-                        Pagamentos pag2 = new Pagamentos();
-                        List<Pagamentos> listaAlugueis = new ArrayList<>();
-                        listaAlugueis = pag2.consultarPagamentos();
+                        Alugueis alu = new Alugueis();
+                        List<Alugueis> listaAlugueis = new ArrayList<>();
+                        listaAlugueis = alu.consultarAlugueis();
                         
                         int idAluguelConsulta = 0;
 
@@ -114,8 +115,8 @@
                             idAluguelConsulta = Integer.parseInt(idAlu);
                         }
 
-                        for(Pagamentos p : listaAlugueis) {
-                            int fIdAluguel = p.getIdAluguel();
+                        for(Alugueis a : listaAlugueis) {
+                            int fIdAluguel = a.getIdAluguel();
                             String selectedAttribute = fIdAluguel==idAluguelConsulta ? "selected" : "";
                     %>
                     <option value="<%= fIdAluguel%>" <%= selectedAttribute %>><%= fIdAluguel%></option>

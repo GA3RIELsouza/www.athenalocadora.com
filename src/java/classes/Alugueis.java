@@ -113,11 +113,11 @@ public class Alugueis {
         
     }
 
-    public List<Alugueis> consultarLocacaoCliente() throws SQLException {
+    public List<Alugueis> consultarAlugueisCliente() throws SQLException {
         
         Connection con = Conexao.conectar();
         List<Alugueis> listaAlugueis = new ArrayList<>();
-        String sql  = "SELECT * ";
+        String sql  = "SELECT idAluguel, idVeiculo, cpfCliente, dataAluguel, dataDevolucao, dataEstimadaDevolucao, pagamento ";
                sql += "FROM alugueis ";
                sql += "WHERE cpfCliente= ? ";
                sql += "ORDER BY idAluguel, cpfCliente;";
@@ -157,11 +157,11 @@ public class Alugueis {
         
     }
 
-    public List<Alugueis> consultarLocacaoVeiculo() throws SQLException {
+    public List<Alugueis> consultarAlugueisVeiculo() throws SQLException {
         
         Connection con = Conexao.conectar();
         List<Alugueis> listaAlugueis = new ArrayList<>();
-        String sql  = "SELECT * ";
+        String sql  = "SELECT idAluguel, idVeiculo, cpfCliente, dataAluguel, dataDevolucao, dataEstimadaDevolucao, pagamento ";
                sql += "FROM alugueis ";
                sql += "WHERE idVeiculo= ? ";
                sql += "ORDER BY idAluguel, cpfCliente;";
@@ -205,7 +205,7 @@ public class Alugueis {
         
         Connection con = Conexao.conectar();
         List<Alugueis> listaAlugueis = new ArrayList<>();
-        String sql  = "SELECT * ";
+        String sql  = "SELECT idAluguel, idVeiculo, cpfCliente, dataAluguel, dataDevolucao, dataEstimadaDevolucao, pagamento ";
                sql += "FROM alugueis ";
                sql += "ORDER BY cpfCliente, idAluguel;";
         

@@ -16,22 +16,58 @@ public class Pagamentos {
     private Timestamp dataPagamento;
     private String    tipoPagamento;
     private double    vlrPagamento;
+    
+    public int auto_increment() throws SQLException {
+        
+        Connection con = Conexao.conectar();
+        String sql  = "SELECT MAX(idPagamento) ";
+               sql += "FROM pagamentos ";
+               sql += "WHERE idAluguel= ?";
+               
+               int maxIdPagamento = 0;
+               int newIdPagamento = 0;
+        
+        try {
+            
+            PreparedStatement stm = con.prepareStatement(sql);
+            stm.setInt(1, idAluguel);
+            ResultSet rs = stm.executeQuery();
+            
+            if(rs.next()) {
+                
+                maxIdPagamento = rs.getInt(1);
+                newIdPagamento = maxIdPagamento + 1;
+                
+            }
+            
+        }catch(SQLException ex) {
+            
+            System.out.println("Erro: " + ex.getMessage());
+            con.close();
+            
+        }
+        
+        con.close();
+        return newIdPagamento;
+        
+    }
 
     public boolean incluirPagamento() throws SQLException {
         
         Connection con = Conexao.conectar();
         String sql  = "INSERT INTO pagamentos ";
-               sql += "(idAluguel, dataPagamento, tipoPagamento, vlrPagamento )";
-               sql += "VALUES (?, ?, ?, ?)";
+               sql += "(idPagamento, idAluguel, dataPagamento, tipoPagamento, vlrPagamento )";
+               sql += "VALUES (?, ?, ?, ?, ?)";
                
         try {
             
             PreparedStatement stm = con.prepareStatement(sql);
             
-            stm.setInt       (1, idAluguel);
-            stm.setTimestamp (2, dataPagamento);
-            stm.setString    (3, tipoPagamento);
-            stm.setDouble    (4, vlrPagamento);
+            stm.setInt       (1, auto_increment());
+            stm.setInt       (2, idAluguel);
+            stm.setTimestamp (3, dataPagamento);
+            stm.setString    (4, tipoPagamento);
+            stm.setDouble    (5, vlrPagamento);
             
             stm.execute();
             
@@ -111,31 +147,31 @@ public class Pagamentos {
         
     }
 
-    public Pagamentos consultarPagamento() throws SQLException {
+    public List<Pagamentos> consultarPagamentosId() throws SQLException {
         
         Connection con = Conexao.conectar();
-        String sql  = "SELECT idAluguel, idPagamento, dataPagamento, tipoPagamento, vlrPagamento ";
+        List<Pagamentos> listaPagamentos = new ArrayList<>();
+        String sql  = "SELECT idPagamento, idAluguel, dataPagamento, tipoPagamento, vlrPagamento ";
                sql += "FROM pagamentos ";
-               sql += "WHERE idPagamento= ? AND idAluguel= ?;";
-               
-        Pagamentos pag = null;
+               sql += "WHERE idPagamento= ? ";
+               sql += "ORDER BY idPagamento AND idAluguel;";
         
         try {
             
             PreparedStatement stm = con.prepareStatement(sql);
-            stm.setInt(1, idPagamento);
-            stm.setInt(2, idAluguel);
             ResultSet rs = stm.executeQuery();
             
-            if(rs.next()) {
+            while(rs.next()) {
                 
-                pag = new Pagamentos();
+                Pagamentos pag = new Pagamentos();
                 
                 pag.setIdPagamento   (getIdPagamento());
-                pag.setIdAluguel     (getIdAluguel());
+                pag.setIdAluguel     (rs.getInt("idAluguel"));
                 pag.setDataPagamento (rs.getTimestamp("dataPagamento"));
                 pag.setTipoPagamento (rs.getString("tipoPagamento"));
                 pag.setVlrPagamento  (rs.getDouble("vlrPagamento"));
+                
+                listaPagamentos.add(pag);
                 
             }
             
@@ -147,7 +183,47 @@ public class Pagamentos {
         }
         
         con.close();
-        return pag;
+        return listaPagamentos;
+        
+    }
+    
+    public List<Pagamentos> consultarPagamentosAluguel() throws SQLException {
+        
+        Connection con = Conexao.conectar();
+        List<Pagamentos> listaPagamentos = new ArrayList<>();
+        String sql  = "SELECT idPagamento, idAluguel, dataPagamento, tipoPagamento, vlrPagamento ";
+               sql += "FROM pagamentos ";
+               sql += "WHERE idAluguel= ? ";
+               sql += "ORDER BY idPagamento AND idAluguel;";
+        
+        try {
+            
+            PreparedStatement stm = con.prepareStatement(sql);
+            ResultSet rs = stm.executeQuery();
+            
+            while(rs.next()) {
+                
+                Pagamentos pag = new Pagamentos();
+                
+                pag.setIdPagamento   (rs.getInt("idPagamento"));
+                pag.setIdAluguel     (getIdAluguel());
+                pag.setDataPagamento (rs.getTimestamp("dataPagamento"));
+                pag.setTipoPagamento (rs.getString("tipoPagamento"));
+                pag.setVlrPagamento  (rs.getDouble("vlrPagamento"));
+                
+                listaPagamentos.add(pag);
+                
+            }
+            
+        }catch(SQLException ex) {
+            
+            System.out.println("Erro: " + ex.getMessage());
+            
+            con.close();
+        }
+        
+        con.close();
+        return listaPagamentos;
         
     }
 
@@ -155,7 +231,7 @@ public class Pagamentos {
         
         Connection con = Conexao.conectar();
         List<Pagamentos> listaPagamentos = new ArrayList<>();
-        String sql  = "SELECT * ";
+        String sql  = "SELECT idPagamento, idAluguel, dataPagamento, tipoPagamento, vlrPagamento ";
                sql += "FROM pagamentos ";
                sql += "ORDER BY idPagamento AND idAluguel;";
         
@@ -183,6 +259,40 @@ public class Pagamentos {
             System.out.println("Erro: " + ex.getMessage());
             
             con.close();
+        }
+        
+        con.close();
+        return listaPagamentos;
+        
+    }
+    
+    public List<Pagamentos> selectExcluirAlterarConsultar() throws SQLException {
+        
+        Connection con = Conexao.conectar();
+        List<Pagamentos> listaPagamentos = new ArrayList<>();
+        String sql  = "SELECT DISTINCT idPagamento ";
+               sql += "FROM pagamentos";
+               
+        try {
+            
+            PreparedStatement stm = con.prepareStatement(sql);
+            ResultSet rs = stm.executeQuery();
+            
+            while(rs.next()) {
+                
+                Pagamentos pag = new Pagamentos();
+                
+                pag.setIdPagamento (rs.getInt("idPagamento"));
+                
+                listaPagamentos.add(pag);
+                
+            }
+            
+        }catch(SQLException ex) {
+            
+            System.out.println("Erro: " + ex.getMessage());
+            con.close();
+            
         }
         
         con.close();

@@ -96,13 +96,19 @@
                     Modelos mod = new Modelos();
                     List<Modelos> listaModelos = new ArrayList<>();
                     
-                    if(vModoConsulta >= 1 && vModoConsulta <= 2) {
+                    if(vModoConsulta >= 0 || vModoConsulta <= 2) {
                         
                         switch(vModoConsulta) {
+                            case 0:
+                                int vIdModelo = Integer.parseInt(request.getParameter("idModelo"));
+                                mod.setIdModelo(vIdModelo);
+                                listaModelos = mod.consultarModelosId();
+                            break;
+                            
                             case 1:
                                 int vIdMarca = Integer.parseInt(request.getParameter("idMarca"));
                                 mod.setIdMarca(vIdMarca);
-                                listaModelos = mod.consultarModeloMarca();
+                                listaModelos = mod.consultarModelosMarca();
                             break;
                             
                             case 2:
@@ -183,7 +189,7 @@
                         </td>
                         
                         <td>
-                            ---
+                            ---1
                         </td>
                         
                         <td>
@@ -198,67 +204,6 @@
                             <br>
                         </td>
                         
-                    </tr>
-                    
-                </tbody>
-                
-                <%
-                        }
-                    }else if(vModoConsulta == 0 && request.getParameter("idModelo").length() > 0) {
-                    int vIdModelo = Integer.parseInt(request.getParameter("idModelo"));
-                    mod.setIdModelo(vIdModelo);
-
-                    mod = mod.consultarModeloId();
-
-                    if(mod != null) {
-               %>
-               
-               <tbody>
-                    
-                    <tr>
-                        
-                        <td style="background-color: transparent;">
-                            <a class="alterar" href="../../alterar/modelo.jsp?idModelo=<%=mod.getIdModelo()%>&idMarca=<%=mod.getIdMarca()%>&nome=<%=mod.getNomeModelo()%>&tipo=<%=mod.getTipoModelo()%>">
-                                Alterar
-                            </a>
-                        </td>
-                        
-                        <td>
-                            <%
-                                out.print(mod.getIdModelo());
-                            %>
-                        </td>
-                        
-                        <td>
-                            <%
-                                Marcas mar = new Marcas();
-                                mar.setIdMarca(mod.getIdMarca());
-                                mar = mar.consultarMarca();
-                                
-                                if(mar != null) {
-                                    out.print(mar.getNomeMarca());
-                                }
-                            %>
-                        </td>
-                        
-                        <td>
-                            <%
-                                out.print(mod.getNomeModelo());
-                            %>
-                        </td>
-                        
-                        <td>
-                            <%
-                                out.print(mod.getTipoModelo());
-                            %>
-                        </td>
-                        
-                        <td style="background-color: transparent;">
-                            <a class="excluir" href="../../excluir/modelo.jsp?idModelo=<%=mod.getIdModelo()%>&idMarca=<%=mod.getIdMarca()%>">
-                                Excluir
-                            </a>
-                        </td>
-                
                     </tr>
                     
                 </tbody>
@@ -281,7 +226,7 @@
                         </td>
                         
                         <td>
-                            ---
+                            ---2
                         </td>
                         
                         <td>

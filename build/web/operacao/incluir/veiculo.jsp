@@ -1,4 +1,5 @@
 <%@include file="/include/check_login.jsp"%>
+<%@page import="classes.Veiculos"%>
 <%@page import="classes.Marcas"%>
 <%@page import="classes.Modelos"%>
 <%@page import="java.util.ArrayList"%>
@@ -16,6 +17,25 @@
         
         <link rel="icon" type="image/x-icon" href="/www.athenalocadora.com/images/favicon.ico?v=1">
         <link href="/www.athenalocadora.com/css/styles.css" rel="stylesheet">
+        
+        <script src="/www.athenalocadora.com/js/jquery-1.2.6.pack.js"></script>
+        <script src="/www.athenalocadora.com/js/jquery.maskedinput-1.1.4.pack.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#placaVeiculo").mask("AAA-9999");
+            });
+            
+            function mudaPlaca() {
+                campoPlacaCinza    = document.getElementById("campoPlacaCinza");
+                campoPlacaMercosul = document.getElementById("campoPlacaMercosul");
+                inputTipoPlaca     = document.getElementById("tipoPlaca").value;
+                
+                if(inputTipoPlaca === "0") {
+                    campoPlacaCinza.style.display = "";
+                    console.log("ok");
+                }
+            }
+        </script>
         
     </head>
     
@@ -73,13 +93,13 @@
             </div>
             
             <div class="form-input">
-                <label for="idModelo">Modelo</label><br>
-                <select name="idModelo" id="idModelo" required>
+                <label for="marcaModelo">Modelo</label><br>
+                <select name="marcaModelo" id="marcaModelo" required>
                     <option value="" disabled selected>Insira o modelo</option>
                     <%
-                        Modelos mod = new Modelos();
+                        Veiculos mod = new Veiculos();
                         List<Modelos> listaModelos = new ArrayList<>();
-                        listaModelos = mod.consultarIncluirAlterar();
+                        listaModelos = mod.selectModelos();
 
                         for(Modelos m : listaModelos) {
                             int    fIdModelo   = m.getIdModelo();
@@ -94,17 +114,26 @@
                             if(mar != null) {
                                 String fNomeMarca = mar.getNomeMarca();
                     %>
-                    <option value="<%= fIdModelo%>"><%= fNomeMarca + " " + fNomeModelo%></option>
+                    <option value="<%= fIdMarca + "-" + fIdModelo%>"><%= fNomeMarca + " " + fNomeModelo%></option>
                     <%
                             }
                         }
                     %>
                 </select>
             </div>
-            
+                
             <div class="form-input">
+                <label for="tipoPlaca">Tipo de placa</label><br>
+                <select name="tipoPlaca" id="tipoPlaca" onchange="mudaPlaca()" required>
+                    <option value="" disabled selected>Insira o tipo de placa</option>
+                    <option value="0">Cinza</option>
+                    <option value="1">Mercosul</option>
+                </select>
+            </div>
+            
+            <div class="form-input" id="campoPlacaCinza" style="display: none;">
                 <label for="placaVeiculo">Placa</label><br>
-                <input type="text" id="placaVeiculo" name="placaVeiculo" placeholder="Insira a placa" maxlength="7" pattern="[a-zA-Z0-9-]{7}" title="Apenas letras e números" required>
+                <input type="text" id="placaVeiculo" name="placaVeiculo" placeholder="Insira a placa" minlength="7" maxlength="7" pattern="[a-zA-Z0-9-]{7}" title="Apenas letras e números" required>
             </div>
             
             <div class="form-input">

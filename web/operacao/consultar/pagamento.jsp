@@ -1,5 +1,6 @@
 <%@include file="/include/check_login.jsp"%>
 <%@page import="classes.Pagamentos"%>
+<%@page import="classes.Alugueis"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -26,15 +27,22 @@
                 
                 if(modoSelecionado === "0") {
                     campoIdPagamento.style.display = "";
-                    campoIdAluguel.style.display = "";
                     inputIdPagamento.setAttribute("required", "");
+                    campoIdAluguel.style.display = "none";
+                    inputIdAluguel.removeAttribute("required");
+                    inputIdAluguel.value = "";
+                }else if(modoSelecionado === "1") {
+                    campoIdPagamento.style.display = "none";
+                    inputIdPagamento.removeAttribute("required");
+                    inputIdPagamento.value = "";
+                    campoIdAluguel.style.display = "";
                     inputIdAluguel.setAttribute("required", "");
                 }else {
                     campoIdPagamento.style.display = "none";
-                    campoIdAluguel.style.display = "none";
                     inputIdPagamento.removeAttribute("required");
-                    inputIdAluguel.removeAttribute("required");
                     inputIdPagamento.value = "";
+                    campoIdAluguel.style.display = "none";
+                    inputIdAluguel.removeAttribute("required");
                     inputIdAluguel.value = "";
                 }
             }
@@ -93,19 +101,20 @@
             <div class="form-input">
                 <label for="modoConsulta">Modo de consulta</label><br>
                 <select name="modoConsulta" id="modoConsulta" onchange="scriptModoConsulta()" required>
-                    <option value="0">Por IDs</option>
-                    <option value="1">Todos</option>
+                    <option value="0">Por ID do pagamento</option>
+                    <option value="1">Por ID do aluguel</option>
+                    <option value="2">Todos</option>
                 </select>
             </div>
             
             <div class="form-input" id="campoIdPagamento">
                 <label for="idPagamento">ID do pagamento <small class="no-select">(buscar por)</small></label><br>
                 <select name="idPagamento" id="idPagamento" required>
-                    <option value="" disabled selected>Insira o ID do aluguel</option>
+                    <option value="" disabled selected>Insira o ID do pagamento</option>
                     <%
-                        Pagamentos pag1 = new Pagamentos();
+                        Pagamentos pag = new Pagamentos();
                         List<Pagamentos> listaPagamentos = new ArrayList<>();
-                        listaPagamentos = pag1.consultarPagamentos();
+                        listaPagamentos = pag.selectExcluirAlterarConsultar();
                         
                         int idPagamentoConsulta = 0;
 
@@ -125,14 +134,14 @@
                 </select>
             </div>
             
-            <div class="form-input" id="campoIdAluguel">
+            <div class="form-input" id="campoIdAluguel" style="display: none;">
                 <label for="idAluguel">ID do aluguel <small class="no-select">(buscar por)</small></label><br>
-                <select name="idAluguel" id="idAluguel" required>
+                <select name="idAluguel" id="idAluguel">
                     <option value="" disabled selected>Insira o ID do aluguel</option>
                     <%
-                        Pagamentos pag2 = new Pagamentos();
-                        List<Pagamentos> listaAlugueis = new ArrayList<>();
-                        listaAlugueis = pag2.consultarPagamentos();
+                        Alugueis alu = new Alugueis();
+                        List<Alugueis> listaAlugueis = new ArrayList<>();
+                        listaAlugueis = alu.consultarAlugueis();
                         
                         int idAluguelConsulta = 0;
 
@@ -141,8 +150,8 @@
                             idAluguelConsulta = Integer.parseInt(idAlu);
                         }
 
-                        for(Pagamentos p : listaAlugueis) {
-                            int fIdAluguel = p.getIdAluguel();
+                        for(Alugueis a : listaAlugueis) {
+                            int fIdAluguel = a.getIdAluguel();
                             String selectedAttribute = fIdAluguel==idAluguelConsulta ? "selected" : "";
                     %>
                     <option value="<%= fIdAluguel%>" <%= selectedAttribute %>><%= fIdAluguel%></option>

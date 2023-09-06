@@ -113,13 +113,13 @@
                             case 0:
                                 String vCpfCliente = request.getParameter("cpfCliente");
                                 alu.setCpfCliente(vCpfCliente);
-                                listaAlugueis = alu.consultarLocacaoCliente();
+                                listaAlugueis = alu.consultarAlugueisCliente();
                             break;
                             
                             case 1:
                                 int vIdVeiculo = Integer.parseInt(request.getParameter("idVeiculo"));
                                 alu.setIdVeiculo(vIdVeiculo);
-                                listaAlugueis = alu.consultarLocacaoVeiculo();
+                                listaAlugueis = alu.consultarAlugueisVeiculo();
                             break;
                             
                             case 2:

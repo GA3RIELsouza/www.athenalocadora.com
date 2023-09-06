@@ -91,24 +91,37 @@
                 </thead>
                 
                 <%
-                    int vModoConsulta;
+                    int vModoConsulta = -1;
                     if(request.getParameter("modoConsulta") != null) {
                         vModoConsulta = Integer.parseInt(request.getParameter("modoConsulta"));
-                    }else {
-                        vModoConsulta = -1;
                     }
 
                     Pagamentos pag = new Pagamentos();
+                    List<Pagamentos> listaPagamentos = new ArrayList<>();
 
-                    if(vModoConsulta == 0 && Integer.parseInt(request.getParameter("idPagamento")) > 0 && Integer.parseInt(request.getParameter("idAluguel")) > 0) {
-                        int vIdPagamento = Integer.parseInt(request.getParameter("idPagamento"));
-                        pag.setIdPagamento(vIdPagamento);
-                        int vIdAluguel = Integer.parseInt(request.getParameter("idAluguel"));
-                        pag.setIdAluguel(vIdAluguel);
+                    if(vModoConsulta >= 0 || vModoConsulta <= 2) {
                         
-                        pag = pag.consultarPagamento();
+                        switch(vModoConsulta) {
+                            case 0:
+                                int vIdPagamento = Integer.parseInt(request.getParameter("idPagamento"));
+                                pag.setIdPagamento(vIdPagamento);
+                                listaPagamentos = pag.consultarPagamentosId();
+                            break;
+                            
+                            case 1:
+                                int vIdAluguel = Integer.parseInt(request.getParameter("idAluguel"));
+                                pag.setIdAluguel(vIdAluguel);
+                                listaPagamentos = pag.consultarPagamentosAluguel();
+                            break;
+                            
+                            case 2:
+                                listaPagamentos = pag.consultarPagamentos();
+                            break;
+                        }
                         
-                        if(pag != null) {
+                        if(listaPagamentos.isEmpty() != true) {
+                            
+                            for(Pagamentos p : listaPagamentos) {
                 %>
                 
                 <tbody>
@@ -123,31 +136,31 @@
                         
                         <td>
                             <%
-                                out.print(pag.getIdPagamento());
+                                out.print(p.getIdPagamento());
                             %>
                         </td>
                         
                         <td>
                             <%
-                                out.print(pag.getIdAluguel());
+                                out.print(p.getIdAluguel());
                             %>
                         </td>
                         
                         <td>
                             <%
-                                out.print(pag.getDataPagamento());
+                                out.print(p.getDataPagamento());
                             %>
                         </td>
                         
                         <td>
                             <%
-                                out.print(pag.getTipoPagamento());
+                                out.print(p.getTipoPagamento());
                             %>
                         </td>
                         
                         <td>
                             <%
-                                out.print("R$" + pag.getVlrPagamento());
+                                out.print("R$" + p.getVlrPagamento());
                             %>
                         </td>
                         
@@ -162,6 +175,7 @@
                 </tbody>
                 
                 <%
+                            }
                         }else {
                 %>
                 
@@ -203,68 +217,9 @@
                 
                 <%
                         }
-                    }else if(vModoConsulta == 1) {
-                        List<Pagamentos> listaPagamentos = new ArrayList<>();
-                        listaPagamentos = pag.consultarPagamentos();
-                        
-                        for(Pagamentos p : listaPagamentos) {
+                    }else {
                %>
                
-               <tbody>
-                    
-                    <tr>
-                        
-                        <td style="background-color: transparent;">
-                            <a class="alterar" href="../../alterar/pagamento.jsp?idPagamento=<%=p.getIdPagamento()%>&idAluguel=<%=p.getIdAluguel()%>&data=<%=p.getDataPagamento()%>&tipo=<%=p.getTipoPagamento()%>&valor=<%=p.getVlrPagamento()%>">
-                                Alterar
-                            </a>
-                        </td>
-                        
-                        <td>
-                            <%
-                                out.print(p.getIdPagamento());
-                            %>
-                        </td>
-                        
-                        <td>
-                            <%
-                                out.print(p.getIdAluguel());
-                            %>
-                        </td>
-                        
-                        <td>
-                            <%
-                                out.print(p.getDataPagamento());
-                            %>
-                        </td>
-                        
-                        <td>
-                            <%
-                                out.print(p.getTipoPagamento());
-                            %>
-                        </td>
-                        
-                        <td>
-                            <%
-                                out.print("R$" + p.getVlrPagamento());
-                            %>
-                        </td>
-                        
-                        <td style="background-color: transparent;">
-                            <a class="excluir" href="../../excluir/pagamento.jsp?idPagamento=<%=p.getIdPagamento()%>&idAluguel=<%=p.getIdAluguel()%>">
-                                Excluir
-                            </a>
-                        </td>
-                
-                    </tr>
-                    
-                </tbody>
-                
-                <%
-                        }
-                    }else {
-                %>
-                
                 <tbody>
                     
                     <tr>
@@ -302,7 +257,7 @@
                 </tbody>
                 
                 <%
-                    }  
+                    }
                 %>
                 
                 <th style="background-color: transparent;">

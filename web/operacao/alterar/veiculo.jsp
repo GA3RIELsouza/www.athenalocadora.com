@@ -1,7 +1,7 @@
 <%@include file="/include/check_login.jsp"%>
+<%@page import="classes.Veiculos"%>
 <%@page import="classes.Marcas"%>
 <%@page import="classes.Modelos"%>
-<%@page import="classes.Veiculos"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -105,16 +105,11 @@
                 <select name="idModelo" id="idModelo" required>
                     <option value="" disabled selected>Insira o modelo</option>
                     <%
-                        Modelos mod = new Modelos();
+                        Veiculos mod = new Veiculos();
                         List<Modelos> listaModelos = new ArrayList<>();
-                        listaModelos = mod.consultarIncluirAlterar();
-                        
-                        int idModeloConsulta = 0;
+                        listaModelos = mod.selectModelos();
 
-                        String idMod = request.getParameter("modelo");
-                        if (idMod != null && !idMod.isEmpty()) {
-                            idModeloConsulta = Integer.parseInt(idMod);
-                        }
+                        String marModConsulta = request.getParameter("marcaModelo");
 
                         for(Modelos m : listaModelos) {
                             int    fIdModelo   = m.getIdModelo();
@@ -128,9 +123,10 @@
 
                             if(mar != null) {
                                 String fNomeMarca = mar.getNomeMarca();
-                                String selectedAttribute = (fIdModelo==idModeloConsulta) ? "selected" : "";
+                                String idMarcaModelo = (fIdMarca + "-" + fIdModelo);
+                                String selectedAttribute = (idMarcaModelo.equals(marModConsulta)) ? "selected" : "";
                     %>
-                    <option value="<%= fIdModelo%>" <%= selectedAttribute%>><%= fNomeMarca + " " + fNomeModelo%></option>
+                    <option value="<%= idMarcaModelo%>" <%= selectedAttribute%>><%= fNomeMarca + " " + fNomeModelo%></option>
                     <%
                             }
                         }
