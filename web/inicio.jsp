@@ -32,37 +32,37 @@
             </div>
         
             <div class="menu-div">
-                <a href="incluir/cliente.jsp" class="menu-anchor">
+                <a href="operacao/incluir/cliente.jsp" class="menu-anchor">
                     Clientes
                 </a>
             </div>
             
             <div class="menu-div">
-                <a href="incluir/veiculo.jsp" class="menu-anchor">
+                <a href="operacao/incluir/veiculo.jsp" class="menu-anchor">
                     Veículos
                 </a>
             </div>
             
             <div class="menu-div">
-                <a href="incluir/marca.jsp" class="menu-anchor">
+                <a href="operacao/incluir/marca.jsp" class="menu-anchor">
                     Marcas
                 </a>
             </div>
             
             <div class="menu-div">
-                <a href="incluir/modelo.jsp" class="menu-anchor">
+                <a href="operacao/incluir/modelo.jsp" class="menu-anchor">
                     Modelos
                 </a>
             </div>
             
             <div class="menu-div">
-                <a href="incluir/aluguel.jsp" class="menu-anchor">
+                <a href="operacao/incluir/aluguel.jsp" class="menu-anchor">
                     Aluguéis
                 </a>
             </div>
             
             <div class="menu-div">
-                <a href="incluir/pagamento.jsp" class="menu-anchor">
+                <a href="operacao/incluir/pagamento.jsp" class="menu-anchor">
                     Pagamentos
                 </a>
             </div>
