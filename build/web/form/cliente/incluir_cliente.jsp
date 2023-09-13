@@ -22,9 +22,9 @@
         cli.setNrCartaoDebCred(vNrCartaoDebCred);
         cli.setChavePix(vChavePix);
         if (cli.incluirCliente()){
-            response.sendRedirect("../cliente.jsp?sucesso=SUCESSO AO INCLUIR O CLIENTE");
+            response.sendRedirect("cliente.jsp?sucessoIncluir=SUCESSO AO INCLUIR O CLIENTE");
         } else {
-            response.sendRedirect("../cliente.jsp?erro=PROBLEMAS AO INCLUIR O CLIENTE");
+            response.sendRedirect("cliente.jsp?erroIncluir=PROBLEMAS AO INCLUIR O CLIENTE");
         }
    %>
 

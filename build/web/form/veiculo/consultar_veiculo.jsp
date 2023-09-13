@@ -37,16 +37,16 @@
 
             <div class="operation-selector">
 
-                <a href="../../incluir/veiculo.jsp" class="operation">
+                <a href="veiculo.jsp?incluir" class="operation">
                     Incluir
                 </a>
 
-                <a href="../../excluir/veiculo.jsp" class="operation">
-                    Excluir
+                <a href="veiculo.jsp?excluir" class="operation">
+                    Alterar
                 </a>
 
-                <a href="../../alterar/veiculo.jsp" class="operation">
-                    Alterar
+                <a href="veiculo.jsp?alterar" class="operation">
+                    Excluir
                 </a>
 
                 <a class="operation selected">
@@ -76,6 +76,10 @@
                     
                     <th scope="col">
                         Modelo
+                    </th>
+                    
+                    <th scope="col">
+                        Tipo placa
                     </th>
                     
                     <th scope="col">
@@ -136,7 +140,7 @@
                     <tr>
                         
                         <td style="background-color: transparent;">
-                            <a class="alterar" href="../../alterar/veiculo.jsp?id=<%=vei.getIdVeiculo()%>&marcaModelo=<%=(vei.getIdMarca()+"-"+vei.getIdModelo())%>&placa=<%=vei.getPlacaVeiculo()%>&corPredominante=<%=vei.getCorPredominante()%>&anoFabricacao=<%=vei.getAnoFabricacao()%>&disponivel=<%=vei.isDisponivel()%>&arCondicionado=<%=vei.isTemArCondicionado()%>&dirHidraulica=<%=vei.isTemDirHidraulica()%>&revisado=<%=vei.isRevisado()%>">
+                            <a class="alterar" href="veiculo.jsp?idAlterar=<%=vei.getIdVeiculo()%>&marcaModelo=<%=(vei.getIdMarca()+"-"+vei.getIdModelo())%>&tipoPlaca=<%=vei.getTipoPlacaVeiculo()%>&placa=<%=vei.getPlacaVeiculo()%>&corPredominante=<%=vei.getCorPredominante()%>&anoFabricacao=<%=vei.getAnoFabricacao()%>&disponivel=<%=vei.isDisponivel()%>&arCondicionado=<%=vei.isTemArCondicionado()%>&dirHidraulica=<%=vei.isTemDirHidraulica()%>&revisado=<%=vei.isRevisado()%>">
                                 Alterar
                             </a>
                         </td>
@@ -171,6 +175,12 @@
                                 if(mod != null) {
                                     out.print(mod.getNomeModelo());
                                 }
+                            %>
+                        </td>
+                        
+                        <td>
+                            <%
+                                out.print(vei.getTipoPlacaVeiculo());
                             %>
                         </td>
                         
@@ -233,7 +243,7 @@
                         </td>
                         
                         <td style="background-color: transparent;">
-                            <a class="excluir" href="../../excluir/veiculo.jsp?id=<%=vei.getIdVeiculo()%>">
+                            <a class="excluir" href="veiculo.jsp?idExcluir=<%=vei.getIdVeiculo()%>">
                                 Excluir
                             </a>
                         </td>
@@ -290,6 +300,10 @@
                             ---
                         </td>
                         
+                        <td>
+                            ---
+                        </td>
+                        
                         <td style="background-color: transparent;">
                             <br>
                         </td>
@@ -312,7 +326,7 @@
                     <tr>
                         
                         <td style="background-color: transparent;">
-                            <a class="alterar" href="../../alterar/veiculo.jsp?id=<%=v.getIdVeiculo()%>&marcaModelo=<%=(v.getIdMarca()+"-"+v.getIdModelo())%>&placa=<%=v.getPlacaVeiculo()%>&corPredominante=<%=v.getCorPredominante()%>&anoFabricacao=<%=v.getAnoFabricacao()%>&disponivel=<%=v.isDisponivel()%>&arCondicionado=<%=v.isTemArCondicionado()%>&dirHidraulica=<%=v.isTemDirHidraulica()%>&revisado=<%=v.isRevisado()%>">
+                            <a class="alterar" href="veiculo.jsp?idAlterar=<%=v.getIdVeiculo()%>&marcaModelo=<%=(v.getIdMarca()+"-"+v.getIdModelo())%>&tipoPlaca=<%=v.getTipoPlacaVeiculo()%>&placa=<%=v.getPlacaVeiculo()%>&corPredominante=<%=v.getCorPredominante()%>&anoFabricacao=<%=v.getAnoFabricacao()%>&disponivel=<%=v.isDisponivel()%>&arCondicionado=<%=v.isTemArCondicionado()%>&dirHidraulica=<%=v.isTemDirHidraulica()%>&revisado=<%=v.isRevisado()%>">
                                 Alterar
                             </a>
                         </td>
@@ -347,6 +361,12 @@
                                 if(mod != null) {
                                     out.print(mod.getNomeModelo());
                                 }
+                            %>
+                        </td>
+                        
+                        <td>
+                            <%
+                                out.print(v.getTipoPlacaVeiculo());
                             %>
                         </td>
                         
@@ -409,7 +429,7 @@
                         </td>
                         
                         <td style="background-color: transparent;">
-                            <a class="excluir" href="../../excluir/veiculo.jsp?id=<%=v.getIdVeiculo()%>">
+                            <a class="excluir" href="veiculo.jsp?idExcluir=<%=v.getIdVeiculo()%>">
                                 Excluir
                             </a>
                         </td>
@@ -433,6 +453,10 @@
                         
                         <td>
                             Nenhum resultado encontrado
+                        </td>
+                        
+                        <td>
+                            ---
                         </td>
                         
                         <td>
@@ -523,6 +547,10 @@
                     <br>
                 </th>
                 
+                <th>
+                    <br>
+                </th>
+                
                 <th style="border-bottom-right-radius: var(--smooth-corners);">
                     <br>
                 </th>
@@ -536,7 +564,7 @@
        <div class="vertical-space"></div>
             
         <div class="home">
-            <a href="../veiculo.jsp" class="home-button outer">
+            <a href="veiculo.jsp?consultar" class="home-button outer">
                 Voltar
             </a>
         </div>

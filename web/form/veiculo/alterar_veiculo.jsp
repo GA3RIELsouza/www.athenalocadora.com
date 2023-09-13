@@ -7,9 +7,9 @@
 <html lang="pt">
 
     <%
-        int     vIdVeiculo         = Integer.parseInt(request.getParameter("idVeiculo"));
+        int vIdVeiculo = Integer.parseInt(request.getParameter("idVeiculo"));
         
-        String  marcaModeloString       = request.getParameter("marcaModelo");
+        String marcaModeloString = request.getParameter("marcaModelo");
         int vIdMarca  = 0;
         int vIdModelo = 0;
         
@@ -23,6 +23,7 @@
             contador++;
         }
         
+        String  vTipoPlacaVeiculo  = request.getParameter("tipoPlacaVeiculo");
         String  vPlacaVeiculo      = request.getParameter("placaVeiculo");
         String  vCorPredominante   = request.getParameter("corPredominante");
         int     vAnoFabricacao     = Integer.parseInt(request.getParameter("anoFabricacao"));
@@ -35,6 +36,7 @@
         vei.setIdVeiculo(vIdVeiculo);
         vei.setIdMarca(vIdMarca);
         vei.setIdModelo(vIdModelo);
+        vei.setTipoPlacaVeiculo(vTipoPlacaVeiculo);
         vei.setPlacaVeiculo(vPlacaVeiculo);
         vei.setCorPredominante(vCorPredominante);
         vei.setAnoFabricacao(vAnoFabricacao);
@@ -43,9 +45,9 @@
         vei.setTemDirHidraulica(vTemDirHidraulica);
         vei.setRevisado(vRevisado);
         if (vei.alterarVeiculo()){
-            response.sendRedirect("../veiculo.jsp?sucesso=SUCESSO AO ALTERAR O VEICULO");
+            response.sendRedirect("veiculo.jsp?sucessoAlterar=SUCESSO AO ALTERAR O VEICULO");
         } else {
-            response.sendRedirect("../veiculo.jsp?erro=PROBLEMAS AO ALTERAR O VEICULO");
+            response.sendRedirect("veiculo.jsp?erroAlterar=PROBLEMAS AO ALTERAR O VEICULO");
         }
    %>
 

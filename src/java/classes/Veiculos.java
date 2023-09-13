@@ -13,6 +13,7 @@ public class Veiculos {
     private int     idVeiculo;
     private int     idMarca;
     private int     idModelo;
+    private String  tipoPlacaVeiculo;
     private String  placaVeiculo;
     private String  corPredominante;
     private int     anoFabricacao;
@@ -25,23 +26,24 @@ public class Veiculos {
         
         Connection con = Conexao.conectar();
         String sql  = "INSERT INTO veiculos ";
-               sql += "(idMarca, idModelo, placaVeiculo, corPredominante, ";
+               sql += "(idMarca, idModelo, tipoPlacaVeiculo, placaVeiculo, corPredominante, ";
                sql += "anoFabricacao, disponivel, temArCondicionado, temDirHidraulica, revisado) ";
-               sql += "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+               sql += "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
                
         try {
             
             PreparedStatement stm = con.prepareStatement(sql);
             
-            stm.setInt     (1, idModelo);
-            stm.setInt     (2, idMarca);
-            stm.setString  (3, placaVeiculo);
-            stm.setString  (4, corPredominante);
-            stm.setInt     (5, anoFabricacao);
-            stm.setBoolean (6, disponivel);
-            stm.setBoolean (7, temArCondicionado);
-            stm.setBoolean (8, temDirHidraulica);
-            stm.setBoolean (9, revisado);
+            stm.setInt     (1,  idModelo);
+            stm.setInt     (2,  idMarca);
+            stm.setString  (3,  tipoPlacaVeiculo);
+            stm.setString  (4,  placaVeiculo);
+            stm.setString  (5,  corPredominante);
+            stm.setInt     (6,  anoFabricacao);
+            stm.setBoolean (7,  disponivel);
+            stm.setBoolean (8,  temArCondicionado);
+            stm.setBoolean (9,  temDirHidraulica);
+            stm.setBoolean (10, revisado);
             
             stm.execute();
             
@@ -63,7 +65,7 @@ public class Veiculos {
         
         Connection con = Conexao.conectar();
         String sql  = "UPDATE veiculos ";
-               sql += "SET idMarca= ?, idModelo= ? placaVeiculo= ?, corPredominante= ?, anoFabricacao= ?, ";
+               sql += "SET idMarca= ?, idModelo= ?, tipoPlacaVeiculo= ?, placaVeiculo= ?, corPredominante= ?, anoFabricacao= ?, ";
                sql += "disponivel= ?, temArCondicionado= ?, temDirHidraulica= ?, revisado = ? ";
                sql += "WHERE idVeiculo= ?";
                
@@ -73,14 +75,15 @@ public class Veiculos {
             
             stm.setInt     (1,  idMarca);
             stm.setInt     (2,  idModelo);
-            stm.setString  (3,  placaVeiculo);
-            stm.setString  (4,  corPredominante);
-            stm.setInt     (5,  anoFabricacao);
-            stm.setBoolean (6,  disponivel);
-            stm.setBoolean (7,  temArCondicionado);
-            stm.setBoolean (8,  temDirHidraulica);
-            stm.setBoolean (9,  revisado);
-            stm.setInt     (10, idVeiculo);
+            stm.setString  (3,  tipoPlacaVeiculo);
+            stm.setString  (4,  placaVeiculo);
+            stm.setString  (5,  corPredominante);
+            stm.setInt     (6,  anoFabricacao);
+            stm.setBoolean (7,  disponivel);
+            stm.setBoolean (8,  temArCondicionado);
+            stm.setBoolean (9,  temDirHidraulica);
+            stm.setBoolean (10, revisado);
+            stm.setInt     (11, idVeiculo);
             
             stm.execute();
             
@@ -129,7 +132,7 @@ public class Veiculos {
     public Veiculos consultarVeiculo() throws SQLException {
         
         Connection con = Conexao.conectar();
-        String sql  = "SELECT idVeiculo, idMarca, idModelo, placaVeiculo, corPredominante, ";
+        String sql  = "SELECT idVeiculo, idMarca, idModelo, tipoPlacaVeiculo, placaVeiculo, corPredominante, ";
                sql += "anoFabricacao, disponivel, temArCondicionado, temDirHidraulica, revisado ";
                sql += "FROM veiculos ";
                sql += "WHERE idVeiculo= ? ";
@@ -150,6 +153,7 @@ public class Veiculos {
                 vei.setIdVeiculo         (getIdVeiculo());
                 vei.setIdMarca           (rs.getInt("idMarca"));
                 vei.setIdModelo          (rs.getInt("idModelo"));
+                vei.setTipoPlacaVeiculo  (rs.getString("tipoPlacaVeiculo"));
                 vei.setPlacaVeiculo      (rs.getString("placaVeiculo"));
                 vei.setCorPredominante   (rs.getString("corPredominante"));
                 vei.setAnoFabricacao     (rs.getInt("anoFabricacao"));
@@ -176,7 +180,7 @@ public class Veiculos {
         
         Connection con = Conexao.conectar();
         List<Veiculos> listaVeiculos = new ArrayList<>();
-        String sql  = "SELECT idVeiculo, idMarca, idModelo, placaVeiculo, corPredominante, ";
+        String sql  = "SELECT idVeiculo, idMarca, idModelo, tipoPlacaVeiculo, placaVeiculo, corPredominante, ";
                sql += "anoFabricacao, disponivel, temArCondicionado, temDirHidraulica, revisado ";
                sql += "FROM veiculos ";
                sql += "ORDER BY idVeiculo;";
@@ -193,6 +197,7 @@ public class Veiculos {
                 vei.setIdVeiculo         (rs.getInt("idVeiculo"));
                 vei.setIdMarca           (rs.getInt("idMarca"));
                 vei.setIdModelo          (rs.getInt("idModelo"));
+                vei.setTipoPlacaVeiculo  (rs.getString("tipoPlacaVeiculo"));
                 vei.setPlacaVeiculo      (rs.getString("placaVeiculo"));
                 vei.setCorPredominante   (rs.getString("corPredominante"));
                 vei.setAnoFabricacao     (rs.getInt("anoFabricacao"));
@@ -282,6 +287,14 @@ public class Veiculos {
         this.idModelo = idModelo;
     }
 
+    public String getTipoPlacaVeiculo() {
+        return tipoPlacaVeiculo;
+    }
+
+    public void setTipoPlacaVeiculo(String tipoPlacaVeiculo) {
+        this.tipoPlacaVeiculo = tipoPlacaVeiculo;
+    }
+
     public String getPlacaVeiculo() {
         return placaVeiculo;
     }
@@ -337,5 +350,5 @@ public class Veiculos {
     public void setRevisado(boolean revisado) {
         this.revisado = revisado;
     }
-
+    
 }

@@ -7,7 +7,7 @@
 <html lang="pt">
 
     <%
-        String  marcaModeloString       = request.getParameter("marcaModelo");
+        String  marcaModeloString = request.getParameter("marcaModelo");
         int vIdMarca  = 0;
         int vIdModelo = 0;
         
@@ -21,6 +21,7 @@
             contador++;
         }
         
+        String  vTipoPlacaVeiculo  = request.getParameter("tipoPlacaVeiculo");
         String  vPlacaVeiculo      = request.getParameter("placaVeiculo");
         String  vCorPredominante   = request.getParameter("corPredominante");
         int     vAnoFabricacao     = Integer.parseInt(request.getParameter("anoFabricacao"));
@@ -32,6 +33,7 @@
         Veiculos vei = new Veiculos();
         vei.setIdMarca(vIdMarca);
         vei.setIdModelo(vIdModelo);
+        vei.setTipoPlacaVeiculo(vTipoPlacaVeiculo);
         vei.setPlacaVeiculo(vPlacaVeiculo);
         vei.setCorPredominante(vCorPredominante);
         vei.setAnoFabricacao(vAnoFabricacao);
@@ -40,9 +42,9 @@
         vei.setTemDirHidraulica(vTemDirHidraulica);
         vei.setRevisado(vRevisado);
         if (vei.incluirVeiculo()){
-            response.sendRedirect("../veiculo.jsp?sucesso=SUCESSO AO INCLUIR O VEICULO");
+            response.sendRedirect("veiculo.jsp?sucessoIncluir=SUCESSO AO INCLUIR O VEICULO");
         } else {
-            response.sendRedirect("../veiculo.jsp?erro=PROBLEMAS AO INCLUIR O VEICULO");
+            response.sendRedirect("veiculo.jsp?erroIncluir=PROBLEMAS AO INCLUIR O VEICULO");
         }
    %>
 

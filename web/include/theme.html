@@ -1,73 +1,61 @@
-<html>
-    
-    <head>
-        
-        <script>
-            if(localStorage.getItem("tema")) {
-                var elementos = document.getElementsByTagName("*");
-                
-                for (var i = 0; i < elementos.length; i++) {
-                    elementos[i].classList.remove("tema-azul", "tema-verde", "tema-laranja", "tema-escuro");
-                    elementos[i].classList.add(localStorage.getItem("tema"));
-                }
-            }
+<script>
+    if(localStorage.getItem("tema")) {
+        var elementos = document.getElementsByTagName("*");
 
-            function mudaTema() {
-                var temaSelect = document.getElementById("tema-select");
-                var elementos  = document.getElementsByTagName("*");
-                var temaSelecionado = temaSelect.value;
-                
-                for (var i = 0; i < elementos.length; i++) {
-                    elementos[i].classList.remove("tema-azul", "tema-verde", "tema-laranja", "tema-cinza");
+        for (var i = 0; i < elementos.length; i++) {
+            elementos[i].classList.remove("tema-azul", "tema-verde", "tema-laranja", "tema-escuro");
+            elementos[i].classList.add(localStorage.getItem("tema"));
+        }
+    }
 
-                    switch(temaSelecionado) {
-                        case "0":
-                            elementos[i].classList.add("tema-azul");
-                            localStorage.setItem("tema", "tema-azul");
-                        break;
+    function mudaTema() {
+        var temaSelect = document.getElementById("tema-select");
+        var elementos  = document.getElementsByTagName("*");
+        var temaSelecionado = temaSelect.value;
 
-                        case "1":
-                            elementos[i].classList.add("tema-verde");
-                            localStorage.setItem("tema", "tema-verde");
-                        break;
+        for (var i = 0; i < elementos.length; i++) {
+            elementos[i].classList.remove("tema-azul", "tema-verde", "tema-laranja", "tema-cinza");
 
-                        case "2":
-                            elementos[i].classList.add("tema-laranja");
-                            localStorage.setItem("tema", "tema-laranja");
-                        break;
+            switch(temaSelecionado) {
+                case "0":
+                    elementos[i].classList.add("tema-azul");
+                    localStorage.setItem("tema", "tema-azul");
+                break;
 
-                        case "3":
-                            elementos[i].classList.add("tema-escuro");
-                            localStorage.setItem("tema", "tema-escuro");
-                        break;
-                        
-                        default:
-                            if (localStorage.getItem("tema")) {
-                                var elementos  = document.getElementsByTagName("*");
+                case "1":
+                    elementos[i].classList.add("tema-verde");
+                    localStorage.setItem("tema", "tema-verde");
+                break;
 
-                                for (var i = 0; i < elementos.length; i++) {
-                                    elementos[i].classList.remove("tema-azul", "tema-verde", "tema-laranja", "tema-escuro");
-                                    elementos[i].classList.add(localStorage.getItem("tema"));
-                                }
-                            }
-                        break;
+                case "2":
+                    elementos[i].classList.add("tema-laranja");
+                    localStorage.setItem("tema", "tema-laranja");
+                break;
+
+                case "3":
+                    elementos[i].classList.add("tema-escuro");
+                    localStorage.setItem("tema", "tema-escuro");
+                break;
+
+                default:
+                    if (localStorage.getItem("tema")) {
+                        var elementos  = document.getElementsByTagName("*");
+
+                        for (var i = 0; i < elementos.length; i++) {
+                            elementos[i].classList.remove("tema-azul", "tema-verde", "tema-laranja", "tema-escuro");
+                            elementos[i].classList.add(localStorage.getItem("tema"));
+                        }
                     }
-                }
+                break;
             }
-        </script>
-        
-    </head>
-    
-    <body>
-        
-        <select class="tema-select" id="tema-select" onchange="mudaTema()">
-            <option value="" selected><strong>Selecione o tema desejado</strong></option>
-            <option value=0>Azul</option>
-            <option value=1>Verde</option>
-            <option value=2>Laranja</option>
-            <option value=3>Escuro</option>
-        </select>
-        
-    </body>
-    
-</html>
+        }
+    }
+</script>
+
+<select class="tema-select" id="tema-select" onchange="mudaTema()">
+    <option value="" selected><strong>Selecione o tema desejado</strong></option>
+    <option value=0>Azul</option>
+    <option value=1>Verde</option>
+    <option value=2>Laranja</option>
+    <option value=3>Escuro</option>
+</select>

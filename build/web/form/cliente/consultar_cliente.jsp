@@ -35,16 +35,16 @@
 
             <div class="operation-selector">
 
-                <a href="../../incluir/cliente.jsp" class="operation">
+                <a href="cliente.jsp?incluir" class="operation">
                     Incluir
                 </a>
-
-                <a href="../../excluir/cliente.jsp" class="operation">
-                    Excluir
+                
+                <a href="cliente.jsp?alterar" class="operation">
+                    Alterar
                 </a>
 
-                <a href="../../alterar/cliente.jsp" class="operation">
-                    Alterar
+                <a href="cliente.jsp?excluir" class="operation">
+                    Excluir
                 </a>
 
                 <a class="operation selected">
@@ -118,7 +118,7 @@
                 <tr>
 
                     <td style="background-color: transparent;">
-                        <a class="alterar" href="../../alterar/cliente.jsp?cpf=<%=cli.getCpfCliente()%>&nome=<%=cli.getNomeCliente()%>&fone=<%=cli.getFoneCliente()%>&email=<%=cli.getEmailCliente()%>&cartao=<%=cli.getNrCartaoDebCred()%>&pix=<%=cli.getChavePix()%>">
+                        <a class="alterar" href="cliente.jsp?cpfAlterar=<%=cli.getCpfCliente()%>&nome=<%=cli.getNomeCliente()%>&fone=<%=cli.getFoneCliente()%>&email=<%=cli.getEmailCliente()%>&cartao=<%=cli.getNrCartaoDebCred()%>&pix=<%=cli.getChavePix()%>">
                             Alterar
                         </a>
                     </td>
@@ -160,7 +160,7 @@
                     </td>
 
                     <td style="background-color: transparent;">
-                        <a class="excluir" href="../../excluir/cliente.jsp?cpf=<%=cli.getCpfCliente()%>">
+                        <a class="excluir" href="cliente.jsp?cpfExcluir=<%=cli.getCpfCliente()%>">
                             Excluir
                         </a>
                     </td>
@@ -227,7 +227,7 @@
                 <tr>
 
                     <td style="background-color: transparent;">
-                        <a class="alterar" href="../../alterar/cliente.jsp?cpf=<%=c.getCpfCliente()%>&nome=<%=c.getNomeCliente()%>&fone=<%=c.getFoneCliente()%>&email=<%=c.getEmailCliente()%>&cartao=<%=c.getNrCartaoDebCred()%>&pix=<%=c.getChavePix()%>">
+                        <a class="alterar" href="cliente.jsp?cpfAlterar=<%=c.getCpfCliente()%>&nome=<%=c.getNomeCliente()%>&fone=<%=c.getFoneCliente()%>&email=<%=c.getEmailCliente()%>&cartao=<%=c.getNrCartaoDebCred()%>&pix=<%=c.getChavePix()%>">
                             Alterar
                         </a>
                     </td>
@@ -269,7 +269,7 @@
                     </td>
 
                     <td style="background-color: transparent;">
-                        <a class="excluir" href="../../excluir/cliente.jsp?cpf=<%=c.getCpfCliente()%>">
+                        <a class="excluir" href="cliente.jsp?cpfExcluir=<%=c.getCpfCliente()%>">
                             Excluir
                         </a>
                     </td>
@@ -364,7 +364,7 @@
        <div class="vertical-space"></div>
             
         <div class="home">
-            <a href="../cliente.jsp" class="home-button outer">
+            <a href="cliente.jsp?Consultar" class="home-button outer">
                 Voltar
             </a>
         </div>

@@ -5,29 +5,7 @@
 <!DOCTYPE html>
 
 <html lang="pt">
-
-    <%
-            Cookie[] cookies = request.getCookies();
-            Usuarios  usu     = new Usuarios();
-            boolean  ok       = false;
-            
-            if(cookies != null) {
-               for(Cookie atual : cookies) {
-                    if(atual.getName().equals("sessionId")) {
-                        usu.setSessionId(atual.getValue());
-                        
-                        if(usu.checkSessionId()) {
-                            ok = true;
-                        }
-                    }
-                }
-            }
-
-            if(ok == false) {
-                response.sendRedirect("/www.athenalocadora.com/index.jsp");
-            }
-        %>
-
+    
     <%
         String vCpfCliente      = request.getParameter("cpfCliente");
         String vNomeCliente     = request.getParameter("nomeCliente");
@@ -44,9 +22,9 @@
         cli.setNrCartaoDebCred(vNrCartaoDebCred);
         cli.setChavePix(vChavePix);
         if (cli.alterarCliente()){
-            response.sendRedirect("../cliente.jsp?sucesso=SUCESSO AO ALTERAR O CLIENTE");
+            response.sendRedirect("cliente.jsp?sucessoAlterar=SUCESSO AO ALTERAR O CLIENTE");
         } else {
-            response.sendRedirect("../cliente.jsp?erro=PROBLEMAS AO ALTERAR O CLIENTE");
+            response.sendRedirect("cliente.jsp?erroAlterar=PROBLEMAS AO ALTERAR O CLIENTE");
         }
    %>
 

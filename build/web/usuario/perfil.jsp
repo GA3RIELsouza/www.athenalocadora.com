@@ -14,9 +14,9 @@
         
         <script>
             function goBack() {
-                if (document.referrer.includes('senha.jsp')) {
-                    window.location.href = '/www.athenalocadora.com/inicio.jsp';
-                } else {
+                if(document.referrer.includes("senha.jsp")) {
+                    window.location.href = "/www.athenalocadora.com/inicio.jsp";
+                }else {
                     window.history.back();
                 }
             }

@@ -42,7 +42,7 @@
         <div class="vertical-space"></div>
         <div class="vertical-space"></div>
         
-        <form onsubmit="return checkNovaSenha();" action="back/alterar_senha.jsp" method="post" class="outer">
+        <form onsubmit="return checkNovaSenha();" action="alterar_senha.jsp" method="post" class="outer">
             
             <div class="title">
                 <h1>
