@@ -6,6 +6,13 @@
             elementos[i].classList.remove("tema-laranja", "tema-verde", "tema-azul", "tema-escuro");
             elementos[i].classList.add(localStorage.getItem("tema"));
         }
+    }else {
+        var elementos = document.getElementsByTagName("*");
+
+        for (var i = 0; i < elementos.length; i++) {
+            elementos[i].classList.remove("tema-laranja", "tema-verde", "tema-azul", "tema-escuro");
+            elementos[i].classList.add("tema-laranja");
+        }
     }
 
     function mudaTema() {

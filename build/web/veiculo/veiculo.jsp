@@ -99,19 +99,14 @@
         
         <form action="incluir_veiculo.jsp" method="post" class="outer" id="form_incluir">
             
-            <div class="sucesso">
-                <%
-                    if(request.getParameter("sucessoIncluir") != null)         
-                        out.write(request.getParameter("sucessoIncluir"));
-                %>
-            </div>
-            
-            <div class="erro">
-                <%
-                    if(request.getParameter("erroIncluir") != null)         
-                        out.write(request.getParameter("erroIncluir"));
-                %>
-            </div>
+            <%
+                if(true) {
+                    String operacao = "Incluir";
+            %>
+            <%@include file="/include/erro_sucesso.jsp"%>
+            <%
+                }
+            %>
             
             <div class="form-input">
                 <label for="marcaModelo">Modelo</label><br>
@@ -220,19 +215,14 @@
                 
         <form action="alterar_veiculo.jsp" method="post" class="outer" id="form_alterar">
             
-            <div class="sucesso">
-                <%
-                    if(request.getParameter("sucessoAlterar") != null)         
-                        out.write(request.getParameter("sucessoAlterar"));
-                %>
-            </div>
-            
-            <div class="erro">
-                <%
-                    if(request.getParameter("erroAlterar") != null)         
-                        out.write(request.getParameter("erroAlterar"));
-                %>
-            </div>
+            <%
+                if(true) {
+                    String operacao = "Alterar";
+            %>
+            <%@include file="/include/erro_sucesso.jsp"%>
+            <%
+                }
+            %>
             
             <div class="form-input">
                 <label for="idVeiculo2">ID <small class="no-select">(buscar por)</small></label><br>
@@ -385,19 +375,14 @@
                 
         <form action="excluir_veiculo.jsp" method="post" class="outer" id="form_excluir">
             
-            <div class="sucesso">
-                <%
-                    if(request.getParameter("sucessoExcluir") != null)         
-                        out.write(request.getParameter("sucessoExcluir"));
-                %>
-            </div>
-            
-            <div class="erro">
-                <%
-                    if(request.getParameter("erroExcluir") != null)         
-                        out.write(request.getParameter("erroExcluir"));
-                %>
-            </div>
+            <%
+                if(true) {
+                    String operacao = "Excluir";
+            %>
+            <%@include file="/include/erro_sucesso.jsp"%>
+            <%
+                }
+            %>
             
             <div class="form-input">
                 <label for="idVeiculo3">ID <small class="no-select">(buscar por)</small></label><br>
