@@ -1,0 +1,138 @@
+<div class="operation-selector">
+    
+    <script>
+        var classe;
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            var urlAtual       = window.location.href;
+            
+            var incluir_nome   = "Incluir";
+            var alterar_nome   = "Alterar";
+            var excluir_nome   = "Excluir";
+            var consultar_nome = "Consultar";
+
+            if (urlAtual.indexOf("cliente.jsp") !== -1) {
+                classe = "cliente";
+            }else if (urlAtual.indexOf("veiculo.jsp") !== -1) {
+                classe = "veiculo";
+            }else if (urlAtual.indexOf("marca.jsp") !== -1) {
+                classe = "marca";
+            }else if (urlAtual.indexOf("modelo.jsp") !== -1) {
+                classe = "modelo";
+            }else if (urlAtual.indexOf("aluguel.jsp") !== -1) {
+                classe   = "aluguel";
+                alterar_nome = "Devolver";
+                excluir_nome = "Cancelar";
+            }else if (urlAtual.indexOf("pagamento.jsp") !== -1) {
+                classe = "pagamento";
+            }
+        
+            var incluir_botao   = document.getElementById("incluir");
+            var excluir_botao   = document.getElementById("excluir");
+            var alterar_botao   = document.getElementById("alterar");
+            var consultar_botao = document.getElementById("consultar");
+            
+            incluir_botao.innerHTML   = incluir_nome;
+            alterar_botao.innerHTML   = alterar_nome;
+            excluir_botao.innerHTML   = excluir_nome;
+            consultar_botao.innerHTML = consultar_nome;
+        });
+
+        function mudaOperacao(operacaoSelecionada) {
+            var incluir   = document.getElementById("incluir");
+            var excluir   = document.getElementById("excluir");
+            var alterar   = document.getElementById("alterar");
+            var consultar = document.getElementById("consultar");
+        
+            var form_incluir   = document.getElementById("form_incluir");
+            var form_excluir   = document.getElementById("form_excluir");
+            var form_alterar   = document.getElementById("form_alterar");
+            var form_consultar = document.getElementById("form_consultar");
+
+            switch(operacaoSelecionada.id) {
+                case "incluir":
+                    incluir.classList.add("selected");
+                    excluir.classList.remove("selected");
+                    alterar.classList.remove("selected");
+                    consultar.classList.remove("selected");
+                    form_incluir.style.display = "";
+                    form_excluir.style.display = "none";
+                    form_alterar.style.display = "none";
+                    form_consultar.style.display = "none";
+                    if (window.history.replaceState) {
+                        history.pushState({}, null, "http://localhost:8080/www.athenalocadora.com/form/" + classe + "/" + classe + ".jsp?incluir");
+                    }
+                break;
+
+                case "excluir":
+                    incluir.classList.remove("selected");
+                    excluir.classList.add("selected");
+                    alterar.classList.remove("selected");
+                    consultar.classList.remove("selected");
+                    form_incluir.style.display = "none";
+                    form_excluir.style.display = "";
+                    form_alterar.style.display = "none";
+                    form_consultar.style.display = "none";
+                    if (window.history.replaceState) {
+                        history.pushState({}, null, "http://localhost:8080/www.athenalocadora.com/form/" + classe + "/" + classe + ".jsp?excluir");
+                    }
+                break;
+
+                case "alterar":
+                    incluir.classList.remove("selected");
+                    excluir.classList.remove("selected");
+                    alterar.classList.add("selected");
+                    consultar.classList.remove("selected");
+                    form_incluir.style.display = "none";
+                    form_excluir.style.display = "none";
+                    form_alterar.style.display = "";
+                    form_consultar.style.display = "none";
+                    if (window.history.replaceState) {
+                        history.pushState({}, null, "http://localhost:8080/www.athenalocadora.com/form/" + classe + "/" + classe + ".jsp?alterar");
+                    }
+                break;
+
+                case "consultar":
+                    incluir.classList.remove("selected");
+                    excluir.classList.remove("selected");
+                    alterar.classList.remove("selected");
+                    consultar.classList.add("selected");
+                    form_incluir.style.display = "none";
+                    form_excluir.style.display = "none";
+                    form_alterar.style.display = "none";
+                    form_consultar.style.display = "";
+                    if (window.history.replaceState) {
+                        history.pushState({}, null, "http://localhost:8080/www.athenalocadora.com/form/" + classe + "/" + classe + ".jsp?consultar");
+                    }
+                break;
+
+                default:
+                    mudaOperacao(document.getElementById("incluir"));
+                break;
+            }
+        }
+
+        window.onload = function() {
+            if(window.location.href.indexOf("?incluir") > -1 || window.location.href.indexOf("Incluir") > -1) {
+                mudaOperacao(document.getElementById("incluir"));
+            }else if(window.location.href.indexOf("?excluir") > -1 || window.location.href.indexOf("Excluir") > -1) {
+                mudaOperacao(document.getElementById("excluir"));
+            }else if(window.location.href.indexOf("?alterar") > -1 || window.location.href.indexOf("Alterar") > -1) {
+                mudaOperacao(document.getElementById("alterar"));
+            }else if(window.location.href.indexOf("?consultar") || window.location.href.indexOf("Consultar") > -1) {
+                mudaOperacao(document.getElementById("consultar"));
+            }else {
+                mudaOperacao(document.getElementById("incluir"));
+            }
+        };
+    </script>
+
+    <button id="incluir" class="operation" onclick="mudaOperacao(this)"></button>
+
+    <button id="alterar" class="operation" onclick="mudaOperacao(this)"></button>
+
+    <button id="excluir" class="operation" onclick="mudaOperacao(this)"></button>
+
+    <button id="consultar" class="operation" onclick="mudaOperacao(this)"></button>
+
+</div>

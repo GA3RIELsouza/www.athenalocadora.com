@@ -3,10 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/gabriel_souza20/Documents/NetBeansProjects/www.athenalocadora.com/web/form/veiculo/veiculo.jsp</file>
-            <file>file:/C:/Users/gabriel_souza20/Documents/NetBeansProjects/www.athenalocadora.com/web/js/operacoes_form.js</file>
-            <file>file:/C:/Users/gabriel_souza20/Documents/NetBeansProjects/www.athenalocadora.com/web/form/veiculo/consultar_veiculo.jsp</file>
-            <file>file:/C:/Users/gabriel_souza20/Documents/NetBeansProjects/www.athenalocadora.com/web/form/cliente/consultar_cliente.jsp</file>
+            <file>file:/C:/Users/gabriel_souza20/Documents/NetBeansProjects/www.athenalocadora.com/web/include/operation_selector.html</file>
+            <file>file:/C:/Users/gabriel_souza20/Documents/NetBeansProjects/www.athenalocadora.com/web/form/aluguel/aluguel.jsp</file>
+            <file>file:/C:/Users/gabriel_souza20/Documents/NetBeansProjects/www.athenalocadora.com/web/form/aluguel/consultar_aluguel.jsp</file>
+            <file>file:/C:/Users/gabriel_souza20/Documents/NetBeansProjects/www.athenalocadora.com/web/include/operation_selector_consulta.html</file>
         </group>
     </open-files>
 </project-private>

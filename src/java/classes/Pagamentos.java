@@ -159,6 +159,7 @@ public class Pagamentos {
         try {
             
             PreparedStatement stm = con.prepareStatement(sql);
+            stm.setInt(1, idPagamento);
             ResultSet rs = stm.executeQuery();
             
             while(rs.next()) {
@@ -199,6 +200,7 @@ public class Pagamentos {
         try {
             
             PreparedStatement stm = con.prepareStatement(sql);
+            stm.setInt(1, idAluguel);
             ResultSet rs = stm.executeQuery();
             
             while(rs.next()) {

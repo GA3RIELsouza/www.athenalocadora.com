@@ -1,10 +1,10 @@
 :root {
-    /* Tema azul, default */
-    --color1: #27A4F2;
-    --color2: #3EAEF4;
-    --color3: #6EC2F7;
-    --color4: #9FD7F9;
-    --color5: #CFEBFC;
+    /* Tema laranja, default */
+    --color1: #F5A940;
+    --color2: #F7BF5E;
+    --color3: #FAD47B;
+    --color4: #FCEA99;
+    --color5: #FFFFB6;
     
     --trueColor:  #859D3D;
     --falseColor: #921D2F;
@@ -149,7 +149,7 @@ a {
 }
 
 .tema-select option[value="0"] {
-    background-color: #CFEBFC;
+    background-color: #FFFFB6;
 }
 
 .tema-select option[value="1"] {
@@ -157,7 +157,7 @@ a {
 }
 
 .tema-select option[value="2"] {
-    background-color: #FFFFB6;
+    background-color: #CFEBFC;
 }
 
 .tema-select option[value="3"] {

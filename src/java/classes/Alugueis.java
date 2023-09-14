@@ -17,7 +17,7 @@ public class Alugueis {
     private Timestamp dataAluguel;
     private Timestamp dataDevolucao;
     private Timestamp dataEstimadaDevolucao;
-    private boolean    pagamento;
+    private boolean   pagamento;
 
     public boolean locarVeiculo() throws SQLException {
         
@@ -64,9 +64,9 @@ public class Alugueis {
             
             PreparedStatement stm = con.prepareStatement(sql);
             
-            stm.setInt       (1, idAluguel);
-            stm.setString    (2, cpfCliente);
-            stm.setTimestamp (3, dataDevolucao);
+            stm.setTimestamp (1, dataDevolucao);
+            stm.setInt       (2, idAluguel);
+            stm.setString    (3, cpfCliente);
             
             stm.execute();
             

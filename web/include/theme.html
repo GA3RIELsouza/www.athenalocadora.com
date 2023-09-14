@@ -3,7 +3,7 @@
         var elementos = document.getElementsByTagName("*");
 
         for (var i = 0; i < elementos.length; i++) {
-            elementos[i].classList.remove("tema-azul", "tema-verde", "tema-laranja", "tema-escuro");
+            elementos[i].classList.remove("tema-laranja", "tema-verde", "tema-azul", "tema-escuro");
             elementos[i].classList.add(localStorage.getItem("tema"));
         }
     }
@@ -14,12 +14,12 @@
         var temaSelecionado = temaSelect.value;
 
         for (var i = 0; i < elementos.length; i++) {
-            elementos[i].classList.remove("tema-azul", "tema-verde", "tema-laranja", "tema-escuro");
+            elementos[i].classList.remove("tema-laranja", "tema-verde", "tema-azul", "tema-escuro");
 
             switch(temaSelecionado) {
                 case "0":
-                    elementos[i].classList.add("tema-azul");
-                    localStorage.setItem("tema", "tema-azul");
+                    elementos[i].classList.add("tema-laranja");
+                    localStorage.setItem("tema", "tema-laranja");
                 break;
 
                 case "1":
@@ -28,8 +28,8 @@
                 break;
 
                 case "2":
-                    elementos[i].classList.add("tema-laranja");
-                    localStorage.setItem("tema", "tema-laranja");
+                    elementos[i].classList.add("tema-azul");
+                    localStorage.setItem("tema", "tema-azul");
                 break;
 
                 case "3":
@@ -42,7 +42,7 @@
                         var elementos  = document.getElementsByTagName("*");
 
                         for (var i = 0; i < elementos.length; i++) {
-                            elementos[i].classList.remove("tema-azul", "tema-verde", "tema-laranja", "tema-escuro");
+                            elementos[i].classList.remove("tema-laranja", "tema-verde", "tema-azul", "tema-escuro");
                             elementos[i].classList.add(localStorage.getItem("tema"));
                         }
                     }
@@ -54,8 +54,8 @@
 
 <select class="tema-select" id="tema-select" onchange="mudaTema()">
     <option value="" selected><strong>Selecione o tema desejado</strong></option>
-    <option value=0>Azul</option>
+    <option value=0>Laranja</option>
     <option value=1>Verde</option>
-    <option value=2>Laranja</option>
+    <option value=2>Azul</option>
     <option value=3>Escuro</option>
 </select>

@@ -1,0 +1,52 @@
+<div class="operation-selector">
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var urlAtual = window.location.href;
+            
+            var incluir_nome    = "Incluir";
+            var alterar_nome    = "Alterar";
+            var excluir_nome    = "Excluir";
+            var consultar_nome  = "Consultar";
+
+            if (urlAtual.indexOf("cliente.jsp") !== -1) {
+                var classe = "cliente.jsp";
+            }else if (urlAtual.indexOf("veiculo.jsp") !== -1) {
+                var classe = "veiculo.jsp";
+            }else if (urlAtual.indexOf("marca.jsp") !== -1) {
+                var classe = "marca.jsp";
+            }else if (urlAtual.indexOf("modelo.jsp") !== -1) {
+                var classe = "modelo.jsp";
+            }else if (urlAtual.indexOf("aluguel.jsp") !== -1) {
+                var classe = "aluguel.jsp";
+                alterar_nome = "Devolver";
+                excluir_nome = "Cancelar";
+            }else if (urlAtual.indexOf("pagamento.jsp") !== -1) {
+                var classe = "pagamento.jsp";
+            }
+            
+            var incluir   = document.getElementById("incluir");
+            var alterar   = document.getElementById("alterar");
+            var excluir   = document.getElementById("excluir");
+            var consultar = document.getElementById("consultar");
+            
+            incluir.href = classe + "?incluir";
+            alterar.href = classe + "?alterar";
+            excluir.href = classe + "?excluir";
+            
+            incluir.innerHTML   = incluir_nome;
+            alterar.innerHTML   = alterar_nome;
+            excluir.innerHTML   = excluir_nome;
+            consultar.innerHTML = consultar_nome;
+        });
+    </script>
+
+    <a id="incluir" class="operation"></a>
+
+    <a id="alterar" class="operation"></a>
+
+    <a id="excluir" class="operation"></a>
+
+    <a id="consultar" class="operation selected"></a>
+
+</div>
