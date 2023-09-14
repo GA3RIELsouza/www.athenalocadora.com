@@ -171,7 +171,7 @@
             </div>
             
             <div class="form-input">
-                <label for="emailClient3e">E-mail</label><br>
+                <label for="emailCliente3">E-mail</label><br>
                 <input type="email" id="emailCliente3" name="emailCliente" placeholder="Insira o e-mail" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" maxlength="50" value="<%=request.getParameter("email") != null ? request.getParameter("email") : ""%>" required>
             </div>
             

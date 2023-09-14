@@ -3,14 +3,13 @@
         var elementos = document.getElementsByTagName("*");
 
         for (var i = 0; i < elementos.length; i++) {
-            elementos[i].classList.remove("tema-laranja", "tema-verde", "tema-azul", "tema-escuro");
+            elementos[i].classList.remove("tema-claro", "tema-escuro", "tema-laranja", "tema-verde", "tema-azul");
             elementos[i].classList.add(localStorage.getItem("tema"));
         }
     }else {
         var elementos = document.getElementsByTagName("*");
 
         for (var i = 0; i < elementos.length; i++) {
-            elementos[i].classList.remove("tema-laranja", "tema-verde", "tema-azul", "tema-escuro");
             elementos[i].classList.add("tema-laranja");
         }
     }
@@ -21,36 +20,47 @@
         var temaSelecionado = temaSelect.value;
 
         for (var i = 0; i < elementos.length; i++) {
-            elementos[i].classList.remove("tema-laranja", "tema-verde", "tema-azul", "tema-escuro");
+            elementos[i].classList.remove("tema-claro", "tema-escuro", "tema-laranja", "tema-verde", "tema-azul");
 
             switch(temaSelecionado) {
                 case "0":
+                    elementos[i].classList.add("tema-claro");
+                    localStorage.setItem("tema", "tema-claro");
+                break;
+                
+                case "1":
+                    elementos[i].classList.add("tema-escuro");
+                    localStorage.setItem("tema", "tema-escuro");
+                break;
+                
+                case "2":
                     elementos[i].classList.add("tema-laranja");
                     localStorage.setItem("tema", "tema-laranja");
                 break;
 
-                case "1":
+                case "3":
                     elementos[i].classList.add("tema-verde");
                     localStorage.setItem("tema", "tema-verde");
                 break;
 
-                case "2":
+                case "4":
                     elementos[i].classList.add("tema-azul");
                     localStorage.setItem("tema", "tema-azul");
                 break;
 
-                case "3":
-                    elementos[i].classList.add("tema-escuro");
-                    localStorage.setItem("tema", "tema-escuro");
-                break;
-
                 default:
-                    if (localStorage.getItem("tema")) {
-                        var elementos  = document.getElementsByTagName("*");
+                    if(localStorage.getItem("tema")) {
+                        var elementos = document.getElementsByTagName("*");
 
                         for (var i = 0; i < elementos.length; i++) {
-                            elementos[i].classList.remove("tema-laranja", "tema-verde", "tema-azul", "tema-escuro");
+                            elementos[i].classList.remove("tema-claro", "tema-escuro", "tema-laranja", "tema-verde", "tema-azul");
                             elementos[i].classList.add(localStorage.getItem("tema"));
+                        }
+                    }else {
+                        var elementos = document.getElementsByTagName("*");
+
+                        for (var i = 0; i < elementos.length; i++) {
+                            elementos[i].classList.add("tema-laranja");
                         }
                     }
                 break;
@@ -61,8 +71,9 @@
 
 <select class="tema-select" id="tema-select" onchange="mudaTema()">
     <option value="" selected><strong>Selecione o tema desejado</strong></option>
-    <option value=0>Laranja</option>
-    <option value=1>Verde</option>
-    <option value=2>Azul</option>
-    <option value=3>Escuro</option>
+    <option value=0>Claro</option>
+    <option value=1>Escuro</option>
+    <option value=2>Laranja</option>
+    <option value=3>Verde</option>
+    <option value=4>Azul</option>
 </select>
