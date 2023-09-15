@@ -7,8 +7,8 @@
     <head>
         
         <%
-            Cookie[] cookies       = request.getCookies();
-            Usuarios usu           = new Usuarios();
+            Cookie[] cookies = request.getCookies();
+            Usuarios usu     = new Usuarios();
 
             if(cookies != null) {
                for(Cookie atual : cookies) {
