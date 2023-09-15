@@ -12,6 +12,11 @@
     color: var(--font-color);
 }
 
+*::selection {
+    color: highlight;
+    background-color: var(--color5);
+}
+
 body {
     font-family: 'Trebuchet MS', sans-serif;
     background-color: var(--color5);
@@ -339,7 +344,7 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
-input::placeholder, br, .no-select {
+input::placeholder, select:required:invalid, br, .no-select {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */

@@ -23,7 +23,7 @@
                     document.getElementById('message').innerHTML = '';
                     return true;
                 } else if(senha !== "" && confirmaSenha !== ""){
-                    document.getElementById('message').innerHTML = '(SENHA Nï¿½O CONFERE)';
+                    document.getElementById('message').innerHTML = '(SENHA NÃO CONFERE)';
                     return false;
                 }
                 
@@ -53,7 +53,7 @@
             
             <%
                 if(true) {
-                    String operacao = "Alterar";
+                    String operacao = "LoginSenha";
             %>
             <%@include file="/include/erro_sucesso.jsp"%>
             <%

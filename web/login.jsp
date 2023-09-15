@@ -27,7 +27,7 @@
 
             response.sendRedirect("inicio.jsp");
         } else {
-            response.sendRedirect("index.jsp?erro=LOGIN OU SENHA INCORRETOS");
+            response.sendRedirect("index.jsp?erroLoginSenha=LOGIN OU SENHA INCORRETOS");
         }
     %>
         

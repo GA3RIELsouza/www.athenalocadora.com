@@ -59,7 +59,7 @@
             
             <%
                 if(true) {
-                    String operacao = "Alterar";
+                    String operacao = "LoginSenha";
             %>
             <%@include file="/include/erro_sucesso.jsp"%>
             <%

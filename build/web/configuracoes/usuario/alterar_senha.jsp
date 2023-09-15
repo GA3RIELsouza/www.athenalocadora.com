@@ -29,10 +29,10 @@
                 if(usu.alterarSenha()){
                     response.sendRedirect("/www.athenalocadora.com/logoff.jsp?sucessoAlterar=SUCESSO AO ALTERAR A SENHA");
                 } else {
-                    response.sendRedirect("../senha.jsp?erroAlterar=PROBLEMAS AO ALTERAR A SENHA");
+                    response.sendRedirect("../senha.jsp?erroLoginSenha=PROBLEMAS AO ALTERAR A SENHA");
                 }
             }else {
-                response.sendRedirect("../senha.jsp?erroAlterar=SENHA ATUAL INCORRETA");
+                response.sendRedirect("../senha.jsp?erroLoginSenha=SENHA ATUAL INCORRETA");
             }
         }
    %>
