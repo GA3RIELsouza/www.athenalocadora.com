@@ -9,8 +9,6 @@
         <%
             Cookie[] cookies       = request.getCookies();
             Usuarios usu           = new Usuarios();
-            boolean  ok            = false;
-            Cookie   sessionCookie = null;
 
             if(cookies != null) {
                for(Cookie atual : cookies) {
@@ -18,17 +16,12 @@
                         usu.setSessionId(atual.getValue());
 
                         if(usu.checkSessionId()) {
-                            ok = true;
-                            sessionCookie = atual;
+                            atual.setMaxAge(60*60*24*7);
+                            response.sendRedirect("/www.athenalocadora.com/inicio.jsp");
                             break;
                         }
                     }
                 }
-            }
-
-            if(ok == true) {
-                sessionCookie.setMaxAge(60*60*24*7);
-                response.sendRedirect("/www.athenalocadora.com/inicio.jsp");
             }
         %>
         
