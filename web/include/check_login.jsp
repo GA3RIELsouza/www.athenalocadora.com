@@ -12,6 +12,7 @@
 
                 if(usu.checkSessionId()) {
                     ok = true;
+                    break;
                 }
             }
         }

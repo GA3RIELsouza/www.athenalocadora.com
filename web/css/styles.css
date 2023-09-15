@@ -7,83 +7,9 @@
     --change-speed: 0.3s;
 }
 
-.tema-claro {
-    --color1: #D7D7D7;
-    --color2: #E1E1E1;
-    --color3: #EBEBEB;
-    --color4: #F5F5F5;
-    --color5: #FFFFFF;
-    color: black;
-}
-
-.tema-claro > body {
-    background-image: url("/www.athenalocadora.com/images/background_claro.png");
-    background-size: cover;
-    background-repeat: no-repeat; 
-}
-
-.tema-escuro {
-    --color1: #000000;
-    --color2: #0C0C0C;
-    --color3: #191919;
-    --color4: #262626;
-    --color5: #333333;
-    color: white;
-}
-
-.tema-escuro > body {
-    background-image: url("/www.athenalocadora.com/images/background_escuro.png");
-    background-size: cover;
-    background-repeat: no-repeat; 
-}
-
-.tema-azul {
-    --color1: #27A4F2;
-    --color2: #3EAEF4;
-    --color3: #6EC2F7;
-    --color4: #9FD7F9;
-    --color5: #CFEBFC;
-    color: black;
-}
-
-.tema-azul > body {
-    background-image: url("/www.athenalocadora.com/images/background_azul.png");
-    background-size: cover;
-    background-repeat: no-repeat; 
-}
-
-.tema-verde {
-    --color1: #24C16E;
-    --color2: #80E6AF;
-    --color3: #AAEDC9;
-    --color4: #D4F7E4;
-    --color5: #E9FBF0;
-    color: black;
-}
-
-.tema-verde > body {
-    background-image: url("/www.athenalocadora.com/images/background_verde.png");
-    background-size: cover;
-    background-repeat: no-repeat; 
-}
-
-.tema-laranja {
-    --color1: #F5A940;
-    --color2: #F7BF5E;
-    --color3: #FAD47B;
-    --color4: #FCEA99;
-    --color5: #FFFFB6;
-    color: black;
-}
-
-.tema-laranja > body {
-    background-image: url("/www.athenalocadora.com/images/background_laranja.png");
-    background-size: cover;
-    background-repeat: no-repeat; 
-}
-
 * {
     transition: 0.3s;
+    color: var(--font-color);
 }
 
 body {
@@ -154,7 +80,7 @@ header {
 
 a {
     text-decoration: none!important;
-    color: black;
+    color: var(--font-color);
 }
 
 .vertical-space {
@@ -400,7 +326,7 @@ option[value=""][disabled] {
 }
 
 option {
-    color: black;
+    color: var(--font-color);
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -440,6 +366,14 @@ input[type=checkbox] {
 
 input[type=checkbox]:checked {
     background-color: var(--trueColor);
+}
+
+input[type=datetime-local] {
+    transition: 0s;
+}
+
+.placeholder-datetime {
+    color: #545454;
 }
 
 /*Cor do placeholder
@@ -517,7 +451,7 @@ button:hover {
     background-color: var(--falseColor);
 }
 
-/* perfil.jsp */
+/* usuario.jsp */
 
 .profile-field {
     padding: 20px 30px;

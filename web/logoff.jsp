@@ -7,7 +7,7 @@
     
     <%
         Cookie[] cookies = request.getCookies();
-        Usuarios  usu     = new Usuarios();
+        Usuarios usu     = new Usuarios();
         
         String vLogin  = request.getParameter("login");
         String vSenha  = request.getParameter("senha");
@@ -26,7 +26,13 @@
             }
         }
         
-        response.sendRedirect("/www.athenalocadora.com/index.jsp");
+        String alterarSenha = request.getParameter("sucessoAlterar");
+        
+        if(alterarSenha != null) {
+            response.sendRedirect("/www.athenalocadora.com/index.jsp?sucessoSenha=" + alterarSenha);
+        }else {
+            response.sendRedirect("/www.athenalocadora.com/index.jsp");
+        }
     %>
     
 </html>

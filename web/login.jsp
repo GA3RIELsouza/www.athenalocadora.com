@@ -22,7 +22,7 @@
             usu.setSessionId(sessionString);
             usu.createSessionId();
 
-            loginCookie.setMaxAge(60*60*24*31);
+            loginCookie.setMaxAge(60*60*24*7);
             response.addCookie(loginCookie);
 
             response.sendRedirect("inicio.jsp");

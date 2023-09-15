@@ -7,9 +7,10 @@
     <head>
         
         <%
-            Cookie[] cookies = request.getCookies();
-            Usuarios  usu     = new Usuarios();
-            boolean  ok       = false;
+            Cookie[] cookies       = request.getCookies();
+            Usuarios usu           = new Usuarios();
+            boolean  ok            = false;
+            Cookie   sessionCookie = null;
 
             if(cookies != null) {
                for(Cookie atual : cookies) {
@@ -18,22 +19,26 @@
 
                         if(usu.checkSessionId()) {
                             ok = true;
+                            sessionCookie = atual;
+                            break;
                         }
                     }
                 }
             }
 
             if(ok == true) {
+                sessionCookie.setMaxAge(60*60*24*7);
                 response.sendRedirect("/www.athenalocadora.com/inicio.jsp");
             }
         %>
         
-        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login | Athena Locadora</title>
         
         <link rel="icon" type="image/x-icon" href="images/favicon.ico?v=1">
         <link href="css/styles.css" rel="stylesheet">
+        <%@include file="/include/theme.jsp"%>
         
     </head>
     
@@ -52,19 +57,14 @@
                 Login
             </h1>
             
-            <div class="sucesso" id="sucesso">
-                <%
-                    if(request.getParameter("sucesso") != null)         
-                        out.write(request.getParameter("sucesso"));
-                %>
-            </div>
-            
-            <div class="erro" id="erro">
-                <%
-                    if(request.getParameter("erro") != null)         
-                        out.write(request.getParameter("erro"));
-                %>
-            </div>
+            <%
+                if(true) {
+                    String operacao = "Alterar";
+            %>
+            <%@include file="/include/erro_sucesso.jsp"%>
+            <%
+                }
+            %>
             
             <div class="form-input">
                 <label for="login">Login</label><br>
@@ -83,8 +83,6 @@
             </div>
             
         </form>
-            
-        <%@include file="/include/theme.html"%>
         
     </body>
     

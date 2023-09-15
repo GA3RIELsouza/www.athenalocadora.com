@@ -1,16 +1,18 @@
 <%@include file="/include/check_login.jsp"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
 <html lang="pt">
     
     <head>
         
-        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Início | Athena Locadora</title>
+        <title>InÃ­cio | Athena Locadora</title>
         
         <link rel="icon" type="image/x-icon" href="images/favicon.ico?v=1">
         <link href="css/styles.css" rel="stylesheet">
+        <%@include file="/include/theme.jsp"%>
         
     </head>
     
@@ -32,44 +34,42 @@
             </div>
         
             <div class="menu-div">
-                <a href="cliente/cliente.jsp?incluir" class="menu-anchor">
+                <a href="classes/cliente/cliente.jsp?incluir" class="menu-anchor">
                     Clientes
                 </a>
             </div>
             
             <div class="menu-div">
-                <a href="veiculo/veiculo.jsp?incluir" class="menu-anchor">
-                    Veículos
+                <a href="classes/veiculo/veiculo.jsp?incluir" class="menu-anchor">
+                    VeÃ­culos
                 </a>
             </div>
             
             <div class="menu-div">
-                <a href="marca/marca.jsp?incluir" class="menu-anchor">
+                <a href="classes/marca/marca.jsp?incluir" class="menu-anchor">
                     Marcas
                 </a>
             </div>
             
             <div class="menu-div">
-                <a href="modelo/modelo.jsp?incluir" class="menu-anchor">
+                <a href="classes/modelo/modelo.jsp?incluir" class="menu-anchor">
                     Modelos
                 </a>
             </div>
             
             <div class="menu-div">
-                <a href="aluguel/aluguel.jsp?incluir" class="menu-anchor">
-                    Aluguéis
+                <a href="classes/aluguel/aluguel.jsp?incluir" class="menu-anchor">
+                    AluguÃ©is
                 </a>
             </div>
             
             <div class="menu-div">
-                <a href="pagamento/pagamento.jsp?incluir" class="menu-anchor">
+                <a href="classes/pagamento/pagamento.jsp?incluir" class="menu-anchor">
                     Pagamentos
                 </a>
             </div>
             
         </div>
-        
-        <%@include file="/include/theme.html"%>
         
     </body>
     
