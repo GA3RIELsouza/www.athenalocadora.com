@@ -34,11 +34,7 @@
             }
             
             function limpaForm() {
-                //É necessário uma função ao invés
-                //do reset convencional nesse caso
-                //por conta do campo "modoConsulta"
-                event.preventDefault();
-                document.getElementById("idMarca").value = "";
+                campoId.style.display = "none";
             }
         </script>
         
@@ -78,7 +74,7 @@
             
             <div class="form-input">
                 <label for="nomeMarca">Nome</label><br>
-                <input type="text" id="nomeMarca" name="nomeMarca" placeholder="Insira o nome" maxlength="30" required>
+                <input type="text" id="nomeMarca" name="nomeMarca" placeholder="Informe o nome" maxlength="30" required>
             </div>
             
             <div class="form-button">
@@ -106,7 +102,7 @@
             <div class="form-input">
                 <label for="idMarca">ID <small class="no-select">(buscar por)</small></label><br>
                 <select name="idMarca" id="idMarca" required>
-                    <option value="" disabled selected>Insira o ID</option>
+                    <option value="" disabled selected>Informe o ID</option>
                     <%
                         Marcas mar = new Marcas();
                         List<Marcas> listaMarcas = new ArrayList<>();
@@ -132,7 +128,7 @@
             
             <div class="form-input">
                 <label for="nomeMarca">Nome</label><br>
-                <input type="text" id="nomeMarca" name="nomeMarca" placeholder="Insira o nome" maxlength="30" value="<%=request.getParameter("nome") != null ? request.getParameter("nome") : ""%>" required>
+                <input type="text" id="nomeMarca" name="nomeMarca" placeholder="Informe o nome" maxlength="30" value="<%=request.getParameter("nome") != null ? request.getParameter("nome") : ""%>" required>
             </div>
             
             <div class="form-button">
@@ -160,7 +156,7 @@
             <div class="form-input">
                 <label for="idMarca">ID <small class="no-select">(buscar por)</small></label><br>
                 <select name="idMarca" id="idMarca" required>
-                    <option value="" disabled selected>Insira o ID</option>
+                    <option value="" disabled selected>Informe o ID</option>
                     <%
                         List<Marcas> listaMarcas3 = new ArrayList<>();
                         listaMarcas3 = mar.consultarMarcas();
@@ -199,15 +195,16 @@
             <div class="form-input">
                 <label for="modoConsulta">Modo de consulta</label><br>
                 <select name="modoConsulta" id="modoConsulta" onchange="scriptModoConsulta()" required>
+                    <option value="" disabled selected>Informe o modo de consulta</option>
                     <option value="0">Por ID</option>
                     <option value="1">Todos</option>
                 </select>
             </div>
             
-            <div class="form-input" id="campoId">
+            <div class="form-input" id="campoId" style="display: none;">
                 <label for="idMarca4">ID <small class="no-select">(buscar por)</small></label><br>
                 <select name="idMarca" id="idMarca4" required>
-                    <option value="" disabled selected>Insira o ID</option>
+                    <option value="" disabled selected>Informe o ID</option>
                     <%
                         List<Marcas> listaMarcas4 = new ArrayList<>();
                         listaMarcas4 = mar.consultarMarcas();

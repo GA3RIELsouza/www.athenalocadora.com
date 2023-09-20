@@ -61,12 +61,12 @@
             
             <div class="form-input">
                 <label for="login">Login</label><br>
-                <input type="email" id="login" name="login" placeholder="Insira seu login" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" maxlength="50" required>
+                <input type="email" id="login" name="login" placeholder="Informe seu login" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" maxlength="50" required>
             </div>
             
             <div class="form-input">
                 <label for="senha">Senha</label><br>
-                <input type="password" id="senha" name="senha" placeholder="Insira sua senha" minlength="8" maxlength="50" required>
+                <input type="password" id="senha" name="senha" placeholder="Informe sua senha" minlength="8" maxlength="50" required>
             </div>
             
             <div class="form-button" style="width: 40%; margin: auto;">

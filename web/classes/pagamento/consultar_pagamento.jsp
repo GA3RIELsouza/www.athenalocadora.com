@@ -49,7 +49,7 @@
                         <br>
                     </th>
                     
-                    <th scope="col" style="border-top-left-radius: var(--smooth-corners);">
+                    <th scope="col" style="border-top-left-radius: var(--rounded-corners);">
                         ID do pagamento
                     </th>
                     
@@ -65,7 +65,7 @@
                         Tipo
                     </th>
                     
-                    <th scope="col" style="border-top-right-radius: var(--smooth-corners);">
+                    <th scope="col" style="border-top-right-radius: var(--rounded-corners);">
                         Valor
                     </th>
                     
@@ -249,7 +249,7 @@
                     <br>
                 </th>
                 
-                <th style="border-bottom-left-radius: var(--smooth-corners);">
+                <th style="border-bottom-left-radius: var(--rounded-corners);">
                     <br>
                 </th>
                 
@@ -265,7 +265,7 @@
                     <br>
                 </th>
                 
-                <th style="border-bottom-right-radius: var(--smooth-corners);">
+                <th style="border-bottom-right-radius: var(--rounded-corners);">
                     <br>
                 </th>
                 

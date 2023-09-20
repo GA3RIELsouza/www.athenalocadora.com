@@ -44,11 +44,7 @@
             }
             
             function limpaForm() {
-                //É necessário uma função ao invés
-                //do reset convencional nesse caso
-                //por conta do campo "modoConsulta"
-                event.preventDefault();
-                document.getElementById("cpfCliente4").value = "";
+                campoCpf.style.display = "none";
             }
         </script>
         
@@ -88,32 +84,32 @@
             
             <div class="form-input">
                 <label for="cpfCliente1">CPF</label><br>
-                <input type="text" id="cpfCliente1" name="cpfCliente" placeholder="Insira o CPF" minlength="14" maxlength="14" required>
+                <input type="text" id="cpfCliente1" name="cpfCliente" placeholder="Informe o CPF" minlength="14" maxlength="14" required>
             </div>
             
             <div class="form-input">
                 <label for="nomeCliente1">Nome</label><br>
-                <input type="text" id="nomeCliente1" name="nomeCliente" placeholder="Insira o nome" maxlength="40" required>
+                <input type="text" id="nomeCliente1" name="nomeCliente" placeholder="Informe o nome" maxlength="40" required>
             </div>
             
             <div class="form-input">
                 <label for="foneCliente1">Telefone</label><br>
-                <input type="tel" id="foneCliente1" name="foneCliente" placeholder="Insira o número de telefone" minlength="15" maxlength="15" required>
+                <input type="tel" id="foneCliente1" name="foneCliente" placeholder="Informe o número de telefone" minlength="15" maxlength="15" required>
             </div>
             
             <div class="form-input">
                 <label for="emailCliente1">E-mail</label><br>
-                <input type="email" id="emailCliente1" name="emailCliente" placeholder="Insira o e-mail" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" maxlength="50" required>
+                <input type="email" id="emailCliente1" name="emailCliente" placeholder="Informe o e-mail" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" maxlength="50" required>
             </div>
             
             <div class="form-input">
                 <label for="nrCartaoDebCred1">Nº cartão débito/crédito</label><br>
-                <input type="text" id="nrCartaoDebCred1" name="nrCartaoDebCred" placeholder="Insira o número do cartão" minlength="19" maxlength="19">
+                <input type="text" id="nrCartaoDebCred1" name="nrCartaoDebCred" placeholder="Informe o número do cartão" minlength="19" maxlength="19">
             </div>
             
             <div class="form-input">
                 <label for="chavePix1">Chave PIX</label><br>
-                <input type="text" id="chavePix1" name="chavePix" placeholder="Insira a chave PIX" maxlength="60">
+                <input type="text" id="chavePix1" name="chavePix" placeholder="Informe a chave PIX" maxlength="60">
             </div>
             
             <div class="form-button">
@@ -142,7 +138,7 @@
             <div class="form-input">
                 <label for="cpfCliente3">CPF <small class="no-select">(buscar por)</small></label><br>
                 <select name="cpfCliente" id="cpfCliente3" required>
-                    <option value="" disabled selected>Insira o CPF</option>
+                    <option value="" disabled selected>Informe o CPF</option>
                     <%
                         Clientes cli = new Clientes();
                         List<Clientes> listaClientes = new ArrayList<>();
@@ -163,27 +159,27 @@
             
             <div class="form-input">
                 <label for="nomeCliente3">Nome</label><br>
-                <input type="text" id="nomeCliente3" name="nomeCliente" placeholder="Insira o nome" maxlength="40" value="<%=request.getParameter("nome") != null ? request.getParameter("nome") : ""%>" required>
+                <input type="text" id="nomeCliente3" name="nomeCliente" placeholder="Informe o nome" maxlength="40" value="<%=request.getParameter("nome") != null ? request.getParameter("nome") : ""%>" required>
             </div>
             
             <div class="form-input">
                 <label for="foneCliente3">Telefone</label><br>
-                <input type="tel" id="foneCliente3" name="foneCliente" placeholder="Insira o número de telefone" minlength="15" maxlength="15" value="<%=request.getParameter("fone") != null ? request.getParameter("fone") : ""%>" required>
+                <input type="tel" id="foneCliente3" name="foneCliente" placeholder="Informe o número de telefone" minlength="15" maxlength="15" value="<%=request.getParameter("fone") != null ? request.getParameter("fone") : ""%>" required>
             </div>
             
             <div class="form-input">
                 <label for="emailCliente3">E-mail</label><br>
-                <input type="email" id="emailCliente3" name="emailCliente" placeholder="Insira o e-mail" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" maxlength="50" value="<%=request.getParameter("email") != null ? request.getParameter("email") : ""%>" required>
+                <input type="email" id="emailCliente3" name="emailCliente" placeholder="Informe o e-mail" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" maxlength="50" value="<%=request.getParameter("email") != null ? request.getParameter("email") : ""%>" required>
             </div>
             
             <div class="form-input">
                 <label for="nrCartaoDebCred3">Nº cartão débito/crédito</label><br>
-                <input type="text" id="nrCartaoDebCred3" name="nrCartaoDebCred" placeholder="Insira o número do cartão" minlength="19" maxlength="19" value="<%=request.getParameter("cartao") != null ? request.getParameter("cartao") : ""%>">
+                <input type="text" id="nrCartaoDebCred3" name="nrCartaoDebCred" placeholder="Informe o número do cartão" minlength="19" maxlength="19" value="<%=request.getParameter("cartao") != null ? request.getParameter("cartao") : ""%>">
             </div>
             
             <div class="form-input">
                 <label for="chavePix3">Chave PIX</label><br>
-                <input type="text" id="chavePix3" name="chavePix" placeholder="Insira a chave PIX" maxlength="60" value="<%=request.getParameter("pix") != null ? request.getParameter("pix") : ""%>">
+                <input type="text" id="chavePix3" name="chavePix" placeholder="Informe a chave PIX" maxlength="60" value="<%=request.getParameter("pix") != null ? request.getParameter("pix") : ""%>">
             </div>
             
             <div class="form-button">
@@ -211,7 +207,7 @@
             <div class="form-input">
                 <label for="cpfCliente2">CPF <small class="no-select">(buscar por)</small></label><br>
                 <select name="cpfCliente" id="cpfCliente2" required>
-                    <option value="" disabled selected>Insira o CPF</option>
+                    <option value="" disabled selected>Informe o CPF</option>
                     <%
                         List<Clientes> listaClientes3 = new ArrayList<>();
                         listaClientes3 = cli.consultarClientes();
@@ -245,15 +241,16 @@
             <div class="form-input">
                 <label for="modoConsulta">Modo de consulta</label><br>
                 <select name="modoConsulta" id="modoConsulta" onchange="scriptModoConsulta()" required>
+                    <option value="" disabled selected>Informe o modo de consulta</option>
                     <option value="0">Por CPF</option>
                     <option value="1">Todos</option>
                 </select>
             </div>
             
-            <div class="form-input" id="campoCpf">
+            <div class="form-input" id="campoCpf" style="display: none;">
                 <label for="cpfCliente4">CPF <small class="no-select">(buscar por)</small></label><br>
                 <select name="cpfCliente" id="cpfCliente4" required>
-                    <option value="" disabled selected>Insira o CPF</option>
+                    <option value="" disabled selected>Informe o CPF</option>
                     <%
                         List<Clientes> listaClientes4 = new ArrayList<>();
                         listaClientes4 = cli.consultarClientes();

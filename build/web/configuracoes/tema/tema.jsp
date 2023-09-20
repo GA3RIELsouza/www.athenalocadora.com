@@ -47,7 +47,7 @@
             <div class="form-input">
                 <label for="tema">Modelo</label><br>
                 <select name="tema" id="tema" required>
-                    <option value="" disabled selected>Insira o tema</option>
+                    <option value="" disabled selected>Informe o tema</option>
                     <option value=0>Claro</option>
                     <option value=1>Escuro</option>
                     <option value=2>Azul</option>

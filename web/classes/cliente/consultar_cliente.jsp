@@ -49,7 +49,7 @@
                     <br>
                 </th>
 
-                <th scope="col" style="border-top-left-radius: var(--smooth-corners);">
+                <th scope="col" style="border-top-left-radius: var(--rounded-corners);">
                     CPF
                 </th>
 
@@ -69,7 +69,7 @@
                     Nrº cartão crédito/débito
                 </th>
 
-                <th scope="col" style="border-top-right-radius: var(--smooth-corners);">
+                <th scope="col" style="border-top-right-radius: var(--rounded-corners);">
                     PIX
                 </th>
 
@@ -316,7 +316,7 @@
                 <br>
             </th>
 
-            <th style="border-bottom-left-radius: var(--smooth-corners);">
+            <th style="border-bottom-left-radius: var(--rounded-corners);">
                 <br>
             </th>
 
@@ -336,7 +336,7 @@
                 <br>
             </th>
 
-            <th style="border-bottom-right-radius: var(--smooth-corners);">
+            <th style="border-bottom-right-radius: var(--rounded-corners);">
                 <br>
             </th>
 

@@ -50,12 +50,8 @@
             }
             
             function limpaForm() {
-                //É necessário uma função ao invés
-                //do reset convencional nesse caso
-                //por conta do campo "modoConsulta"
-                event.preventDefault();
-                document.getElementById("idPagamento").value = "";
-                document.getElementById("idAluguel").value = "";
+                campoIdPagamento.style.display = "none";
+                campoIdAluguel.style.display   = "none";
             }
         </script>
         
@@ -96,7 +92,7 @@
             <div class="form-input">
                 <label for="idAluguel">ID do aluguel</label><br>
                 <select name="idAluguel" id="idAluguel" required>
-                    <option value="" disabled selected>Insira o ID do aluguel</option>
+                    <option value="" disabled selected>Informe o ID do aluguel</option>
                     <%
                         Alugueis alu = new Alugueis();
                         List<Alugueis> listaAlugueis = new ArrayList<>();
@@ -128,7 +124,7 @@
             <div class="form-input">
                 <label for="tipoPagamento">Tipo</label><br>
                 <select name="tipoPagamento" id="tipoPagamento" required>
-                    <option value="" disabled selected>Insira o tipo de pagamento</option>
+                    <option value="" disabled selected>Informe o tipo de pagamento</option>
                     <option value="Dinheiro">Dinheiro</option>
                     <option value="Cartão crédito">Cartão crédito</option>
                     <option value="Cartão débito">Cartão débito</option>
@@ -138,7 +134,7 @@
             
             <div class="form-input">
                 <label for="vlrPagamento">Valor</label><br>
-                <input type="number" step=".01" pattern="^\d+(?:\.\d{1,2})?$" id="vlrPagamento" name="vlrPagamento" placeholder="Insira o valor do pagamento (em reais)" required>
+                <input type="number" step=".01" pattern="^\d+(?:\.\d{1,2})?$" id="vlrPagamento" name="vlrPagamento" placeholder="Informe o valor do pagamento (em reais)" required>
             </div>
             
             <div class="form-button">
@@ -167,7 +163,7 @@
             <div class="form-input">
                 <label for="idPagamento">ID do pagamento <small class="no-select">(buscar por)</small></label><br>
                 <select name="idPagamento" id="idPagamento" required>
-                    <option value="" disabled selected>Insira o ID do pagamento</option>
+                    <option value="" disabled selected>Informe o ID do pagamento</option>
                     <%
                         Pagamentos pag = new Pagamentos();
                         List<Pagamentos> listaPagamentos = new ArrayList<>();
@@ -194,7 +190,7 @@
             <div class="form-input">
                 <label for="idAluguel">ID do aluguel <small class="no-select">(buscar por)</small></label><br>
                 <select name="idAluguel" id="idAluguel" required>
-                    <option value="" disabled selected>Insira o ID do aluguel</option>
+                    <option value="" disabled selected>Informe o ID do aluguel</option>
                     <%
                         Alugueis alu2 = new Alugueis();
                         List<Alugueis> listaAlugueis2 = new ArrayList<>();
@@ -226,7 +222,7 @@
             <div class="form-input">
                 <label for="tipoPagamento">Tipo</label><br>
                 <select name="tipoPagamento" id="tipoPagamento" required>
-                    <option value="" disabled selected>Insira o tipo</option>
+                    <option value="" disabled selected>Informe o tipo</option>
                     <%
                         String option1 = "Dinheiro";
                         String option2 = "Cartão crédito";
@@ -264,7 +260,7 @@
             
             <div class="form-input">
                 <label for="vlrPagamento">Valor</label><br>
-                <input type="number" step=".01" pattern="^\d+(?:\.\d{1,2})?$" id="vlrPagamento" name="vlrPagamento" placeholder="Insira o valor do pagamento (em reais)" value="<%=request.getParameter("valor") != null ? request.getParameter("valor") : ""%>" required>
+                <input type="number" step=".01" pattern="^\d+(?:\.\d{1,2})?$" id="vlrPagamento" name="vlrPagamento" placeholder="Informe o valor do pagamento (em reais)" value="<%=request.getParameter("valor") != null ? request.getParameter("valor") : ""%>" required>
             </div>
             
             <div class="form-button">
@@ -293,7 +289,7 @@
             <div class="form-input">
                 <label for="idPagamento">ID do pagamento <small class="no-select">(buscar por)</small></label><br>
                 <select name="idPagamento" id="idPagamento" required>
-                    <option value="" disabled selected>Insira o ID do pagamento</option>
+                    <option value="" disabled selected>Informe o ID do pagamento</option>
                     <%
                         Pagamentos pag3 = new Pagamentos();
                         List<Pagamentos> listaPagamentos3 = new ArrayList<>();
@@ -320,7 +316,7 @@
             <div class="form-input">
                 <label for="idAluguel">ID do aluguel <small class="no-select">(buscar por)</small></label><br>
                 <select name="idAluguel" id="idAluguel" required>
-                    <option value="" disabled selected>Insira o ID do aluguel</option>
+                    <option value="" disabled selected>Informe o ID do aluguel</option>
                     <%
                         Alugueis alu3 = new Alugueis();
                         List<Alugueis> listaAlugueis3 = new ArrayList<>();
@@ -361,16 +357,17 @@
             <div class="form-input">
                 <label for="modoConsulta">Modo de consulta</label><br>
                 <select name="modoConsulta" id="modoConsulta" onchange="scriptModoConsulta()" required>
+                    <option value="" disabled selected>Informe o modo de consulta</option>
                     <option value="0">Por ID do pagamento</option>
                     <option value="1">Por ID do aluguel</option>
                     <option value="2">Todos</option>
                 </select>
             </div>
             
-            <div class="form-input" id="campoIdPagamento">
+            <div class="form-input" id="campoIdPagamento" style="display: none;">
                 <label for="idPagamento4">ID do pagamento <small class="no-select">(buscar por)</small></label><br>
                 <select name="idPagamento" id="idPagamento4" required>
-                    <option value="" disabled selected>Insira o ID do pagamento</option>
+                    <option value="" disabled selected>Informe o ID do pagamento</option>
                     <%
                         Pagamentos pag4 = new Pagamentos();
                         List<Pagamentos> listaPagamentos4 = new ArrayList<>();
@@ -397,7 +394,7 @@
             <div class="form-input" id="campoIdAluguel" style="display: none;">
                 <label for="idAluguel4">ID do aluguel <small class="no-select">(buscar por)</small></label><br>
                 <select name="idAluguel" id="idAluguel4">
-                    <option value="" disabled selected>Insira o ID do aluguel</option>
+                    <option value="" disabled selected>Informe o ID do aluguel</option>
                     <%
                         Alugueis alu4 = new Alugueis();
                         List<Alugueis> listaAlugueis4 = new ArrayList<>();

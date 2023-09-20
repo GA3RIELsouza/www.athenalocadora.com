@@ -49,12 +49,8 @@
             }
             
             function limpaForm() {
-                //É necessário uma função ao invés
-                //do reset convencional nesse caso
-                //por conta do campo "modoConsulta"
-                event.preventDefault();
-                document.getElementById("idModelo").value = "";
-                document.getElementById("idMarca").value  = "";
+                campoIdModelo.style.display = "none";
+                campoIdMarca.style.display  = "none";
             }
         </script>
         
@@ -95,7 +91,7 @@
             <div class="form-input">
                 <label for="idMarca">Marca</label><br>
                 <select name="idMarca" id="idMarca" required>
-                    <option value="" disabled selected>Insira a marca</option>
+                    <option value="" disabled selected>Informe a marca</option>
                     <%
                         Modelos mar = new Modelos();
                         List<Marcas> listaMarcas = new ArrayList<>();
@@ -114,13 +110,13 @@
             
             <div class="form-input">
                 <label for="nomeModelo">Nome</label><br>
-                <input type="text" id="nomeModelo" name="nomeModelo" placeholder="Insira o nome" maxlength="30" required>
+                <input type="text" id="nomeModelo" name="nomeModelo" placeholder="Informe o nome" maxlength="30" required>
             </div>
                 
             <div class="form-input">
                 <label for="tipoModelo">Tipo</label><br>
                 <select name="tipoModelo" id="tipoModelo" required>
-                    <option value="" disabled selected>Insira o tipo</option>
+                    <option value="" disabled selected>Informe o tipo</option>
                     <option value="Carro">Carro</option>
                     <option value="Moto">Moto</option>
                     <option value="Caminhonete">Caminhonete</option>
@@ -153,7 +149,7 @@
             <div class="form-input">
                 <label for="idModelo">ID do modelo <small class="no-select">(buscar por)</small></label><br>
                 <select name="idModelo" id="idModelo" required>
-                    <option value="" disabled selected>Insira o ID do modelo</option>
+                    <option value="" disabled selected>Informe o ID do modelo</option>
                     <%
                         Modelos mod2 = new Modelos();
                         List<Modelos> listaModelos = new ArrayList<>();
@@ -180,7 +176,7 @@
             <div class="form-input">
                 <label for="idMarca">Marca <small class="no-select">(buscar por)</small></label><br>
                 <select name="idMarca" id="idMarca" required>
-                    <option value="" disabled selected>Insira a marca</option>
+                    <option value="" disabled selected>Informe a marca</option>
                     <%
                         List<Marcas> listaMarcas2 = new ArrayList<>();
                         listaMarcas2 = mar.selectMarcas();
@@ -206,13 +202,13 @@
                 
             <div class="form-input">
                 <label for="nomeModelo">Nome</label><br>
-                <input type="text" id="nomeModelo" name="nomeModelo" placeholder="Insira o nome" maxlength="30" value="<%=request.getParameter("nome") != null ? request.getParameter("nome") : ""%>" required>
+                <input type="text" id="nomeModelo" name="nomeModelo" placeholder="Informe o nome" maxlength="30" value="<%=request.getParameter("nome") != null ? request.getParameter("nome") : ""%>" required>
             </div>
                 
             <div class="form-input">
                 <label for="tipoModelo">Tipo</label><br>
                 <select name="tipoModelo" id="tipoModelo" required>
-                    <option value="" disabled selected>Insira o tipo</option>
+                    <option value="" disabled selected>Informe o tipo</option>
                     <%
                         String option1 = "Carro";
                         String option2 = "Moto";
@@ -273,7 +269,7 @@
             <div class="form-input">
                 <label for="idModelo">ID do modelo <small class="no-select">(buscar por)</small></label><br>
                 <select name="idModelo" id="idModelo" required>
-                    <option value="" disabled selected>Insira o ID do modelo</option>
+                    <option value="" disabled selected>Informe o ID do modelo</option>
                     <%
                         Modelos mod = new Modelos();
                         List<Modelos> listaModelos3 = new ArrayList<>();
@@ -300,7 +296,7 @@
             <div class="form-input">
                 <label for="idMarca">Marca <small class="no-select">(buscar por)</small></label><br>
                 <select name="idMarca" id="idMarca" required>
-                    <option value="" disabled selected>Insira a marca</option>
+                    <option value="" disabled selected>Informe a marca</option>
                     <%
                         Modelos mar3 = new Modelos();
                         List<Marcas> listaMarcas3 = new ArrayList<>();
@@ -341,16 +337,17 @@
             <div class="form-input">
                 <label for="modoConsulta">Modo de consulta</label><br>
                 <select name="modoConsulta" id="modoConsulta" onchange="scriptModoConsulta()" required>
+                    <option value="" disabled selected>Informe o modo de consulta</option>
                     <option value="0">Por ID do modelo</option>
                     <option value="1">Por ID da marca</option>
                     <option value="2">Todos</option>
                 </select>
             </div>
             
-            <div class="form-input" id="campoIdModelo">
+            <div class="form-input" id="campoIdModelo" style="display: none;">
                 <label for="idModelo4">ID do modelo <small class="no-select">(buscar por)</small></label><br>
                 <select name="idModelo" id="idModelo4" required>
-                    <option value="" disabled selected>Insira o ID do modelo</option>
+                    <option value="" disabled selected>Informe o ID do modelo</option>
                     <%
                         Modelos mod4 = new Modelos();
                         List<Modelos> listaModelos4 = new ArrayList<>();
@@ -369,7 +366,7 @@
                 <div class="form-input" id="campoIdMarca" style="display: none;">
                 <label for="idMarca4">ID da marca <small class="no-select">(buscar por)</small></label><br>
                 <select name="idMarca" id="idMarca4">
-                    <option value="" disabled selected>Insira o ID da marca</option>
+                    <option value="" disabled selected>Informe o ID da marca</option>
                     <%
                         Marcas mar4 = new Marcas();
                         List<Marcas> listaMarcas4 = new ArrayList<>();

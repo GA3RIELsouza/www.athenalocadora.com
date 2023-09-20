@@ -51,12 +51,8 @@
             }
             
             function limpaForm() {
-                //É necessário uma função ao invés
-                //do reset convencional nesse caso
-                //por conta do campo "modoConsulta"
-                event.preventDefault();
-                document.getElementById("cpfCliente").value = "";
-                document.getElementById("idVeiculo").value = "";
+                campoCpfCliente.style.display = "none";
+                campoIdVeiculo.style.display  = "none";
             }
         </script>
         
@@ -97,7 +93,7 @@
             <div class="form-input">
                 <label for="idVeiculo">ID do veículo</label><br>
                 <select name="idVeiculo" id="idVeiculo" required>
-                    <option value="" disabled selected>Insira o ID do veículo</option>
+                    <option value="" disabled selected>Informe o ID do veículo</option>
                     <%
                         Veiculos vei = new Veiculos();
                         List<Veiculos> listaVeiculos = new ArrayList<>();
@@ -124,7 +120,7 @@
             <div class="form-input">
                 <label for="cpfCliente">CPF do cliente</label><br>
                 <select name="cpfCliente" id="cpfCliente" required>
-                    <option value="" disabled selected>Insira o CPF do cliente</option>
+                    <option value="" disabled selected>Informe o CPF do cliente</option>
                     <%
                         Clientes cli = new Clientes();
                         List<Clientes> listaClientes = new ArrayList<>();
@@ -188,7 +184,7 @@
             <div class="form-input">
                 <label for="idAluguel">ID do aluguel <small class="no-select">(buscar por)</small></label><br>
                 <select name="idAluguel" id="idAluguel" required>
-                    <option value="" disabled selected>Insira o ID do aluguel</option>
+                    <option value="" disabled selected>Informe o ID do aluguel</option>
                     <%
                         Alugueis alu = new Alugueis();
                         List<Alugueis> listaAlugueis = new ArrayList<>();
@@ -215,7 +211,7 @@
             <div class="form-input">
                 <label for="cpfCliente">CPF do cliente <small class="no-select">(buscar por)</small></label><br>
                 <select name="cpfCliente" id="cpfCliente" required>
-                    <option value="" disabled selected>Insira o CPF do cliente</option>
+                    <option value="" disabled selected>Informe o CPF do cliente</option>
                     <%
                         Clientes cli2 = new Clientes();
                         List<Clientes> listaClientes2 = new ArrayList<>();
@@ -264,7 +260,7 @@
             <div class="form-input">
                 <label for="idAluguel">ID do aluguel <small class="no-select">(buscar por)</small></label><br>
                 <select name="idAluguel" id="idAluguel" required>
-                    <option value="" disabled selected>Insira o ID do aluguel</option>
+                    <option value="" disabled selected>Informe o ID do aluguel</option>
                     <%
                         Alugueis alu3 = new Alugueis();
                         List<Alugueis> listaAlugueis3 = new ArrayList<>();
@@ -291,7 +287,7 @@
             <div class="form-input">
                 <label for="cpfCliente">CPF do cliente <small class="no-select">(buscar por)</small></label><br>
                 <select name="cpfCliente" id="cpfCliente" required>
-                    <option value="" disabled selected>Insira o CPF do cliente</option>
+                    <option value="" disabled selected>Informe o CPF do cliente</option>
                     <%
                         Clientes cli3 = new Clientes();
                         List<Clientes> listaClientes3 = new ArrayList<>();
@@ -326,16 +322,17 @@
             <div class="form-input">
                 <label for="modoConsulta">Modo de consulta</label><br>
                 <select name="modoConsulta" id="modoConsulta" onchange="scriptModoConsulta()" required>
+                    <option value="" disabled selected>Informe o modo de consulta</option>
                     <option value="0">Por CPF do cliente</option>
                     <option value="1">Por ID do veículo</option>
                     <option value="2">Todos</option>
                 </select>
             </div>
             
-            <div class="form-input" id="campoCpfCliente">
+            <div class="form-input" id="campoCpfCliente" style="display: none;">
                 <label for="cpfCliente4">CPF do cliente <small class="no-select">(buscar por)</small></label><br>
                 <select name="cpfCliente" id="cpfCliente4" required>
-                    <option value="" disabled selected>Insira o CPF do cliente</option>
+                    <option value="" disabled selected>Informe o CPF do cliente</option>
                     <%
                         Clientes cli4 = new Clientes();
                         List<Clientes> listaClientes4 = new ArrayList<>();
@@ -357,7 +354,7 @@
             <div class="form-input" id="campoIdVeiculo" style="display: none;">
                 <label for="idVeiculo4">ID do veículo <small class="no-select">(buscar por)</small></label><br>
                 <select name="idVeiculo" id="idVeiculo4" required>
-                    <option value="" disabled selected>Insira o ID do veículo</option>
+                    <option value="" disabled selected>Informe o ID do veículo</option>
                     <%
                         Veiculos vei4 = new Veiculos();
                         List<Veiculos> listaVeiculos4 = new ArrayList<>();

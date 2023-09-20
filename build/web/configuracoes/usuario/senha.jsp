@@ -62,17 +62,17 @@
             
             <div class="form-input">
                 <label for="cpfCliente">Senha atual</label><br>
-                <input type="text" id="senhaAtual" name="senhaAtual" placeholder="Insira a senha atual" minlength="8" maxlength="50" required>
+                <input type="text" id="senhaAtual" name="senhaAtual" placeholder="Informe a senha atual" minlength="8" maxlength="50" required>
             </div>
             
             <div class="form-input">
                 <label for="nomeCliente">Nova senha</label><br>
-                <input type="password" id="novaSenha" name="novaSenha" placeholder="Insira a nova senha" minlength="8" maxlength="50" onchange="checkNovaSenha()" required>
+                <input type="password" id="novaSenha" name="novaSenha" placeholder="Informe a nova senha" minlength="8" maxlength="50" onchange="checkNovaSenha()" required>
             </div>
             
             <div class="form-input">
                 <label for="foneCliente">Confirmar nova senha <span id="message" style="color: var(--falseColor); font-weight: bold;"></span></label><br>
-                <input type="password" id="confirmaNovaSenha" name="confirmaNovaSenha" placeholder="Insira a nova senha" minlength="8" maxlength="50" onchange="checkNovaSenha()" required>
+                <input type="password" id="confirmaNovaSenha" name="confirmaNovaSenha" placeholder="Informe a nova senha" minlength="8" maxlength="50" onchange="checkNovaSenha()" required>
             </div>
             
             <div class="form-button">

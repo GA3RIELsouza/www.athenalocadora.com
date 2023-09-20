@@ -67,11 +67,7 @@
             }
             
             function limpaForm() {
-                //É necessário uma função ao invés
-                //do reset convencional nesse caso
-                //por conta do campo "modoConsulta"
-                event.preventDefault();
-                document.getElementById("idVeiculo").value = "";
+                campoId.style.display = "none";
             }
         </script>
         
@@ -112,7 +108,7 @@
             <div class="form-input">
                 <label for="marcaModelo">Modelo</label><br>
                 <select name="marcaModelo" id="marcaModelo" required>
-                    <option value="" disabled selected>Insira o modelo</option>
+                    <option value="" disabled selected>Informe o modelo</option>
                     <%
                         Veiculos mod = new Veiculos();
                         List<Modelos> listaModelos = new ArrayList<>();
@@ -142,7 +138,7 @@
             <div class="form-input">
                 <label for="tipoPlacaVeiculo1">Tipo de placa</label><br>
                 <select name="tipoPlacaVeiculo" id="tipoPlacaVeiculo1" onchange="mudaPlaca(1)" required>
-                    <option value="" disabled selected>Insira o tipo de placa</option>
+                    <option value="" disabled selected>Informe o tipo de placa</option>
                     <option value="Cinza">Cinza</option>
                     <option value="Mercosul">Mercosul</option>
                 </select>
@@ -150,17 +146,17 @@
             
             <div class="form-input" id="campoPlacaCinza1" style="display: none;">
                 <label for="placaVeiculoC1">Placa</label><br>
-                <input type="text" id="placaVeiculoC1" name="placaVeiculo" placeholder="Insira a placa" minlength="7" maxlength="7" pattern="[a-zA-Z0-9-]{7}" title="Apenas letras e números">
+                <input type="text" id="placaVeiculoC1" name="placaVeiculo" placeholder="Informe a placa" minlength="7" maxlength="7" pattern="[a-zA-Z0-9-]{7}" title="Apenas letras e números">
             </div>
             
             <div class="form-input" id="campoPlacaMercosul1" style="display: none;">
                 <label for="placaVeiculoM1">Placa</label><br>
-                <input type="text" id="placaVeiculoM1" name="placaVeiculo" placeholder="Insira a placa" minlength="7" maxlength="7" pattern="[a-zA-Z0-9-]{7}" title="Apenas letras e números">
+                <input type="text" id="placaVeiculoM1" name="placaVeiculo" placeholder="Informe a placa" minlength="7" maxlength="7" pattern="[a-zA-Z0-9-]{7}" title="Apenas letras e números">
             </div>
             
             <div class="form-input">
                 <label for="corPredominante">Cor predominante</label><br>
-                <input type="list" list="listaCores" id="corPredominante" name="corPredominante" placeholder="Insira a cor predominante" maxlength="15" required>
+                <input type="list" list="listaCores" id="corPredominante" name="corPredominante" placeholder="Informe a cor predominante" maxlength="15" required>
                 <datalist id="listaCores">
                   <option value="Branco"></option>
                   <option value="Preto"></option>
@@ -180,7 +176,7 @@
             
             <div class="form-input">
                 <label for="anoFabricacao">Ano de fabricação</label><br>
-                <input type="number" step="1" pattern="\d+" id="anoFabricacao" name="anoFabricacao" placeholder="Insira o ano de fabricação" min="1886" max="2147483647" required>
+                <input type="number" step="1" pattern="\d+" id="anoFabricacao" name="anoFabricacao" placeholder="Informe o ano de fabricação" min="1886" max="2147483647" required>
             </div>
             
             <div class="form-input">
@@ -229,7 +225,7 @@
             <div class="form-input">
                 <label for="idVeiculo2">ID <small class="no-select">(buscar por)</small></label><br>
                 <select name="idVeiculo" id="idVeiculo2" required>
-                    <option value="" disabled selected>Insira o ID do veículo</option>
+                    <option value="" disabled selected>Informe o ID do veículo</option>
                     <%
                         Veiculos vei = new Veiculos();
                         List<Veiculos> listaVeiculos = new ArrayList<>();
@@ -256,7 +252,7 @@
             <div class="form-input">
                 <label for="marcaModelo">Modelo</label><br>
                 <select name="marcaModelo" id="marcaModelo" required>
-                    <option value="" disabled selected>Insira o modelo</option>
+                    <option value="" disabled selected>Informe o modelo</option>
                     <%
                         List<Modelos> listaModelos2 = new ArrayList<>();
                         listaModelos2 = mod.selectModelos();
@@ -289,7 +285,7 @@
             <div class="form-input">
                 <label for="tipoPlacaVeiculo2">Tipo de placa</label><br>
                 <select name="tipoPlacaVeiculo" id="tipoPlacaVeiculo2" onchange="mudaPlaca(2)" required>
-                    <option value="" disabled selected>Insira o tipo de placa</option>
+                    <option value="" disabled selected>Informe o tipo de placa</option>
                     <%
                         String tipoPlacaConsulta = request.getParameter("tipoPlaca");
                         String cinzaSelected;
@@ -311,17 +307,17 @@
             
             <div class="form-input" id="campoPlacaCinza2" style="display: none;">
                 <label for="placaVeiculoC2">Placa</label><br>
-                <input type="text" id="placaVeiculoC2" name="placaVeiculo" placeholder="Insira a placa" minlength="7" maxlength="7" pattern="[a-zA-Z0-9-]{7}" title="Apenas letras e números" value="<%=request.getParameter("corPredominante") != null ? request.getParameter("placa") : ""%>">
+                <input type="text" id="placaVeiculoC2" name="placaVeiculo" placeholder="Informe a placa" minlength="7" maxlength="7" pattern="[a-zA-Z0-9-]{7}" title="Apenas letras e números" value="<%=request.getParameter("corPredominante") != null ? request.getParameter("placa") : ""%>">
             </div>
                 
             <div class="form-input" id="campoPlacaMercosul2" style="display: none;">
                 <label for="placaVeiculoM2">Placa</label><br>
-                <input type="text" id="placaVeiculoM2" name="placaVeiculo" placeholder="Insira a placa" minlength="7" maxlength="7" pattern="[a-zA-Z0-9-]{7}" title="Apenas letras e números" value="<%=request.getParameter("corPredominante") != null ? request.getParameter("placa") : ""%>">
+                <input type="text" id="placaVeiculoM2" name="placaVeiculo" placeholder="Informe a placa" minlength="7" maxlength="7" pattern="[a-zA-Z0-9-]{7}" title="Apenas letras e números" value="<%=request.getParameter("corPredominante") != null ? request.getParameter("placa") : ""%>">
             </div>
             
             <div class="form-input">
                 <label for="corPredominante">Cor predominante</label><br>
-                <input type="list" list="listaCores" id="corPredominante" name="corPredominante" placeholder="Insira a cor predominante" maxlength="15" value="<%=request.getParameter("corPredominante") != null ? request.getParameter("corPredominante") : ""%>" required>
+                <input type="list" list="listaCores" id="corPredominante" name="corPredominante" placeholder="Informe a cor predominante" maxlength="15" value="<%=request.getParameter("corPredominante") != null ? request.getParameter("corPredominante") : ""%>" required>
                 <datalist id="listaCores">
                   <option value="Branco"></option>
                   <option value="Preto"></option>
@@ -341,7 +337,7 @@
             
             <div class="form-input">
                 <label for="anoFabricacao">Ano de fabricação</label><br>
-                <input type="number" step="1" pattern="\d+" id="anoFabricacao" name="anoFabricacao" placeholder="Insira o ano de fabricação" min="1886" max="2023" value="<%=request.getParameter("anoFabricacao") != null ? request.getParameter("anoFabricacao") : ""%>" required>
+                <input type="number" step="1" pattern="\d+" id="anoFabricacao" name="anoFabricacao" placeholder="Informe o ano de fabricação" min="1886" max="2023" value="<%=request.getParameter("anoFabricacao") != null ? request.getParameter("anoFabricacao") : ""%>" required>
             </div>
             
             <div class="form-input">
@@ -389,7 +385,7 @@
             <div class="form-input">
                 <label for="idVeiculo3">ID <small class="no-select">(buscar por)</small></label><br>
                 <select name="idVeiculo" id="idVeiculo3" required>
-                    <option value="" disabled selected>Insira o ID do veículo</option>
+                    <option value="" disabled selected>Informe o ID do veículo</option>
                     <%
                         List<Veiculos> listaVeiculos3 = new ArrayList<>();
                         listaVeiculos3 = vei.consultarVeiculos();
@@ -428,15 +424,16 @@
             <div class="form-input">
                 <label for="modoConsulta">Modo de consulta</label><br>
                 <select name="modoConsulta" id="modoConsulta" onchange="scriptModoConsulta()" required>
+                    <option value="" disabled selected>Informe o modo de consulta</option>
                     <option value="0">Por ID</option>
                     <option value="1">Todos</option>
                 </select>
             </div>
             
-            <div class="form-input" id="campoId">
+            <div class="form-input" id="campoId" style="display: none;">
                 <label for="idVeiculo4">ID <small class="no-select">(buscar por)</small></label><br>
                 <select name="idVeiculo" id="idVeiculo4" required>
-                    <option value="" disabled selected>Insira o ID do veículo</option>
+                    <option value="" disabled selected>Informe o ID do veículo</option>
                     <%
                         List<Veiculos> listaVeiculos4 = new ArrayList<>();
                         listaVeiculos4 = vei.consultarVeiculos();
