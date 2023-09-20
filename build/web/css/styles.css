@@ -328,7 +328,7 @@ select:required:invalid {
 }
 
 select:required:invalid option {
-    color: black;
+    color: var(--font-color);
 }
 
 option[value=""][disabled] {

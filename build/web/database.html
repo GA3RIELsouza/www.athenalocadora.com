@@ -8,6 +8,34 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Banco de dados offline</title>
         
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const countdown = document.getElementById("countdown");
+                const retry     = document.getElementById("retry");
+                
+                setTimeout(function() {
+                    countdown.textContent = "Tente novamente em 4...";
+                }, 1000);
+                
+                setTimeout(function() {
+                    countdown.textContent = "Tente novamente em 3...";
+                }, 2000);
+                
+                setTimeout(function() {
+                    countdown.textContent = "Tente novamente em 2...";
+                }, 3000);
+                
+                setTimeout(function() {
+                    countdown.textContent = "Tente novamente em 1...";
+                }, 4000);
+                
+                setTimeout(function() {
+                    countdown.style.display = "none";
+                    retry.style.display = "";
+                }, 5000);
+            });
+        </script>
+        
     </head>
     
     <body>
@@ -28,12 +56,18 @@
                 
             </h2>
             
-            <h3>
+            <h3 id="countdown">
+                
+                Tente novamente em 5...
+                
+            </h3>
+            
+            <h3 id="retry" style="display: none;">
                 
                 <a href="index.jsp">
-
+                    
                     Tentar conex&atilde;o
-
+                    
                 </a>
                 
             </h3>
