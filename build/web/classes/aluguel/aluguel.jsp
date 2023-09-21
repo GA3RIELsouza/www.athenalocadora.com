@@ -68,9 +68,9 @@
         <span class="outer">
             
             <div class="title-form">
-                <h1>
-                    Aluguéis
-                </h1>
+                
+                <h1>Aluguéis</h1>
+                
             </div>
 
             <%@include file="/include/operation_selector.html"%>

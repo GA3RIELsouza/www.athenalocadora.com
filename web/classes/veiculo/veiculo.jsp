@@ -83,9 +83,9 @@
         <span class="outer">
             
             <div class="title-form">
-                <h1>
-                    Veículos
-                </h1>
+                
+                <h1>Veículos</h1>
+                
             </div>
 
             <%@include file="/include/operation_selector.html"%>

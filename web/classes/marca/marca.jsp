@@ -50,9 +50,9 @@
         <span class="outer">
             
             <div class="title-form">
-                <h1>
-                    Marcas
-                </h1>
+                
+                <h1>Marcas</h1>
+                
             </div>
 
             <%@include file="/include/operation_selector.html"%>
