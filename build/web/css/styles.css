@@ -142,7 +142,6 @@ a {
     background-color: var(--color2);
 }
 
-/* inicio.jsp */
 
 .title {
     text-align: center;
@@ -175,8 +174,6 @@ a {
 .menu-anchor:hover {
     background-color: var(--color2);
 }
-
-/* form/ */
 
 .title-form {
     margin: auto;
@@ -485,4 +482,13 @@ button:hover {
 
 .alterar-senha:hover {
     background-color: var(--falseColor);
+}
+
+.error-screen {
+    margin:auto;
+    text-align: center;
+    width: 50%;
+    background-color: lightgray;
+    padding: 10px;
+    border-radius: 50px
 }

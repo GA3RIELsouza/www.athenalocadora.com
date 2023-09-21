@@ -8,29 +8,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Erro 404 - Página não encontrada</title>
         
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico?v=1">
+        <link href="css/styles.css" rel="stylesheet">
+        
         <script>
             document.addEventListener("DOMContentLoaded", function() {
                 const countdown = document.getElementById("countdown");
                 
                 setTimeout(function() {
                     countdown.textContent = "Redirecionando você em 4...";
+                    
+                    setTimeout(function() {
+                        countdown.textContent = "Redirecionando você em 3...";
+                        
+                        setTimeout(function() {
+                            countdown.textContent = "Redirecionando você em 2...";
+                            
+                            setTimeout(function() {
+                                countdown.textContent = "Redirecionando você em 1...";
+                                
+                                setTimeout(function() {
+                                    window.location.href = "inicio.jsp";
+                                }, 1000);
+                            }, 1000);
+                        }, 1000);
+                    }, 1000);
                 }, 1000);
-                
-                setTimeout(function() {
-                    countdown.textContent = "Redirecionando você em 3...";
-                }, 2000);
-                
-                setTimeout(function() {
-                    countdown.textContent = "Redirecionando você em 2...";
-                }, 3000);
-                
-                setTimeout(function() {
-                    countdown.textContent = "Redirecionando você em 1...";
-                }, 4000);
-                
-                setTimeout(function() {
-                    window.location.href = "inicio.jsp";
-                }, 5000);
             });
         </script>
         
@@ -38,7 +41,9 @@
     
     <body>
         
-        <div style="margin:auto; text-align: center; width: 50%; background-color: lightgray; padding: 10px; border-radius: 50px">
+        <div class="vertical-space"></div>
+        
+        <div class="error-screen outer">
             
             <h1>
                 
