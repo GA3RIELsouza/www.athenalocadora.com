@@ -9,9 +9,9 @@ public class Conexao {
     public static Connection conectar() {
         
         Connection con  = null;
-        String url      = "jdbc:mysql://localhost:3306/SA_Locadora";
-        String user     = "SA_Locadora";
-        String password = "SA_Locadora";
+        String url      = "jdbc:mysql://localhost:3306/Athena_Locadora";
+        String user     = "funcionario_athena";
+        String password = "athena_locadora_321";
         
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
