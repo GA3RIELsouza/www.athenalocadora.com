@@ -1,24 +1,25 @@
-<%@page import="classes.Usuarios"%>
+<%@page import="classes.Sessoes"%>
 
 <%
     Cookie[] cookies = request.getCookies();
-    Usuarios  usu     = new Usuarios();
-    boolean  ok       = false;
+    Sessoes  ses     = new Sessoes();
+    boolean  cookieEncontrado = false;
 
     if(cookies != null) {
        for(Cookie atual : cookies) {
-            if(atual.getName().equals("sessionId")) {
-                usu.setSessionId(atual.getValue());
+            if(atual.getName().equals("chaveSessao")) {
+                cookieEncontrado = true;
+                ses.setChaveSessao(atual.getValue());
 
-                if(usu.checkSessionId()) {
-                    ok = true;
+                if(!ses.checkChaveSessao()) {
+                    response.sendRedirect("/www.athenalocadora.com/index.jsp");
                     break;
                 }
             }
         }
     }
-
-    if(ok == false) {
-        response.sendRedirect("/www.athenalocadora.com/index.jsp");
+    
+    if(!cookieEncontrado) {
+        response.sendRedirect("/www.athenalocadora.com/index.jsp?aa");
     }
 %>

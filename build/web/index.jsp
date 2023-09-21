@@ -1,4 +1,4 @@
-<%@page import="classes.Usuarios"%>
+<%@page import="classes.Sessoes"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
@@ -8,21 +8,20 @@
         
         <%
             Cookie[] cookies = request.getCookies();
-            Usuarios usu     = new Usuarios();
+            Sessoes  ses     = new Sessoes();
 
             if(cookies != null) {
-               for(Cookie atual : cookies) {
-                    if(atual.getName().equals("sessionId")) {
-                        usu.setSessionId(atual.getValue());
+                for(Cookie atual : cookies) {
+                     if(atual.getName().equals("sessionId")) {
+                         ses.setChaveSessao(atual.getValue());
 
-                        if(usu.checkSessionId()) {
-                            atual.setMaxAge(60*60*24*7);
-                            response.sendRedirect("/www.athenalocadora.com/inicio.jsp");
-                            break;
-                        }
-                    }
-                }
-            }
+                         if(ses.checkChaveSessao()) {
+                             response.sendRedirect("/www.athenalocadora.com/inicio.jsp");
+                             break;
+                         }
+                     }
+                 }
+             }
         %>
         
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">

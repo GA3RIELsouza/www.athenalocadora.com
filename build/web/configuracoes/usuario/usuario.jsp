@@ -1,4 +1,5 @@
 <%@include file="/include/check_login.jsp"%>
+<%@page import="classes.Usuarios"%>
 <!DOCTYPE html>
 
 <html lang="pt">
@@ -35,7 +36,8 @@
             </div>
             
             <%
-                usu = usu.consultarLoginSenha();
+                Usuarios usu = new Usuarios();
+                usu = usu.checkSenha();
                 
                 if(usu != null) {
             %>

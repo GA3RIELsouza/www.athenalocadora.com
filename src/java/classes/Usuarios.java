@@ -10,99 +10,6 @@ public class Usuarios {
     
     private String login;
     private String senha;
-    private String sessionId;
-    
-    public boolean createSessionId() throws SQLException {
-        
-        Connection con = Conexao.conectar();
-        
-        String sql  = "UPDATE usuarios ";
-               sql += "SET sessionId= ? ";
-               sql += "WHERE login = ?";
-        
-        try {
-            
-            PreparedStatement stm = con.prepareStatement(sql);
-            
-            stm.setString (1, sessionId);
-            stm.setString (2, login);
-            
-            stm.execute();
-            
-        }catch(SQLException ex) {
-            
-            System.out.println("Erro: " + ex.getMessage());
-            
-            con.close();
-            return false;
-            
-        }
-        
-        con.close();
-        return true;
-        
-    }
-    
-    public boolean deleteSessionId() throws SQLException {
-        
-        Connection con = Conexao.conectar();
-        String sql  = "UPDATE usuarios ";
-               sql += "SET sessionId= null " ;
-               sql += "WHERE sessionId= ?";
-        
-        try {
-            
-            PreparedStatement stm = con.prepareStatement(sql);
-            
-            stm.setString (1, sessionId);
-            
-            stm.execute();
-            
-        }catch(SQLException ex) {
-            
-            System.out.println("Erro: " + ex.getMessage());
-            
-            con.close();
-            return false;
-            
-        }
-        
-        con.close();
-        return true;
-        
-    }
-    
-    public boolean checkSessionId() throws SQLException {
-        
-        Connection con = Conexao.conectar();
-        
-        String sql  = "SELECT COUNT(*) ";
-               sql += "FROM usuarios ";
-               sql += "WHERE sessionId= ?";
-        
-        try {
-            
-            PreparedStatement stm = con.prepareStatement(sql);
-            
-            stm.setString (1, sessionId);
-            
-            ResultSet resultado = stm.executeQuery();
-            resultado.next();
-            int check = resultado.getInt(1);
-            
-            con.close();
-            return check != 0;
-            
-        }catch(SQLException ex) {
-            
-            System.out.println("Erro: " + ex.getMessage());
-            
-            con.close();
-            return false;
-            
-        }
-        
-    }
     
     public boolean checkLogin() throws SQLException {
         
@@ -137,26 +44,25 @@ public class Usuarios {
         
     }
     
-    public Usuarios consultarLoginSenha() throws SQLException {
+    public Usuarios checkSenha() throws SQLException {
         
         Connection con = Conexao.conectar();
-        String sql  = "SELECT login, senha ";
+        String sql  = "SELECT senha ";
                sql += "FROM usuarios ";
-               sql += "WHERE sessionId= ?;";
+               sql += "WHERE login= ?;";
                
         Usuarios usu = null;
         
         try {
             
             PreparedStatement stm = con.prepareStatement(sql);
-            stm.setString(1, sessionId);
+            stm.setString(1, login);
             ResultSet rs = stm.executeQuery();
             
             if(rs.next()) {
                 
                 usu = new Usuarios();
                 
-                usu.setLogin (rs.getString("login"));
                 usu.setSenha (rs.getString("senha"));
                 
             }
@@ -178,14 +84,14 @@ public class Usuarios {
         Connection con = Conexao.conectar();
         String sql  = "UPDATE usuarios ";
                sql += "SET senha= ? " ;
-               sql += "WHERE sessionId= ?";
+               sql += "WHERE login= ?";
                
         try {
             
             PreparedStatement stm = con.prepareStatement(sql);
             
             stm.setString (1, senha);
-            stm.setString (2, sessionId);
+            stm.setString (2, login);
             
             stm.execute();
             
@@ -209,10 +115,6 @@ public class Usuarios {
 
     public void setSenha(String senha) {
         this.senha = senha;
-    }
-
-    public void setSessionId(String sessionId) {
-        this.sessionId = sessionId;
     }
 
     public String getLogin() {

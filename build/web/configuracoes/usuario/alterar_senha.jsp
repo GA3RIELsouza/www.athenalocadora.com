@@ -9,7 +9,7 @@
         String vNovaSenha  = request.getParameter("novaSenha");
         String vSenhaAtual = request.getParameter("senhaAtual");
         
-        usu = usu.consultarLoginSenha();
+        usu = usu.checkSenha();
         
         if(usu != null) {
             if(usu.getSenha().equals(vSenhaAtual)) {
