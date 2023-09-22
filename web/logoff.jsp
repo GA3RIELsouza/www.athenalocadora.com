@@ -26,7 +26,7 @@
     String alterarSenha = request.getParameter("sucessoAlterar");
 
     if(alterarSenha != null) {
-        response.sendRedirect("/www.athenalocadora.com/index.jsp?sucessoSenha=" + alterarSenha);
+        response.sendRedirect("/www.athenalocadora.com/index.jsp?sucessoLoginSenha=" + alterarSenha);
     }else {
         response.sendRedirect("/www.athenalocadora.com/index.jsp");
     }

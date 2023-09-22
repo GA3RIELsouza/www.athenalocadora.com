@@ -43,6 +43,7 @@
         ses.novaSessao();
         
         Cookie sessaoCookie = new Cookie("chaveSessao", chaveGerada);
+        sessaoCookie.setMaxAge(60*60*24*7);
         response.addCookie(sessaoCookie);
 
         response.sendRedirect("inicio.jsp");

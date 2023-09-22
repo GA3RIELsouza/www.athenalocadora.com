@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Alterar senha | Athena Locadora</title>
         
-        <link rel="icon" type="image/x-icon" href="../images/favicon.ico?v=1">
+        <link rel="icon" type="image/x-icon" href="/www.athenalocadora.com/images/favicon.ico?v=1">
         <link href="/www.athenalocadora.com/css/styles.css" rel="stylesheet">
         <%@include file="/include/theme.jsp"%>
         
@@ -43,7 +43,7 @@
         <div class="vertical-space"></div>
         <div class="vertical-space"></div>
         
-        <form onsubmit="return checkNovaSenha();" action="alterar_senha.jsp" method="post" class="outer">
+        <form onsubmit="return checkNovaSenha();" action="alterar_senha_1.jsp" method="post" class="outer">
             
             <div class="title">
                 <h1>

@@ -1,40 +1,42 @@
 <%@include file="/include/check_login.jsp"%>
+<%@page import="classes.Usuarios"%>
+<%@page import="classes.Sessoes"%>
 <%@page import="java.io.PrintWriter"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 
-<html lang="pt">
+<%
+    String vNovaSenha  = request.getParameter("novaSenha");
+    String vSenhaAtual = request.getParameter("senhaAtual");
 
-    <%
-        String vNovaSenha  = request.getParameter("novaSenha");
-        String vSenhaAtual = request.getParameter("senhaAtual");
-        
-        usu = usu.checkSenha();
-        
-        if(usu != null) {
-            if(usu.getSenha().equals(vSenhaAtual)) {
-                usu = new Usuarios();
-                
-                String vSessionId = "";
-                
+    Usuarios usu = new Usuarios();
+
+    usu = usu.checkLoginSenha();
+
+    if(usu != null) {
+        if(usu.getSenha().equals(vSenhaAtual)) {
+            Sessoes ses2 = new Sessoes();
+
+            if(cookies != null) {
                 for(Cookie atual : cookies) {
-                    if(atual.getName().equals("sessionId")) {
-                        vSessionId = atual.getValue();
+                     if(atual.getName().equals("chaveSessao")) {
+                        ses2.setChaveSessao(atual.getValue());
                     }
                 }
-                
+            }
+
+            ses2 = ses2.checkLoginChave();
+
+            if(ses2 != null) {
                 usu.setSenha(vNovaSenha);
-                usu.setSessionId(vSessionId);
-                
+                usu.setLogin(ses2.getLogin());
+
                 if(usu.alterarSenha()){
                     response.sendRedirect("/www.athenalocadora.com/logoff.jsp?sucessoAlterar=SUCESSO AO ALTERAR A SENHA");
                 } else {
                     response.sendRedirect("../senha.jsp?erroLoginSenha=PROBLEMAS AO ALTERAR A SENHA");
                 }
-            }else {
-                response.sendRedirect("../senha.jsp?erroLoginSenha=SENHA ATUAL INCORRETA");
             }
+        }else {
+            response.sendRedirect("../senha.jsp?erroLoginSenha=SENHA ATUAL INCORRETA");
         }
-   %>
-
-</html>
+    }
+%>

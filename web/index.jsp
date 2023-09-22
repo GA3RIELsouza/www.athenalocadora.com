@@ -12,7 +12,7 @@
 
             if(cookies != null) {
                 for(Cookie atual : cookies) {
-                     if(atual.getName().equals("sessionId")) {
+                     if(atual.getName().equals("chaveSessao")) {
                          ses.setChaveSessao(atual.getValue());
 
                          if(ses.checkChaveSessao()) {

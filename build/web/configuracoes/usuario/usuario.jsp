@@ -1,5 +1,6 @@
 <%@include file="/include/check_login.jsp"%>
 <%@page import="classes.Usuarios"%>
+<%@page import="classes.Sessoes"%>
 <!DOCTYPE html>
 
 <html lang="pt">
@@ -10,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Perfil do usuário | Athena Locadora</title>
         
-        <link rel="icon" type="image/x-icon" href="../images/favicon.ico?v=1">
+        <link rel="icon" type="image/x-icon" href="/www.athenalocadora.com/images/favicon.ico?v=1">
         <link href="/www.athenalocadora.com/css/styles.css" rel="stylesheet">
         <%@include file="/include/theme.jsp"%>
         
@@ -36,10 +37,26 @@
             </div>
             
             <%
-                Usuarios usu = new Usuarios();
-                usu = usu.checkSenha();
+                Sessoes  ses2 = new Sessoes();
                 
-                if(usu != null) {
+                if(cookies != null) {
+                    for(Cookie atual : cookies) {
+                         if(atual.getName().equals("chaveSessao")) {
+                            ses2.setChaveSessao(atual.getValue());
+                        }
+                    }
+                }
+                
+                ses2 = ses2.checkLoginChave();
+                
+                if(ses2 != null) {
+                    Usuarios usu  = new Usuarios();
+                    
+                    usu.setLogin(ses2.getLogin());
+                    
+                    usu = usu.checkLoginSenha();
+
+                    if(usu != null) {
             %>
         
             <div class="profile-field">
@@ -84,7 +101,8 @@
             </div>
             
             <%
-                }  
+                    }
+                }
             %>
             
         </div>

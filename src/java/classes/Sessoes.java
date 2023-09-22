@@ -146,6 +146,41 @@ public class Sessoes {
         return false;
         
     }
+    
+    public Sessoes checkLoginChave() throws SQLException {
+        
+        Connection con = Conexao.conectar();
+        String sql  = "SELECT login ";
+               sql += "FROM sessoes ";
+               sql += "WHERE chaveSessao= ?";
+               
+        Sessoes ses = null;
+        
+        try {
+            
+            PreparedStatement stm = con.prepareStatement(sql);
+            stm.setString(1, chaveSessao);
+            ResultSet rs = stm.executeQuery();
+            
+            if(rs.next()) {
+                
+                ses = new Sessoes();
+                
+                ses.setLogin(rs.getString("login"));
+                
+            }
+            
+        }catch(SQLException ex) {
+            
+            System.out.println("Erro: " + ex.getMessage());
+            con.close();
+            
+        }
+        
+        con.close();
+        return ses;
+        
+    }
 
     public String getLogin() {
         return login;

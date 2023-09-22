@@ -44,12 +44,12 @@ public class Usuarios {
         
     }
     
-    public Usuarios checkSenha() throws SQLException {
+    public Usuarios checkLoginSenha() throws SQLException {
         
         Connection con = Conexao.conectar();
-        String sql  = "SELECT senha ";
+        String sql  = "SELECT login, senha ";
                sql += "FROM usuarios ";
-               sql += "WHERE login= ?;";
+               sql += "WHERE login= ?";
                
         Usuarios usu = null;
         
@@ -63,7 +63,8 @@ public class Usuarios {
                 
                 usu = new Usuarios();
                 
-                usu.setSenha (rs.getString("senha"));
+                usu.setLogin(rs.getString("login"));
+                usu.setSenha(rs.getString("senha"));
                 
             }
             
