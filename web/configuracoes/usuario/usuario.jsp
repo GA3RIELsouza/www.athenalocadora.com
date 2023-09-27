@@ -113,6 +113,9 @@
                     }
                 }
             %>
+            
+                <div class="vertical-space"></div>
+                <div class="vertical-space"></div>
                 
                 <div class="form-button">
                     <button type="submit" style="visibility: visible;">

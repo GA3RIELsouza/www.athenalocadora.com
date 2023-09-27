@@ -10,64 +10,27 @@ import util.Conexao;
 public class Sessoes {
     
     private String    login;
-    private int       idSessao;
     private String    ip;
     private Timestamp dataInicio;
     private Timestamp dataFim;
     private String    tokenSessao;
     
-    public int auto_increment() throws SQLException {
-        
-        Connection con = Conexao.conectar();
-        String sql  = "SELECT MAX(idSessao) ";
-               sql += "FROM sessoes ";
-               sql += "WHERE login= ?";
-               
-               int maxIdSessao = 0;
-               int newIdSessao = 0;
-        
-        try {
-            
-            PreparedStatement stm = con.prepareStatement(sql);
-            stm.setString(1, login);
-            ResultSet rs = stm.executeQuery();
-            
-            if(rs.next()) {
-                
-                maxIdSessao = rs.getInt(1);
-                newIdSessao = maxIdSessao + 1;
-                
-            }
-            
-        }catch(SQLException ex) {
-            
-            System.out.println("Erro: " + ex.getMessage());
-            con.close();
-            
-        }
-        
-        con.close();
-        return newIdSessao;
-        
-    }
-    
     public boolean novaSessao() throws SQLException {
         
         Connection con = Conexao.conectar();
         String sql  = "INSERT INTO sessoes ";
-               sql += "(login, idSessao, ip, dataInicio, dataFim, tokenSessao) ";
-               sql += "VALUES (?, ?, ?, ?, ?, ?)";
+               sql += "(login, ip, dataInicio, dataFim, tokenSessao) ";
+               sql += "VALUES (?, ?, ?, ?, ?)";
                
         try {
             
             PreparedStatement stm = con.prepareStatement(sql);
             
             stm.setString    (1, login);
-            stm.setInt       (2, auto_increment());
-            stm.setString    (3, ip);
-            stm.setTimestamp (4, dataInicio);
-            stm.setTimestamp (5, dataFim);
-            stm.setString    (6, tokenSessao);
+            stm.setString    (2, ip);
+            stm.setTimestamp (3, dataInicio);
+            stm.setTimestamp (4, dataFim);
+            stm.setString    (5, tokenSessao);
             
             stm.execute();
             
@@ -218,14 +181,6 @@ public class Sessoes {
 
     public void setLogin(String login) {
         this.login = login;
-    }
-
-    public int getIdSessao() {
-        return idSessao;
-    }
-
-    public void setIdSessao(int idSessao) {
-        this.idSessao = idSessao;
     }
 
     public String getIp() {
