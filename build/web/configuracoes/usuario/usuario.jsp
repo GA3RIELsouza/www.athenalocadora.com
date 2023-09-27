@@ -28,7 +28,16 @@
         <div class="vertical-space"></div>
         <div class="vertical-space"></div>
         
-        <div class="menu outer">
+        <form action="atualizar_token.jsp" method="post" class="outer">
+            
+            <%
+                if(true) {
+                    String operacao = "AtualizarToken";
+            %>
+            <%@include file="/include/erro_sucesso.jsp"%>
+            <%
+                }
+            %>
             
             <div class="title">
                 <h1>
@@ -41,8 +50,8 @@
                 
                 if(cookies != null) {
                     for(Cookie atual : cookies) {
-                         if(atual.getName().equals("chaveSessao")) {
-                            ses2.setChaveSessao(atual.getValue());
+                         if(atual.getName().equals("tokenSessao")) {
+                            ses2.setTokenSessao(atual.getValue());
                         }
                     }
                 }
@@ -104,8 +113,14 @@
                     }
                 }
             %>
+                
+                <div class="form-button">
+                    <button type="submit" style="visibility: visible;">
+                        Atualizar token da sessão
+                    </button>
+                </div>
             
-        </div>
+        </form>
         
         <div class="vertical-space"></div>
         

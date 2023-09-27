@@ -32,17 +32,17 @@
             .mapToObj(i -> chrs.charAt(i))
             .collect(StringBuilder::new, StringBuilder::append, StringBuilder::append)
             .toString();
-        String vChaveSessao = chaveGerada;
+        String vTokenSessao = chaveGerada;
         
         ses.setLogin(vLoginSessao);
         ses.setIp(vIp);
         ses.setDataInicio(vDataInicio);
         ses.setDataFim(vDataFim);
-        ses.setChaveSessao(vChaveSessao);
+        ses.setTokenSessao(vTokenSessao);
 
         ses.novaSessao();
         
-        Cookie sessaoCookie = new Cookie("chaveSessao", chaveGerada);
+        Cookie sessaoCookie = new Cookie("tokenSessao", chaveGerada);
         sessaoCookie.setMaxAge(60*60*24*7);
         response.addCookie(sessaoCookie);
 

@@ -7,11 +7,11 @@
 
     if(cookies != null) {
        for(Cookie atual : cookies) {
-            if(atual.getName().equals("chaveSessao")) {
+            if(atual.getName().equals("tokenSessao")) {
                 cookieEncontrado = true;
-                ses.setChaveSessao(atual.getValue());
+                ses.setTokenSessao(atual.getValue());
 
-                if(!ses.checkChaveSessao()) {
+                if(!ses.checkTokenSessao()) {
                     response.sendRedirect("/www.athenalocadora.com/index.jsp");
                     break;
                 }
@@ -20,6 +20,6 @@
     }
     
     if(!cookieEncontrado) {
-        response.sendRedirect("/www.athenalocadora.com/index.jsp?aa");
+        response.sendRedirect("/www.athenalocadora.com/index.jsp");
     }
 %>

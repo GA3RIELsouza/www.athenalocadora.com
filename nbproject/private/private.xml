@@ -3,12 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/gabriel_souza20/Documents/NetBeansProjects/www.athenalocadora.com/web/include/check_login.jsp</file>
             <file>file:/C:/Users/gabriel_souza20/Documents/NetBeansProjects/www.athenalocadora.com/web/configuracoes/usuario/usuario.jsp</file>
+            <file>file:/C:/Users/gabriel_souza20/Documents/NetBeansProjects/www.athenalocadora.com/web/database.html</file>
+            <file>file:/C:/Users/gabriel_souza20/Documents/NetBeansProjects/www.athenalocadora.com/web/configuracoes/usuario/alterar_senha_1.jsp</file>
             <file>file:/C:/Users/gabriel_souza20/Documents/NetBeansProjects/www.athenalocadora.com/src/java/classes/Usuarios.java</file>
-            <file>file:/C:/Users/gabriel_souza20/Documents/NetBeansProjects/www.athenalocadora.com/web/login.jsp</file>
+            <file>file:/C:/Users/gabriel_souza20/Documents/NetBeansProjects/www.athenalocadora.com/web/logoff.jsp</file>
+            <file>file:/C:/Users/gabriel_souza20/Documents/NetBeansProjects/www.athenalocadora.com/web/404.html</file>
+            <file>file:/C:/Users/gabriel_souza20/Documents/NetBeansProjects/www.athenalocadora.com/web/configuracoes/usuario/alterar_senha.jsp</file>
+            <file>file:/C:/Users/gabriel_souza20/Documents/NetBeansProjects/www.athenalocadora.com/web/configuracoes/usuario/senha.jsp</file>
+            <file>file:/C:/Users/gabriel_souza20/Documents/NetBeansProjects/www.athenalocadora.com/web/index.jsp</file>
             <file>file:/C:/Users/gabriel_souza20/Documents/NetBeansProjects/www.athenalocadora.com/web/WEB-INF/web.xml</file>
-            <file>file:/C:/Users/gabriel_souza20/Documents/NetBeansProjects/www.athenalocadora.com/src/java/classes/Sessoes.java</file>
-            <file>file:/C:/Users/gabriel_souza20/Documents/NetBeansProjects/www.athenalocadora.com/src/java/classes/Clientes.java</file>
         </group>
     </open-files>
 </project-private>

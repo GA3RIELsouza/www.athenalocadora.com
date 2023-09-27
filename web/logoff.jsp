@@ -10,10 +10,10 @@
 
     if(cookies != null) {
        for(Cookie atual : cookies) {
-            if(atual.getName().equals("chaveSessao")) {
+            if(atual.getName().equals("tokenSessao")) {
                 atual.setMaxAge(0);
                 
-                ses.setChaveSessao(atual.getValue());
+                ses.setTokenSessao(atual.getValue());
                 
                 ses.encerrarSessao();
 

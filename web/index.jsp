@@ -12,10 +12,10 @@
 
             if(cookies != null) {
                 for(Cookie atual : cookies) {
-                     if(atual.getName().equals("chaveSessao")) {
-                         ses.setChaveSessao(atual.getValue());
+                     if(atual.getName().equals("tokenSessao")) {
+                         ses.setTokenSessao(atual.getValue());
 
-                         if(ses.checkChaveSessao()) {
+                         if(ses.checkTokenSessao()) {
                              response.sendRedirect("/www.athenalocadora.com/inicio.jsp");
                              break;
                          }
