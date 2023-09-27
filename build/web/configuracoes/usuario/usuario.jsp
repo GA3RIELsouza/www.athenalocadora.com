@@ -118,7 +118,7 @@
                 <div class="vertical-space"></div>
                 
                 <div class="form-button">
-                    <button type="submit" style="visibility: visible;">
+                    <button type="submit" style="width: 60%;">
                         Atualizar token da sessão
                     </button>
                 </div>
