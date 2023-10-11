@@ -12,16 +12,16 @@
 
             if(cookies != null) {
                 for(Cookie atual : cookies) {
-                     if(atual.getName().equals("tokenSessao")) {
-                         ses.setTokenSessao(atual.getValue());
+                    if(atual.getName().equals("tokenSessao")) {
+                        ses.setTokenSessao(atual.getValue());
 
-                         if(ses.checkTokenSessao()) {
-                             response.sendRedirect("/www.athenalocadora.com/inicio.jsp");
-                             break;
-                         }
-                     }
-                 }
-             }
+                        if(ses.checkTokenSessao()) {
+                            response.sendRedirect("/www.athenalocadora.com/inicio.jsp");
+                            break;
+                        }
+                    }
+                }
+            }
         %>
         
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
