@@ -303,7 +303,8 @@
                         List<Veiculos> listaVeiculos = new ArrayList<>();
                         listaVeiculos = vei.consultarVeiculos();
                         
-                        for(Veiculos v : listaVeiculos) {
+                        if(!listaVeiculos.isEmpty()) {
+                            for(Veiculos v : listaVeiculos) {
                %>
                
                <tbody>
@@ -419,6 +420,71 @@
                             </a>
                         </td>
                 
+                    </tr>
+                    
+                </tbody>
+                
+                <%
+                            }
+                        }else {
+                %>
+                
+                <tbody>
+                    
+                    <tr>
+                        
+                        <td style="background-color: transparent;">
+                            <br>
+                        </td>
+                        
+                        <td>
+                            Nenhum resultado encontrado
+                        </td>
+                        
+                        <td>
+                            ---
+                        </td>
+                        
+                        <td>
+                            ---
+                        </td>
+                        
+                        <td>
+                            ---
+                        </td>
+                        
+                        <td>
+                            ---
+                        </td>
+                        
+                        <td>
+                            ---
+                        </td>
+                        
+                        <td>
+                            ---
+                        </td>
+                        
+                        <td>
+                            ---
+                        </td>
+                        
+                        <td>
+                            ---
+                        </td>
+                        
+                        <td>
+                            ---
+                        </td>
+                        
+                        <td>
+                            ---
+                        </td>
+                        
+                        <td style="background-color: transparent;">
+                            <br>
+                        </td>
+                        
                     </tr>
                     
                 </tbody>

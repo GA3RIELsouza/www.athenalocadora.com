@@ -147,7 +147,8 @@
                 }else if(vModoConsulta == 1) {
                     List<Marcas> listaMarcas = new ArrayList<>();
                     listaMarcas = mar.consultarMarcas();
-
+                    
+                    if(!listaMarcas.isEmpty()) {
                     for(Marcas m : listaMarcas) {
            %>
 
@@ -183,6 +184,35 @@
 
             </tbody>
 
+            <%
+                        }
+                    }else {
+            %>
+            
+            <tbody>
+
+                <tr>
+
+                    <td style="background-color: transparent;">
+                        <br>
+                    </td>
+
+                    <td>
+                        Nenhum resultado encontrado
+                    </td>
+
+                    <td>
+                        ---
+                    </td>
+
+                    <td style="background-color: transparent;">
+                        <br>
+                    </td>
+
+                </tr>
+
+            </tbody>
+            
             <%
                     }
                 }else {

@@ -203,8 +203,9 @@
                 }else if(vModoConsulta == 1) {
                     List<Clientes> listaClientes = new ArrayList<>();
                     listaClientes = cli.consultarClientes();
-
-                    for(Clientes c : listaClientes) {
+                    
+                    if(!listaClientes.isEmpty()) {
+                        for(Clientes c : listaClientes) {
            %>
 
            <tbody>
@@ -263,6 +264,51 @@
 
             </tbody>
 
+            <%
+                        }
+                    }else {
+            %>
+            
+            <tbody>
+
+                <tr>
+
+                    <td style="background-color: transparent;">
+                        <br>
+                    </td>
+
+                    <td>
+                        Nenhum resultado encontrado
+                    </td>
+
+                    <td>
+                        ---
+                    </td>
+
+                    <td>
+                        ---
+                    </td>
+
+                    <td>
+                        ---
+                    </td>
+
+                    <td>
+                        ---
+                    </td>
+
+                    <td>
+                        ---
+                    </td>
+
+                    <td style="background-color: transparent;">
+                        <br>
+                    </td>
+
+                </tr>
+
+            </tbody>
+            
             <%
                     }
                 }else {
